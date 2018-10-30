@@ -1,4 +1,4 @@
-export class Support {
+export class Ticket {
     constructor(
       public type: string,
       public issue: string,

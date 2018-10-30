@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SupportService } from '../support.service';
-import { Support} from '../support';
+import { TicketService } from '../ticket.service';
+import { Ticket} from '../ticket';
 
 @Component({
   selector: 'app-support',
@@ -8,15 +8,24 @@ import { Support} from '../support';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+ 
+  private type= "support"
+  private status="new"
 
-  constructor(private supportService: SupportService) {}
+  constructor(private ticketService: TicketService) {}
 
-  support(issue: string, content: string): void {
-    this.supportService
-    .support({issue, content} as Support)
-    .subscribe(credentials => {
-      localStorage.getItem("token");
-    });
+  submitSupport(issue: string, content: string) : void {
+    this.support(this.type, issue, content, this.status)
+  }
+  
+  
+  
+  support(type: string, issue: string, content: string, status: string): void {
+    this.ticketService
+    .support({type, issue, content, status} as Ticket)
+    .subscribe( results => {
+      alert("Request Sent")
+    })
   }
 
   ngOnInit() {
