@@ -1,9 +1,11 @@
 <nav>
-  <span>
-    <a routerLink='/home'>Home</a>
-    <a routerLink='/about'>About Us</a>
-    <a routerLink='/auth'>Login/ Signup</a>
-    <a routerLink='/contact'>Contact</a>
-  </span>
+  <mat-toolbar class="toolbar">
+    <mat-toolbar-row>
+      <a class="navlink" mat-stroked-button routerLink='/home'>Home</a>
+      <a class="navlink" mat-stroked-button routerLink='/about'>About Us</a>
+      <a class="navlink" mat-stroked-button routerLink='/auth'>Login/ Signup</a>
+      <a class="navlink" mat-stroked-button routerLink='/contact'>Contact</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
 </nav>
 <router-outlet></router-outlet>
