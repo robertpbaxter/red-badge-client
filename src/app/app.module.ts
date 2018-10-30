@@ -9,6 +9,8 @@ import { AuthComponent } from './auth/auth.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { MaterialModule } from './materialmodule'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Browser } from 'protractor';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { MaterialModule } from './materialmodule'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
