@@ -9,10 +9,10 @@
     </mat-select>
   </mat-form-field>
 
-  <mat-form-field hintLabel="Max 4000 characters">
-    <input matInput #input maxlength="4000" placeholder="Please Describe">
-    <mat-hint align="end">{{input.value?.length || 0}}/4000</mat-hint>
+  <mat-form-field hintLabel="Max 2000 characters">
+    <input matInput #input maxlength="2000" placeholder="Please Describe">
+    <mat-hint align="end">{{input.value?.length || 0}}/2000</mat-hint>
   </mat-form-field>
 
-  <button class="button" mat-raised-button>Submit</button>
+  <button class="button" mat-raised-button (click)="support()">Submit</button>
 </div>
