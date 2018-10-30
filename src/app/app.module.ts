@@ -15,10 +15,6 @@ import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { HttpClientModule } from "@angular/common/http";
 
-// import {MatMenuModule} from '@angular/material/menu';
-
-// import {MatButtonModule, MatCheckboxModule, MatMenu} from '@angular/material';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +23,8 @@ import { HttpClientModule } from "@angular/common/http";
     AuthComponent,
     AboutComponent,
     ContactComponent,
+    LoginComponent,
+    SignupComponent,
 
   ],
   imports: [
@@ -34,8 +32,7 @@ import { HttpClientModule } from "@angular/common/http";
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
-    LoginComponent,
-    SignupComponent,
+
     HttpClientModule
     // MatMenuModule
   ],
