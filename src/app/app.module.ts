@@ -8,9 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-// import {MatMenuModule} from '@angular/material/menu';
-
-// import {MatButtonModule, MatCheckboxModule, MatMenu} from '@angular/material';
+import { MaterialModule } from './materialmodule'
 
 @NgModule({
   declarations: [
@@ -20,11 +18,12 @@ import { ContactComponent } from './contact/contact.component';
     AuthComponent,
     AboutComponent,
     ContactComponent,
-    // MatMenuModule
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
