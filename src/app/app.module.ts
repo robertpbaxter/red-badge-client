@@ -27,6 +27,8 @@ import { HttpClientModule } from "@angular/common/http";
     AuthComponent,
     AboutComponent,
     ContactComponent,
+    LoginComponent,
+    SignupComponent,
 
   ],
   imports: [
@@ -34,8 +36,6 @@ import { HttpClientModule } from "@angular/common/http";
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
-    LoginComponent,
-    SignupComponent,
     HttpClientModule
     // MatMenuModule
   ],
