@@ -6,6 +6,8 @@ import { AuthComponent } from "./auth/auth.component";
 import { AboutComponent } from "./about/about.component";
 import { AuthGuard } from './auth.guard';
 // import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NewHousingComponent } from './new-housing/new-housing.component';
+
 
 const routes: Routes = [
   {path: "", redirectTo:"/home", pathMatch: "full"},
@@ -15,6 +17,7 @@ const routes: Routes = [
   {path: "about", component: AboutComponent},
   // { path: '**', component: PageNotFoundComponent}
 
+  {path: "new", component: NewHousingComponent},
 ];
 
 @NgModule({
