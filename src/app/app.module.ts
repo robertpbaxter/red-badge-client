@@ -14,14 +14,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { HttpClientModule } from "@angular/common/http";
-<<<<<<< HEAD
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-=======
 import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { MapEntryComponent } from './map-entry/map-entry.component';
 import { NewHousingComponent } from './new-housing/new-housing.component';
->>>>>>> bb0a9380e597c692c9dbb22dc59adb72927911da
+import { AuthGuard } from './auth.guard'
 
 @NgModule({
   declarations: [
@@ -33,13 +30,9 @@ import { NewHousingComponent } from './new-housing/new-housing.component';
     ContactComponent,
     LoginComponent,
     SignupComponent,
-<<<<<<< HEAD
-    PageNotFoundComponent
-=======
     MapComponent,
     MapEntryComponent,
-    NewHousingComponent,
->>>>>>> bb0a9380e597c692c9dbb22dc59adb72927911da
+    NewHousingComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +46,7 @@ import { NewHousingComponent } from './new-housing/new-housing.component';
       libraries: ["places"]
     })
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
