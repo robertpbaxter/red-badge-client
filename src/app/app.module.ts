@@ -14,6 +14,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { HttpClientModule } from "@angular/common/http";
+import { MapComponent } from './map/map.component';
+import { AgmCoreModule } from '@agm/core';
+import { MapEntryComponent } from './map-entry/map-entry.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { HttpClientModule } from "@angular/common/http";
     ContactComponent,
     LoginComponent,
     SignupComponent,
+    MapComponent,
+    MapEntryComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,8 +37,10 @@ import { HttpClientModule } from "@angular/common/http";
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
-    // MatMenuModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBjo_g0gV5qXLS1ASDwVNCqvh0M9_IrZsM'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
