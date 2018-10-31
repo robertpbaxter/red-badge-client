@@ -32,7 +32,7 @@ import { HttpClientModule } from "@angular/common/http";
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
     // MatMenuModule
   ],
   providers: [],
