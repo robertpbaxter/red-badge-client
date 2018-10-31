@@ -1,1 +1,24 @@
-<h1>Signup Component</h1>
+<h1>Sign up</h1>
+<form>
+    <div class="form-group">
+      <label class="first">
+        First Name:
+        <input type="text" #first />
+      </label>
+      <label class="last">
+          Last Name:
+          <input type="text" #last />
+        </label>
+      <label class='email'>
+        Email:
+        <input type="text" #email />
+      </label>
+    </div>
+    <div class="form-group">
+      <label class='password'>
+        Password:
+        <input type="password" #password />
+      </label>
+    </div>
+    <button type="submit" (click)=validateLogin(email.value,password.value)>Log In</button>
+  </form>
