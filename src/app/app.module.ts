@@ -19,6 +19,7 @@ import { MapComponent } from "./map/map.component";
 import { AgmCoreModule } from "@agm/core";
 import { MapEntryComponent } from "./map-entry/map-entry.component";
 import { NewHousingComponent } from "./new-housing/new-housing.component";
+import { AuthGuard } from "./auth.guard";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { NewHousingComponent } from "./new-housing/new-housing.component";
       libraries: ["places"]
     })
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
