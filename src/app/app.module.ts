@@ -17,6 +17,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { MapEntryComponent } from './map-entry/map-entry.component';
+import { NewHousingComponent } from './new-housing/new-housing.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MapEntryComponent } from './map-entry/map-entry.component';
     SignupComponent,
     MapComponent,
     MapEntryComponent,
+    NewHousingComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,12 +39,13 @@ import { MapEntryComponent } from './map-entry/map-entry.component';
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule, 
+    FormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBjo_g0gV5qXLS1ASDwVNCqvh0M9_IrZsM'
+      apiKey: 'AIzaSyBjo_g0gV5qXLS1ASDwVNCqvh0M9_IrZsM',
+      libraries: ["places"]
     })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,0 +1,8 @@
+.newentry {
+    display: flex;
+    flex-direction: column;
+}
+
+.newentry > * {
+    width: 50%;
+}

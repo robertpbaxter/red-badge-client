@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapEntryComponent implements OnInit {
 
+  lat = 39.7684
+  lng = -86.1581
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onPickedLocation(event) {
+    console.log(event)
+    this.lat = event.coords.lat
+    this.lng = event.coords.lng
+  }
 }

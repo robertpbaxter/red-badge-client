@@ -28,7 +28,7 @@ export class MapComponent implements OnInit {
       lng: -86.1570
     },
     {
-      lat: 39.7684,
+      lat: 39.9,
       lng: -86.1570
     }
   ]
