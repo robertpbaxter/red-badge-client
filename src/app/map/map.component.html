@@ -1,0 +1,18 @@
+<h1>{{ title }}</h1>
+
+<agm-map [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
+  <div *ngFor="let point of points">
+    <agm-marker [latitude]="point.lat" [longitude]="point.lng"></agm-marker>
+    <!-- <agm-marker [latitude]="39.76990" [longitude]="-86.1580"></agm-marker>
+  <agm-marker [latitude]="40.8693" [longitude]="-86.1584"></agm-marker>
+  <agm-marker [latitude]="41.8693" [longitude]="-86.1584"></agm-marker>
+  <agm-marker [latitude]="39.8693" [longitude]="-86.1584"></agm-marker>
+  <agm-marker [latitude]="39.3693" [longitude]="-86.1584"></agm-marker> -->
+  </div>
+</agm-map>
+
+
+
+<!-- <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="onPickedLocation($event)"> 
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map> -->
