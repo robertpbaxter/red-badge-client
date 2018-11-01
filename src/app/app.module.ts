@@ -14,10 +14,13 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { HttpClientModule } from "@angular/common/http";
-import { MapComponent } from './map/map.component';
-import { AgmCoreModule } from '@agm/core';
-import { MapEntryComponent } from './map-entry/map-entry.component';
-import { NewHousingComponent } from './new-housing/new-housing.component';
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { MapComponent } from "./map/map.component";
+import { AgmCoreModule } from "@agm/core";
+import { MapEntryComponent } from "./map-entry/map-entry.component";
+import { NewHousingComponent } from "./new-housing/new-housing.component";
+import { AuthGuard } from "./auth.guard";
+import { TicketsComponent } from "./tickets/tickets.component";
 
 @NgModule({
   declarations: [
@@ -29,9 +32,11 @@ import { NewHousingComponent } from './new-housing/new-housing.component';
     ContactComponent,
     LoginComponent,
     SignupComponent,
+    PageNotFoundComponent,
     MapComponent,
     MapEntryComponent,
     NewHousingComponent,
+    TicketsComponent
   ],
   imports: [
     BrowserModule,
@@ -41,11 +46,11 @@ import { NewHousingComponent } from './new-housing/new-housing.component';
     HttpClientModule,
     FormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBjo_g0gV5qXLS1ASDwVNCqvh0M9_IrZsM',
+      apiKey: "AIzaSyBjo_g0gV5qXLS1ASDwVNCqvh0M9_IrZsM",
       libraries: ["places"]
     })
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

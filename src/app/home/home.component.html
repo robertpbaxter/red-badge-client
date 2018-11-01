@@ -1,4 +1,8 @@
-<p>
- Buh Gok!!!!
-</p>
 <app-map></app-map>
+<div *ngFor= "let home of homes" class="listings">
+    <h3 class="list">type of housing: {{home.residenceType}}</h3>
+    <p class="list">number of rooms for rent: {{home.rooms}}</p>
+    <p class="list">{{home.address}}</p>
+    <p class="list">${{home.price}} per month</p>
+</div>
+

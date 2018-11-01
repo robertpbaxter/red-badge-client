@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
   
   support(type: string, issue: string, content: string, status: string): void {
     this.ticketService
-    .support({type, issue, content, status} as Ticket)
+    .newTicket({type, issue, content, status} as Ticket)
     .subscribe( results => {
       alert("Request Sent")
     })
