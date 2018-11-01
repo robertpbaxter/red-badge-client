@@ -1,8 +1,26 @@
 <h1>I'm the admin component!</h1>
 
 <div *ngFor="let ticket of tickets">
-  <p>{{ticket.status}}, #:{{ticket.id}}, from user:{{ticket.contactId}}, type:{{ticket.type}}, issue:{{ticket.issue}},
-    content:{{ticket.content}}
-    <button (click)="deleteTicket(ticket)" title="delete ticket" value="ticket.id">Delete</button></p>
+  <mat-card class="ticket">
+    <mat-card-header>
+      <mat-card-title>{{ticket.status}}</mat-card-title>
+      <mat-card-subtitle>From User: {{ticket.contactId}}</mat-card-subtitle>
+      <mat-card-subtitle>{{ticket.type}}:  {{ticket.issue}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>{{ticket.content}}
+    </mat-card-content>
 
+
+    <mat-form-field>
+      <mat-select placeholder="change status" value="ticket.status" #status>
+        <mat-option value="pending">pending</mat-option>
+        <mat-option value="resolved">resolved</mat-option>
+        <mat-option value="rejected">rejected</mat-option>
+      </mat-select>
+
+    </mat-form-field>
+    <button class="button" (click)="updateTicket(status.value, ticket.id)" mat-raised-button>update</button>
+    <button  (click)="deleteTicket(ticket)" title="delete ticket" value="ticket.id" mat-raised-button>Delete</button>
+  </mat-card>
 </div>
+<app-user></app-user>

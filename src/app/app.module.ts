@@ -21,6 +21,8 @@ import { MapEntryComponent } from "./map-entry/map-entry.component";
 import { NewHousingComponent } from "./new-housing/new-housing.component";
 import { AuthGuard } from "./auth.guard";
 import { TicketsComponent } from "./tickets/tickets.component";
+import { UserComponent } from './user/user.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { TicketsComponent } from "./tickets/tickets.component";
     MapComponent,
     MapEntryComponent,
     NewHousingComponent,
-    TicketsComponent
+    TicketsComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { TicketsComponent } from "./tickets/tickets.component";
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyBjo_g0gV5qXLS1ASDwVNCqvh0M9_IrZsM",
       libraries: ["places"]
-    })
+    }),
+    MatIconModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
