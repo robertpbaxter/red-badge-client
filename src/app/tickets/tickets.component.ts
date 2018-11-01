@@ -22,6 +22,12 @@ export class TicketsComponent implements OnInit {
     });
   }
 
+  updateTicket(status: string, id: number): void {
+    console.log(status, id);
+    this.ticketService.updateTicket({status, id} as Ticket).subscribe(results => this.getTickets())
+    
+  }
+
   deleteTicket(ticket: Ticket): void {
     // console.log("ticket deleted!", ticket.id);
     this.ticketService
