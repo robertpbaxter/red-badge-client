@@ -20,6 +20,7 @@ import { AgmCoreModule } from "@agm/core";
 import { MapEntryComponent } from "./map-entry/map-entry.component";
 import { NewHousingComponent } from "./new-housing/new-housing.component";
 import { AuthGuard } from "./auth.guard";
+import { TicketsComponent } from "./tickets/tickets.component";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AuthGuard } from "./auth.guard";
     PageNotFoundComponent,
     MapComponent,
     MapEntryComponent,
-    NewHousingComponent
+    NewHousingComponent,
+    TicketsComponent
   ],
   imports: [
     BrowserModule,

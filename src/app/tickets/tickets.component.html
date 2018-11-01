@@ -1,0 +1,8 @@
+<h1>I'm the admin component!</h1>
+
+<div *ngFor="let ticket of tickets">
+  <p>{{ticket.status}}, #:{{ticket.id}}, from user:{{ticket.contactId}}, type:{{ticket.type}}, issue:{{ticket.issue}},
+    content:{{ticket.content}}
+    <button (click)="deleteTicket(ticket)" title="delete ticket" value="ticket.id">Delete</button></p>
+
+</div>
