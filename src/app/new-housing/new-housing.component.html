@@ -1,3 +1,7 @@
+<agm-map [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
 <div class="newentry">
   <mat-form-field>
     <mat-select placeholder="type of housing" #residenceType>
@@ -65,4 +69,4 @@
   <button class="button" mat-raised-button (click)=submitListing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
 
 </div>
-<app-map-entry></app-map-entry>
+<!-- <app-map-entry></app-map-entry> -->
