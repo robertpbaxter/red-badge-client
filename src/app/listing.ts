@@ -1,5 +1,6 @@
 export class Listing {
     constructor(
+      public id: number,
       public residenceType: string,
       public rooms: string,
       public bathrooms: string,

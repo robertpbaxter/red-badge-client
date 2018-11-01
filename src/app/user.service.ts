@@ -29,10 +29,10 @@ export class UserService {
     };
   }
 
-  getUser(): Observable<User[]> {
+  getUser(id: number): Observable<any> {
     return this.http
-    .get<User[]>(this.userUrl, this.httpOptions)
-    .pipe(catchError(this.handleError("getUser", [])));
+    .get<User>(`${this.userUrl}/${id}`, this.httpOptions)
+    .pipe(catchError(this.handleError("getUser")));
   }
 
 }

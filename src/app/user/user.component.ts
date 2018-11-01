@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../user';
 
@@ -8,19 +8,26 @@ import { User } from '../user';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  @Input() userId = this.userId;
+  user = {
+    firstName: '',
+    lastName: '',
+    email: ''
+  }
 
-  users: User[];
+
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.getUser();
+    this.getUser(this.userId);
   }
 
-  getUser(): void {
-    this.userService.getUser().subscribe(users => {
-      console.log(users);
-      this.users = users
+  getUser(id: number): void {
+    console.log(id)
+    this.userService.getUser(id).subscribe(user => {
+      console.log(user);
+      this.user = user
     })
   }
 

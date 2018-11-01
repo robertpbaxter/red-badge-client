@@ -21,6 +21,8 @@ token:string=localStorage.getItem("token")
   };
 
   private listingUrl = " https://team-buh-gok-server.herokuapp.com/api/housing";
+  
+  private userListingsUrl = " https://team-buh-gok-server.herokuapp.com/api/housing/owner/id";
 
   private handleError<T>(operation = "operation", result?: T) {
     return (error: any): Observable<T> => {
