@@ -19,7 +19,7 @@ export class TicketService {
     })
   };
 
-  private ticketUrl = " https://team-buh-gok-server.herokuapp.com/api/ticket";
+  private ticketUrl = "https://team-buh-gok-server.herokuapp.com/api/ticket";
 
   private handleError<T>(operation = "operation", result?: T) {
     return (error: any): Observable<T> => {
