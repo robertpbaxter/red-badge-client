@@ -28,3 +28,4 @@ export class NewHousingComponent implements OnInit {
   }
 
 }
+  
