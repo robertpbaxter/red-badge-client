@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { ListingService } from "../listing.service";
 import { Listing } from "../listing";
+import { CoordsService } from "../coords.service";
+import { Coords } from "../coords";
 
 @Component({
   selector: "app-new-housing",
@@ -8,12 +10,16 @@ import { Listing } from "../listing";
   styleUrls: ["./new-housing.component.css"]
 })
 export class NewHousingComponent {
+  coords: Coords;
   startingLat = 39.7684;
   startingLng = -86.1581;
-  lat = "";
-  lng = "";
+  lat: number = null;
+  lng: number = null;
 
-  constructor(private listingService: ListingService) {}
+  constructor(
+    private listingService: ListingService,
+    private coordsService: CoordsService
+  ) {}
 
   onPickedLocation(event) {
     this.lat = event.coords.lat;
@@ -62,7 +68,19 @@ export class NewHousingComponent {
       } as Listing)
       .subscribe(results => {
         alert("Listing Added");
-        console.log(results);
+        console.log(results.housing.id, this.lat, this.lng);
+        this.newCoords(results.housing.id);
       });
+  }
+
+  newCoords(housingId: number): void {
+    if (!this.lat || !this.lng) {
+      alert("You must select a location on the map first");
+    }
+    let lat = this.lat;
+    let lng = this.lng;
+    this.coordsService
+      .newCoords({ housingId, lat, lng } as Coords)
+      .subscribe(results => console.log(results));
   }
 }
