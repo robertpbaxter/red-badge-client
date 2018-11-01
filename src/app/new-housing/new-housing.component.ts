@@ -10,6 +10,13 @@ import { Coords } from "../coords";
   styleUrls: ["./new-housing.component.css"]
 })
 export class NewHousingComponent {
+
+  ngOnInit() {
+    this.userListenings();
+  }
+
+  listings: Listing[];
+
   coords: Coords;
   startingLat = 39.7684;
   startingLng = -86.1581;
@@ -83,4 +90,19 @@ export class NewHousingComponent {
       .newCoords({ housingId, lat, lng } as Coords)
       .subscribe(results => console.log(results));
   }
+
+userListenings(): void {
+  this.listingService.userListings(). subscribe(listings => {
+    console.log(listings);
+    this.listings = listings
+  })
+}
+
+deleteListing(listing: Listing): void {
+  console.log("ticket deleted!", listing.id);
+  this.listingService
+    .deleteListing(listing.id)
+    .subscribe(result => this.userListenings());
+}
+
 }
