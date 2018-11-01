@@ -22,7 +22,7 @@ token:string=localStorage.getItem("token")
 
   private listingUrl = " https://team-buh-gok-server.herokuapp.com/api/housing";
   
-  private userListingsUrl = " https://team-buh-gok-server.herokuapp.com/api/housing/owner/id";
+  private userListingsUrl = " https://team-buh-gok-server.herokuapp.com/api/housing/owner";
 
   private handleError<T>(operation = "operation", result?: T) {
     return (error: any): Observable<T> => {
@@ -35,6 +35,18 @@ token:string=localStorage.getItem("token")
     return this.http
       .post<Listing>(`${this.listingUrl}`, listing, this.httpOptions)
       .pipe(catchError(this.handleError<Listing>("listing")))
+  }
+
+  userListings(): Observable<Listing[]> {
+    return this.http
+    .get<Listing[]>(this.userListingsUrl, this.httpOptions)
+    .pipe(catchError(this.handleError("userListings", [])))
+  }
+
+  deleteListing(id: number): Observable<Listing> {
+    return this.http
+      .delete<Listing>(`${this.listingUrl}/${id}`, this.httpOptions)
+      .pipe(catchError(this.handleError<Listing>("deleteListing")));
   }
 
 }

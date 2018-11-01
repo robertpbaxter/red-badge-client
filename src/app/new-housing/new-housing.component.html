@@ -1,3 +1,17 @@
+<div *ngFor= "let listing of listings">
+  <h3>housing type: {{listing.residenceType}}</h3>
+  <p># of rooms: {{listing.rooms}}</p>
+  <p># of bathrooms: {{listing.bathrooms}}</p>
+  <p>address: {{listing.address}}</p>
+  <p>pets allowed: {{listing.petsAllowed}}</p>
+  <p>facilities: {{listing.facilities}}</p>
+  <p>price: ${{listing.price}}</p>
+  <button (click)="deleteListing(listing
+  )" title="delete ticket" value="listing.id" mat-raised-button>Delete</button>
+</div>
+
+
+
 <agm-map [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>
