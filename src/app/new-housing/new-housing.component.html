@@ -1,13 +1,13 @@
-<div *ngFor="let listing of listings">
-  <h3>housing type: {{listing.residenceType}}</h3>
-  <p># of rooms: {{listing.rooms}}</p>
-  <p># of bathrooms: {{listing.bathrooms}}</p>
-  <p>address: {{listing.address}}</p>
-  <p>pets allowed: {{listing.petsAllowed}}</p>
-  <p>facilities: {{listing.facilities}}</p>
-  <p>price: ${{listing.price}}</p>
-  <button (click)="deleteListing(listing
-  )" title="delete ticket" value="listing.id" mat-raised-button>Delete</button>
+<div *ngFor="let housing of housing">
+  <h3>housing type: {{housing.residenceType}}</h3>
+  <p># of rooms: {{housing.rooms}}</p>
+  <p># of bathrooms: {{housing.bathrooms}}</p>
+  <p>address: {{housing.address}}</p>
+  <p>pets allowed: {{housing.petsAllowed}}</p>
+  <p>facilities: {{housing.facilities}}</p>
+  <p>price: ${{housing.price}}</p>
+  <button (click)="deleteHousing(housing
+  )" title="delete ticket" value="housing.id" mat-raised-button>Delete</button>
 </div>
 
 
