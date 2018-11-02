@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { AuthService } from 'src/app/auth.service';
 import { Alert } from 'selenium-webdriver';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +10,7 @@ import { Alert } from 'selenium-webdriver';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   validateSignup(firstName: string, lastName: string, email: string, password: string, confirmPassword: string){
     let e = email.toLowerCase().trim();
@@ -37,6 +38,7 @@ export class SignupComponent implements OnInit {
         localStorage.setItem("token", credentials.sessionToken);
         localStorage.setItem("role", credentials.user.permission);
         email = "";
+        this.router.navigate(['/home'])
       });
   }
 

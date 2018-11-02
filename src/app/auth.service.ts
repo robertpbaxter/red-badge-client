@@ -19,6 +19,11 @@ export class AuthService {
   private handleError<T>(operation = "operation", result?: T) {
     return (error: any): Observable<T> => {
       console.log(error);
+      if(error.status === 502) {
+        alert("Username or password is incorrect!")
+      } else if (error.status === 500) {
+        alert("User email does not exist.")
+      }
       return of(result as T);
     };
   }
@@ -33,5 +38,10 @@ export class AuthService {
     return this.http
       .post<User>(`${this.authUrl}/signup`, user, this.httpOptions)
       .pipe(catchError(this.handleError<User>("signup")));
+  }
+
+  logout(): void {
+    localStorage.clear();
+    console.log("You are logged out!");
   }
 }

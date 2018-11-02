@@ -12,13 +12,12 @@ import { TicketsComponent } from "./tickets/tickets.component";
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent, canActivate: [AuthGuard] },
-  { path: "contact", component: ContactComponent },
+  { path: "contact", component: ContactComponent, canActivate: [AuthGuard]  },
   { path: "auth", component: AuthComponent },
-  { path: "about", component: AboutComponent },
-  { path: "tickets", component: TicketsComponent },
+  { path: "about", component: AboutComponent, canActivate: [AuthGuard]  },
+  { path: "tickets", component: TicketsComponent, canActivate: [AuthGuard]  },
   // { path: '**', component: PageNotFoundComponent}
-
-  { path: "new", component: NewHousingComponent }
+  { path: "new", component: NewHousingComponent, canActivate: [AuthGuard]  }
 ];
 
 @NgModule({
