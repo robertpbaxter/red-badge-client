@@ -19,7 +19,7 @@ export class TicketService {
     })
   };
 
-  private ticketUrl = " https://team-buh-gok-server.herokuapp.com/api/ticket";
+  private ticketUrl = "https://team-buh-gok-server.herokuapp.com/api/ticket";
 
   private handleError<T>(operation = "operation", result?: T) {
     return (error: any): Observable<T> => {
@@ -46,9 +46,9 @@ export class TicketService {
       .pipe(catchError(this.handleError<Ticket>(`find ticket id=${id}`)));
   }
 
-  updateTicket(id: number, ticket: Ticket): Observable<any> {
+  updateTicket(ticket: Ticket): Observable<any> {
     return this.http
-      .put(`${this.ticketUrl}/${id}`, ticket, this.httpOptions)
+      .put(`${this.ticketUrl}/${ticket.id}`, ticket, this.httpOptions)
       .pipe(catchError(this.handleError<Ticket>("updateTicket")));
   }
 

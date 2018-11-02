@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from "rxjs";
-import { catchError } from "rxjs/operators";
-import {Listing} from "./listing"
+import { catchError } from "rxjs/operators";;
+import { User } from "./user"
 
 @Injectable({
   providedIn: 'root'
 })
-export class ListingService {
+export class UserService {
 
-token:string=localStorage.getItem("token")
+  token: string = localStorage.getItem("token");
 
   constructor(private http: HttpClient) { }
 
@@ -20,7 +20,7 @@ token:string=localStorage.getItem("token")
     })
   };
 
-  private listingUrl = " https://team-buh-gok-server.herokuapp.com/api/housing";
+  userUrl = "https://team-buh-gok-server.herokuapp.com/api/user";
 
   private handleError<T>(operation = "operation", result?: T) {
     return (error: any): Observable<T> => {
@@ -29,10 +29,10 @@ token:string=localStorage.getItem("token")
     };
   }
 
-  listing(listing: Listing): Observable<any> {
+  getUser(id: number): Observable<any> {
     return this.http
-      .post<Listing>(`${this.listingUrl}`, listing, this.httpOptions)
-      .pipe(catchError(this.handleError<Listing>("listing")))
+    .get<User>(`${this.userUrl}/${id}`, this.httpOptions)
+    .pipe(catchError(this.handleError("getUser")));
   }
 
 }

@@ -1,3 +1,21 @@
+<div *ngFor="let housing of housing">
+  <h3>housing type: {{housing.residenceType}}</h3>
+  <p># of rooms: {{housing.rooms}}</p>
+  <p># of bathrooms: {{housing.bathrooms}}</p>
+  <p>address: {{housing.address}}</p>
+  <p>pets allowed: {{housing.petsAllowed}}</p>
+  <p>facilities: {{housing.facilities}}</p>
+  <p>price: ${{housing.price}}</p>
+  <button (click)="deleteHousing(housing
+  )" title="delete ticket" value="housing.id" mat-raised-button>Delete</button>
+</div>
+
+
+
+<agm-map [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
 <div class="newentry">
   <mat-form-field>
     <mat-select placeholder="type of housing" #residenceType>
@@ -62,7 +80,7 @@
     <span matSuffix>.00</span>
   </mat-form-field>
 
-  <button class="button" mat-raised-button (click)=submitListing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
+  <button class="button" mat-raised-button (click)=submitHousing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
 
 </div>
-<app-map-entry></app-map-entry>
+<!-- <app-map-entry></app-map-entry> -->
