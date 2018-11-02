@@ -1,16 +1,18 @@
 <nav>
   <mat-toolbar class="toolbar">
     <mat-toolbar-row>
-        <button class="navlink" mat-menu-item (click)=logout()>Log Out</button>
+
+        <button mat-button [matMenuTriggerFor]="menu"><i class="fas fa-bars"></i></button>
+      <mat-menu #menu="matMenu">
+        <a class="navlink" routerLink='/tickets' *ngIf="isLoggedIn" mat-stroked-button>Admin</a>
+        <a class="navlink" mat-stroked-button routerLink='/home' *ngIf='isLoggedIn'>Home</a>
+        <a class="navlink" mat-stroked-button routerLink='/about' *ngIf='isLoggedIn'>About</a>
+        <a class="navlink" mat-stroked-button routerLink='/new' *ngIf='isLoggedIn'>New Listing</a>
+        <a class="navlink" mat-stroked-button routerLink='/auth' *ngIf='!isLoggedIn'>Login/ Signup</a>
+        <a class="navlink" mat-stroked-button routerLink='/contact' *ngIf='isLoggedIn'>Contact</a>
+        <a class="navlink" mat-stroked-button routerLink='/tickets'>Admin</a>
+        <button class="navlink" mat-stroked-button (click)=logout() *ngIf='isLoggedIn'>Log Out</button>
       </mat-menu>
-      <a class="navlink" routerLink='/tickets' *ngIf="isLoggedIn" mat-stroked-button>Admin</a>
-      <a class="navlink" mat-stroked-button routerLink='/home' *ngIf='isLoggedIn'>Home</a>
-      <a class="navlink" mat-stroked-button routerLink='/about'*ngIf='isLoggedIn'>About</a>
-      <a class="navlink" mat-stroked-button routerLink='/new' *ngIf='isLoggedIn'>New Listing</a>
-      <a class="navlink" mat-stroked-button routerLink='/auth' *ngIf='!isLoggedIn'>Login/ Signup</a>
-      <a class="navlink" mat-stroked-button routerLink='/contact' *ngIf='isLoggedIn'>Contact</a>
-      <a class="navlink" mat-stroked-button routerLink='/tickets'>Admin</a>
-      <button class="navlink" mat-stroked-button (click)=logout() *ngIf='isLoggedIn'>Log Out</button>
     </mat-toolbar-row>
     <!-- </mat-toolbar-row>
       <ng-template #loggedOut >
