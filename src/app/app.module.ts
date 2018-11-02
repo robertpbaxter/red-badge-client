@@ -24,6 +24,7 @@ import { TicketsComponent } from "./tickets/tickets.component";
 import { UserComponent } from './user/user.component';
 import {MatIconModule} from '@angular/material/icon';
 import { MapDetailsComponent } from './map-details/map-details.component';
+import { UpdateHousingComponent } from './update-housing/update-housing.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { MapDetailsComponent } from './map-details/map-details.component';
     NewHousingComponent,
     TicketsComponent,
     UserComponent,
-    MapDetailsComponent
+    MapDetailsComponent,
+    UpdateHousingComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,9 @@ import { MapDetailsComponent } from './map-details/map-details.component';
       libraries: ["places"]
     }),
     MatIconModule
+  ],
+  entryComponents: [
+    UpdateHousingComponent
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
