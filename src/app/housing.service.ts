@@ -46,6 +46,12 @@ export class HousingService {
       .pipe(catchError(this.handleError("getUserHousing", [])));
   }
 
+  getOneHousing(id: number): Observable<any> {
+    return this.http
+      .get<Housing>(`${this.housingUrl}/${id}`, this.httpOptions)
+      .pipe(catchError(this.handleError("getUserHousing")));
+  }
+
   updateHousing(housing: Housing): Observable<any> {
     return this.http
       .put(`${this.housingUrl}/${housing.id}`, housing, this.httpOptions)

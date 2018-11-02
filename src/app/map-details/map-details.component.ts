@@ -9,8 +9,27 @@ import { HousingService } from "../housing.service";
 export class MapDetailsComponent implements OnInit {
   @Input()
   housingId = this.housingId;
+  housing = {
+    id: "",
+    residenceType: "",
+    rooms: "",
+    bathrooms: "",
+    address: "",
+    petsAllowed: "",
+    facilities: "",
+    price: ""
+  };
 
   constructor(private housingService: HousingService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getOneHousing(this.housingId);
+  }
+
+  getOneHousing(id: number): void {
+    this.housingService.getOneHousing(id).subscribe(housing => {
+      console.log(housing);
+      this.housing = housing;
+    });
+  }
 }

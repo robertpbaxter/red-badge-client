@@ -102,5 +102,6 @@ export class NewHousingComponent {
     this.housingService
       .deleteHousing(housing.id)
       .subscribe(result => this.getUserHousing());
+    this.coordsService.deleteCoords(housing.id).subscribe();
   }
 }
