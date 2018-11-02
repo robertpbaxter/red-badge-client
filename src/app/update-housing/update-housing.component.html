@@ -1,30 +1,8 @@
-<div *ngFor="let housing of housing">
-  <h3>housing type: {{housing.residenceType}}</h3>
-  <p># of rooms: {{housing.rooms}}</p>
-  <p># of bathrooms: {{housing.bathrooms}}</p>
-  <p>address: {{housing.address}}</p>
-  <p>pets allowed: {{housing.petsAllowed}}</p>
-  <p>facilities: {{housing.facilities}}</p>
-  <p>price: ${{housing.price}}</p>
-  <p>id: {{housing.id}}</p>
-  <button (click)="deleteHousing(housing
-  )" title="delete ticket" value="housing.id" mat-raised-button>Delete</button>
-  <mat-card>
-    <mat-card-content>
-      <button md-raised-button (click)="openDialog(housing)">Update</button>
-    </mat-card-content>
-  </mat-card>
-</div>
-
-
-
-<agm-map [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
-
-<div class="newentry">
+<div class="editEntry">
+<h2 mat-dialog-title>Update</h2>
+<mat-dialog-content>
   <mat-form-field>
-    <mat-select placeholder="type of housing" #residenceType>
+    <mat-select placeholder="type of housing" #residenceType [(ngModel)]='data.housing.residenceType'>
       <mat-option value="House">House</mat-option>
       <mat-option value="Apartment">Apartment</mat-option>
       <mat-option value="Condo">Condo</mat-option>
@@ -35,7 +13,7 @@
   </mat-form-field>
 
   <mat-form-field>
-    <mat-select placeholder="number of rooms for rent" #rooms>
+    <mat-select placeholder="number of rooms for rent" #rooms [(ngModel)]='data.housing.rooms'>
       <mat-option value="1">1</mat-option>
       <mat-option value="2">2</mat-option>
       <mat-option value="3">3</mat-option>
@@ -50,7 +28,7 @@
   </mat-form-field>
 
   <mat-form-field>
-    <mat-select placeholder="number of bathrooms" #bathrooms>
+    <mat-select placeholder="number of bathrooms" #bathrooms [(ngModel)]='data.housing.bathrooms'>
       <mat-option value="1">1</mat-option>
       <mat-option value="1.5">1.5</mat-option>
       <mat-option value="2">2</mat-option>
@@ -65,11 +43,11 @@
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Address" #address>
+    <input matInput placeholder="Address" #address [(ngModel)]='data.housing.address'>
   </mat-form-field>
 
   <mat-form-field>
-    <mat-select placeholder="pets allowed" #petsAllowed>
+    <mat-select placeholder="pets allowed" #petsAllowed [(ngModel)]='data.housing.petsAllowed'>
       <mat-option value="Yes">Yes</mat-option>
       <mat-option value="No">No</mat-option>
     </mat-select>
@@ -77,16 +55,26 @@
   </mat-form-field>
 
   <mat-form-field class="facilities">
-    <textarea #facilities matInput placeholder="please list facilities"></textarea>
+    <textarea [(ngModel)]='data.housing.facilities' #facilities matInput placeholder="please list facilities"></textarea>
   </mat-form-field>
 
   <mat-form-field>
-    <input #price matInput placeholder="rent amount per month" type="number" class="example-right-align">
+    <input [(ngModel)]='data.housing.price' #price matInput placeholder="rent amount per month" type="number" class="example-right-align">
     <span matPrefix>$&nbsp;</span>
     <span matSuffix>.00</span>
   </mat-form-field>
 
-  <button class="button" mat-raised-button (click)=submitHousing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
 
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="updateHousing(data.housing.id,residenceType.value,
+    rooms.value,
+    bathrooms.value,
+    address.value,
+    petsAllowed.value,
+    facilities.value,
+    price.value)">update</button>
+    <button mat-raised-button (click)="onCloseCancel()">cancel</button>
+  </mat-dialog-actions>
+
+</mat-dialog-content>
 </div>
-<!-- <app-map-entry></app-map-entry> -->

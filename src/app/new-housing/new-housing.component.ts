@@ -3,6 +3,9 @@ import { HousingService } from "../housing.service";
 import { Housing } from "../housing";
 import { CoordsService } from "../coords.service";
 import { Coords } from "../coords";
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { UpdateHousingComponent } from "../update-housing/update-housing.component";
+
 
 @Component({
   selector: "app-new-housing",
@@ -10,11 +13,15 @@ import { Coords } from "../coords";
   styleUrls: ["./new-housing.component.css"]
 })
 export class NewHousingComponent {
+
+  dialogResult = ''
+
   ngOnInit() {
     this.getUserHousing();
   }
 
   housing: Housing[];
+  editHousing: Housing
 
   coords: Coords;
   startingLat = 39.7684;
@@ -24,8 +31,34 @@ export class NewHousingComponent {
 
   constructor(
     private housingService: HousingService,
-    private coordsService: CoordsService
-  ) {}
+    private coordsService: CoordsService,
+    public dialog: MatDialog
+  ) { }
+
+  // openDialog() {
+  //   let dialogReg = this.dialog.open(UpdateHousingComponent, {
+  //     width: '600px',
+  //     data: 'This text is passed into the dialog',
+
+  //   });
+  //   dialogReg.afterClosed().subscribe( results => {
+  //     console.log(`Dialog : ${results}`);
+  //     this.dialogResult = results
+  //   })
+  // }
+
+
+  openDialog(housing: Housing) {
+    const dialogConfig = new MatDialogConfig();
+    console.log(housing)
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    dialogConfig.data = {
+      housing: housing
+    };
+    this.dialog.open(UpdateHousingComponent, dialogConfig)
+  }
 
   onPickedLocation(event) {
     this.lat = event.coords.lat;
@@ -96,6 +129,11 @@ export class NewHousingComponent {
       console.log(housing);
       this.housing = housing;
     });
+  }
+
+  updateHousing(housing: Housing): void {
+    console.log(housing);
+    // this.housingService.updateHousing(housing).subscribe(results => this.getUserHousing())
   }
 
   deleteHousing(housing: Housing): void {

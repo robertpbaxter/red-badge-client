@@ -21,9 +21,11 @@ import { MapEntryComponent } from "./map-entry/map-entry.component";
 import { NewHousingComponent } from "./new-housing/new-housing.component";
 import { AuthGuard } from "./auth.guard";
 import { TicketsComponent } from "./tickets/tickets.component";
-import { UserComponent } from './user/user.component';
-import {MatIconModule} from '@angular/material/icon';
-import { MapDetailsComponent } from './map-details/map-details.component';
+import { UserComponent } from "./user/user.component";
+import { MatIconModule } from "@angular/material/icon";
+import { MapDetailsComponent } from "./map-details/map-details.component";
+import { HousingDetailComponent } from "./housing-detail/housing-detail.component";
+import { UpdateHousingComponent } from "./update-housing/update-housing.component";
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { MapDetailsComponent } from './map-details/map-details.component';
     NewHousingComponent,
     TicketsComponent,
     UserComponent,
-    MapDetailsComponent
+    MapDetailsComponent,
+    HousingDetailComponent,
+    UpdateHousingComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +60,7 @@ import { MapDetailsComponent } from './map-details/map-details.component';
     }),
     MatIconModule
   ],
+  entryComponents: [UpdateHousingComponent],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
