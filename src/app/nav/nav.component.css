@@ -13,7 +13,11 @@
   flex: 1 1 auto;
  }
 
- .fas {
+ .fa-bars {
      color: black;
      font-size: 15pt
+ }
+
+ .menutitle {
+     color: black;
  }
