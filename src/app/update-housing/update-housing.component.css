@@ -2,3 +2,7 @@ agm-map {
   height: 400px;
   max-width: 600px;
 }
+
+.editsingle {
+  margin: 10px;
+}

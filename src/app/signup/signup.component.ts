@@ -38,7 +38,8 @@ export class SignupComponent implements OnInit {
         localStorage.setItem("token", credentials.sessionToken);
         localStorage.setItem("role", credentials.user.permission);
         email = "";
-        this.router.navigate(['/home'])
+        // this.router.navigate(['/home'])
+        window.location.href = '/auth'
       });
   }
 
