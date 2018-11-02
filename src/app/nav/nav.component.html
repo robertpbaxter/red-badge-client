@@ -1,13 +1,17 @@
 <nav>
   <mat-toolbar class="toolbar">
     <mat-toolbar-row>
-      <a class="navlink" mat-stroked-button routerLink='/home'>Home</a>
-      <a class="navlink" mat-stroked-button routerLink='/about'>About</a>
-      <a class="navlink" mat-stroked-button routerLink='/new'>New Listing</a>
-      <a class="navlink" mat-stroked-button routerLink='/auth'>Login/ Signup</a>
-      <a class="navlink" mat-stroked-button routerLink='/contact'>Contact</a>
-      <a class="navlink" mat-stroked-button routerLink='/tickets' *ngIf="isLoggedIn" >Admin</a>
-      <button class="navlink" mat-stroked-button (click)=logout()>Log Out</button>
+      <button mat-button [matMenuTriggerFor]="menu"><i class="fas fa-bars"></i></button>
+      <mat-menu #menu="matMenu">
+        <a class="navlink" mat-menu-item routerLink='/home'>Home</a>
+        <a class="navlink" mat-menu-item routerLink='/about'>About</a>
+        <a class="navlink" mat-menu-item routerLink='/new'>New Listing</a>
+        <a class="navlink" mat-menu-item routerLink='/auth'>Login/ Signup</a>
+        <a class="navlink" mat-menu-item routerLink='/contact'>Contact</a>
+
+        <button class="navlink" mat-menu-item (click)=logout()>Log Out</button>
+      </mat-menu>
+      <a class="navlink" routerLink='/tickets' *ngIf="isLoggedIn" mat-stroked-button>Admin</a>
     </mat-toolbar-row>
   </mat-toolbar>
 </nav>

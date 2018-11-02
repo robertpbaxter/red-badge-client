@@ -1,7 +1,7 @@
 <div class="editEntry">
 <h2 mat-dialog-title>Update</h2>
 <mat-dialog-content>
-  <mat-form-field>
+  <mat-form-field class='editsingle'>
     <mat-select placeholder="type of housing" #residenceType [(ngModel)]='data.housing.residenceType'>
       <mat-option value="House">House</mat-option>
       <mat-option value="Apartment">Apartment</mat-option>
@@ -12,7 +12,7 @@
     </mat-select>
   </mat-form-field>
 
-  <mat-form-field>
+  <mat-form-field class='editsingle'>
     <mat-select placeholder="number of rooms for rent" #rooms [(ngModel)]='data.housing.rooms'>
       <mat-option value="1">1</mat-option>
       <mat-option value="2">2</mat-option>
@@ -27,7 +27,7 @@
     </mat-select>
   </mat-form-field>
 
-  <mat-form-field>
+  <mat-form-field class='editsingle'>
     <mat-select placeholder="number of bathrooms" #bathrooms [(ngModel)]='data.housing.bathrooms'>
       <mat-option value="1">1</mat-option>
       <mat-option value="1.5">1.5</mat-option>
@@ -42,11 +42,11 @@
     </mat-select>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
+  <mat-form-field class='editsingle'>
     <input matInput placeholder="Address" #address [(ngModel)]='data.housing.address'>
   </mat-form-field>
 
-  <mat-form-field>
+  <mat-form-field class='editsingle'>
     <mat-select placeholder="pets allowed" #petsAllowed [(ngModel)]='data.housing.petsAllowed'>
       <mat-option value="Yes">Yes</mat-option>
       <mat-option value="No">No</mat-option>
@@ -54,11 +54,11 @@
     <!-- <input matInput placeholder="if yes what kind"> -->
   </mat-form-field>
 
-  <mat-form-field class="facilities">
+  <mat-form-field class='editsingle'>
     <textarea [(ngModel)]='data.housing.facilities' #facilities matInput placeholder="please list facilities"></textarea>
   </mat-form-field>
 
-  <mat-form-field>
+  <mat-form-field class='editsingle'>
     <input [(ngModel)]='data.housing.price' #price matInput placeholder="rent amount per month" type="number" class="example-right-align">
     <span matPrefix>$&nbsp;</span>
     <span matSuffix>.00</span>

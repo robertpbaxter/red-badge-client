@@ -12,3 +12,8 @@
  .example-spacer {
   flex: 1 1 auto;
  }
+
+ .fas {
+     color: black;
+     font-size: 15pt
+ }
