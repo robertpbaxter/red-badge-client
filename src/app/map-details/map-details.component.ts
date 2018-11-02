@@ -28,7 +28,6 @@ export class MapDetailsComponent implements OnInit {
 
   getOneHousing(id: number): void {
     this.housingService.getOneHousing(id).subscribe(housing => {
-      console.log(housing);
       this.housing = housing;
     });
   }
