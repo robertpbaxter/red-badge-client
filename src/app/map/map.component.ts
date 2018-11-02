@@ -20,7 +20,6 @@ export class MapComponent implements OnInit {
 
   fetchCoordinates(): void {
     this.coordsService.getAllCoords().subscribe(coords => {
-      console.log(coords);
       this.coords = coords;
     });
   }
