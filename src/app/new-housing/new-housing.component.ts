@@ -77,6 +77,7 @@ export class NewHousingComponent {
         console.log(results.housing.id, this.lat, this.lng);
         this.newCoords(results.housing.id);
       });
+      // window.location.href = '/new';?
   }
 
   newCoords(housingId: number): void {

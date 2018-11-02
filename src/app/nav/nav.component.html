@@ -1,17 +1,24 @@
 <nav>
   <mat-toolbar class="toolbar">
     <mat-toolbar-row>
-      <a class="navlink" mat-stroked-button routerLink='/home'>Home</a>
-      <a class="navlink" mat-stroked-button routerLink='/about'>About</a>
-      <a class="navlink" mat-stroked-button routerLink='/new'>New Listing</a>
-      <a class="navlink" mat-stroked-button routerLink='/auth'>Login/ Signup</a>
-      <a class="navlink" mat-stroked-button routerLink='/contact'>Contact</a>
-      <a class="navlink" mat-stroked-button routerLink='/tickets' *ngIf="isLoggedIn" >Admin</a>
-      <button class="navlink" mat-stroked-button (click)=logout()>Log Out</button>
+      <a class="navlink" mat-stroked-button routerLink='/home' *ngIf='isLoggedIn'>Home</a>
+      <a class="navlink" mat-stroked-button routerLink='/about'*ngIf='isLoggedIn'>About</a>
+      <a class="navlink" mat-stroked-button routerLink='/new' *ngIf='isLoggedIn'>New Listing</a>
+      <a class="navlink" mat-stroked-button routerLink='/auth' *ngIf='!isLoggedIn'>Login/ Signup</a>
+      <a class="navlink" mat-stroked-button routerLink='/contact' *ngIf='isLoggedIn'>Contact</a>
+      <a class="navlink" mat-stroked-button routerLink='/tickets'>Admin</a>
+      <button class="navlink" mat-stroked-button (click)=logout() *ngIf='isLoggedIn'>Log Out</button>
     </mat-toolbar-row>
+    <!-- </mat-toolbar-row>
+      <ng-template #loggedOut >
+        <a class="navlink" mat-stroked-button routerLink='/auth'>Login/ Signup</a>
+      </ng-template> -->
   </mat-toolbar>
 </nav>
 <router-outlet></router-outlet>
 
-<!-- {{localStorage === '' ? ngHide : "Home"}} -->
+<!-- {{localStorage === '' ? visibility:'hidden' : "Home"}} -->
 <!-- *ngIf="localStorage === '' ? visibility:'hidden' : 'Home' " -->
+<!-- <a class="navlink" #adminbtn mat-stroked-button routerLink='/tickets' *ngIf=isAdmin() >Admin</a>}} -->
+
+<!-- <mat-toolbar-row *ngIf="isLoggedIn; else loggedOut" ></mat-toolbar-row> -->

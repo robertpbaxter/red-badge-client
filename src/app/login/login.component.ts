@@ -23,18 +23,19 @@ export class LoginComponent implements OnInit {
     this.login(e, p);
     }
   }
-
+  
   login(email: string, password: string): void {
     console.log('Welcome!')
     this.authService
-      .login({ email, password } as User)
-      .subscribe(credentials => { console.log(credentials)
-        localStorage.setItem("token", credentials.sessionToken);
-        localStorage.setItem("role", credentials.user.permission);
-        email = "";
-        this.router.navigate(['/home'])
+    .login({ email, password } as User)
+    .subscribe(credentials => { console.log(credentials)
+      localStorage.setItem("token", credentials.sessionToken);
+      localStorage.setItem("role", credentials.user.permission);
+      email = "";
+      // this.router.navigate(['/home'])
+      window.location.href = '/home'
       });
-  }
-
+    }
+    
   ngOnInit() {}
 }
