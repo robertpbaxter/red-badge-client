@@ -9,12 +9,14 @@ import { AuthGuard } from "./auth.guard";
 import { NewHousingComponent } from "./new-housing/new-housing.component";
 import { TicketsComponent } from "./tickets/tickets.component";
 import { HousingDetailComponent } from "./housing-detail/housing-detail.component";
+import { SignupComponent } from "./signup/signup.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent, canActivate: [AuthGuard] },
   { path: "contact", component: ContactComponent, canActivate: [AuthGuard] },
   { path: "auth", component: AuthComponent },
+  { path: "signup", component: SignupComponent },
   { path: "about", component: AboutComponent, canActivate: [AuthGuard] },
   { path: "tickets", component: TicketsComponent, canActivate: [AuthGuard] },
   { path: "new", component: NewHousingComponent, canActivate: [AuthGuard] },
