@@ -21,6 +21,7 @@ import { MapEntryComponent } from "./map-entry/map-entry.component";
 import { NewHousingComponent } from "./new-housing/new-housing.component";
 import { AuthGuard } from "./auth.guard";
 import { TicketsComponent } from "./tickets/tickets.component";
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TicketsComponent } from "./tickets/tickets.component";
     MapComponent,
     MapEntryComponent,
     NewHousingComponent,
-    TicketsComponent
+    TicketsComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

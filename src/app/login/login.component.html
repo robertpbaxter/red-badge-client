@@ -4,13 +4,13 @@
     <div class="form-group">
       <label class='email'>
         Email:
-        <input type="text" #email />
+        <input type="text" #email required />
       </label>
     </div>
     <div class="form-group">
       <label class='password'>
         Password:
-        <input type="password" #password />
+        <input type="password" #password required />
       </label>
     </div>
     <button type="submit" (click)=validateLogin(email.value,password.value)>Log In</button>
