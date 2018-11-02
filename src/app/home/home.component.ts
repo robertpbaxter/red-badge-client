@@ -1,34 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { Home } from '../home';
-import { HomeService } from '../home.service';
-import { MatTableDataSource } from '@angular/material';
+import { Component, OnInit } from "@angular/core";
+import { Housing } from "../housing";
+import { HousingService } from "../housing.service";
+import { MatTableDataSource } from "@angular/material";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-
   dataSource;
-  displayedColumns = ['residenceType', 'rooms', 'address', 'price']
+  displayedColumns = ["residenceType", "rooms", "address", "price"];
 
-  homes: Home[];
+  housing: Housing[];
 
-  constructor(private homeService: HomeService) { }
+  constructor(private housingService: HousingService) {}
 
   ngOnInit() {
-    this.home()
+    this.getAllHousing();
   }
 
-  home(): void {
-    this.homeService.home().subscribe(homes => {
-      if (!homes) {
+  getAllHousing(): void {
+    this.housingService.getAllHousing().subscribe(housing => {
+      if (!housing) {
         return;
       }
-      this.dataSource = new MatTableDataSource(homes)
-    })
-
+      this.dataSource = new MatTableDataSource(housing);
+    });
   }
-
 }

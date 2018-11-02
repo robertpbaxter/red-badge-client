@@ -23,6 +23,7 @@ import { AuthGuard } from "./auth.guard";
 import { TicketsComponent } from "./tickets/tickets.component";
 import { UserComponent } from './user/user.component';
 import {MatIconModule} from '@angular/material/icon';
+import { MapDetailsComponent } from './map-details/map-details.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatIconModule} from '@angular/material/icon';
     MapEntryComponent,
     NewHousingComponent,
     TicketsComponent,
-    UserComponent
+    UserComponent,
+    MapDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -47,7 +47,6 @@ export class TicketService {
   }
 
   updateTicket(ticket: Ticket): Observable<any> {
-    console.log(status)
     return this.http
       .put(`${this.ticketUrl}/${ticket.id}`, ticket, this.httpOptions)
       .pipe(catchError(this.handleError<Ticket>("updateTicket")));

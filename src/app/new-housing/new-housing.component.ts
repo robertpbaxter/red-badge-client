@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { ListingService } from "../listing.service";
-import { Listing } from "../listing";
+import { HousingService } from "../housing.service";
+import { Housing } from "../housing";
 import { CoordsService } from "../coords.service";
 import { Coords } from "../coords";
 
@@ -10,12 +10,11 @@ import { Coords } from "../coords";
   styleUrls: ["./new-housing.component.css"]
 })
 export class NewHousingComponent {
-
   ngOnInit() {
-    this.userListenings();
+    this.getUserHousing();
   }
 
-  listings: Listing[];
+  housing: Housing[];
 
   coords: Coords;
   startingLat = 39.7684;
@@ -24,7 +23,7 @@ export class NewHousingComponent {
   lng: number = null;
 
   constructor(
-    private listingService: ListingService,
+    private housingService: HousingService,
     private coordsService: CoordsService
   ) {}
 
@@ -34,7 +33,7 @@ export class NewHousingComponent {
     console.log(this.lat, this.lng);
   }
 
-  submitListing(
+  submitHousing(
     residenceType: string,
     rooms: string,
     bathrooms: string,
@@ -43,7 +42,7 @@ export class NewHousingComponent {
     facilities: string,
     price: string
   ): void {
-    this.listing(
+    this.newHousing(
       residenceType,
       rooms,
       bathrooms,
@@ -54,7 +53,7 @@ export class NewHousingComponent {
     );
   }
 
-  listing(
+  newHousing(
     residenceType: string,
     rooms: string,
     bathrooms: string,
@@ -63,8 +62,8 @@ export class NewHousingComponent {
     facilities: string,
     price: string
   ): void {
-    this.listingService
-      .listing({
+    this.housingService
+      .newHousing({
         residenceType,
         rooms,
         bathrooms,
@@ -72,7 +71,7 @@ export class NewHousingComponent {
         petsAllowed,
         facilities,
         price
-      } as Listing)
+      } as Housing)
       .subscribe(results => {
         alert("Listing Added");
         console.log(results.housing.id, this.lat, this.lng);
@@ -91,18 +90,17 @@ export class NewHousingComponent {
       .subscribe(results => console.log(results));
   }
 
-userListenings(): void {
-  this.listingService.userListings(). subscribe(listings => {
-    console.log(listings);
-    this.listings = listings
-  })
-}
+  getUserHousing(): void {
+    this.housingService.getUserHousing().subscribe(housing => {
+      console.log(housing);
+      this.housing = housing;
+    });
+  }
 
-deleteListing(listing: Listing): void {
-  console.log("ticket deleted!", listing.id);
-  this.listingService
-    .deleteListing(listing.id)
-    .subscribe(result => this.userListenings());
-}
-
+  deleteHousing(housing: Housing): void {
+    console.log("ticket deleted!", housing.id);
+    this.housingService
+      .deleteHousing(housing.id)
+      .subscribe(result => this.getUserHousing());
+  }
 }

@@ -2,6 +2,10 @@
 
 <agm-map [latitude]="startingLat" [longitude]="startingLng">
   <div *ngFor="let coord of coords">
-    <agm-marker id="coord.housingId" [latitude]="coord.latitude" [longitude]="coord.longitude"></agm-marker>
+    <agm-marker id="coord.housingId" [latitude]="coord.latitude" [longitude]="coord.longitude">
+      <agm-info-window>
+        <app-map-details [housingId]="coord.housingId"></app-map-details>
+      </agm-info-window>
+    </agm-marker>
   </div>
 </agm-map>

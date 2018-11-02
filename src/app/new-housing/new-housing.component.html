@@ -1,4 +1,4 @@
-<div *ngFor= "let listing of listings">
+<div *ngFor="let listing of listings">
   <h3>housing type: {{listing.residenceType}}</h3>
   <p># of rooms: {{listing.rooms}}</p>
   <p># of bathrooms: {{listing.bathrooms}}</p>
@@ -80,7 +80,7 @@
     <span matSuffix>.00</span>
   </mat-form-field>
 
-  <button class="button" mat-raised-button (click)=submitListing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
+  <button class="button" mat-raised-button (click)=submitHousing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
 
 </div>
 <!-- <app-map-entry></app-map-entry> -->
