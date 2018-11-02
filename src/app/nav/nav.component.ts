@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+// import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-nav',
@@ -8,19 +9,28 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
-  isLoggedIn = localStorage.getItem('token')
-
+  // isAdmin: boolean = false;
+  isLoggedIn = localStorage.getItem('token');
+  isAdmin = localStorage.getItem('permission');
+  
   constructor(
-    private router: Router,
+    // private router: Router,
     private authService: AuthService) { }
 
   ngOnInit() {
+    // this.verifyAdmin();
+    this.isLoggedIn
   }
 
   logout(): void {
     this.authService.logout();
-    this.router.navigate(['/auth']);
+    // this.router.navigate(['/auth']);
+    window.location.href = '/auth'
   }
 
+  // verifyAdmin() {
+  //     if(localStorage.getItem('permission') !== 'admin'){
+  //       this.isAdmin = document.getElementById('adminbtn')
+  //     }
+  // }
 }
