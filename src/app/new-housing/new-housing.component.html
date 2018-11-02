@@ -1,92 +1,107 @@
 <div *ngFor="let housing of housing">
-  <h3>housing type: {{housing.residenceType}}</h3>
-  <p># of rooms: {{housing.rooms}}</p>
-  <p># of bathrooms: {{housing.bathrooms}}</p>
-  <p>address: {{housing.address}}</p>
-  <p>pets allowed: {{housing.petsAllowed}}</p>
-  <p>facilities: {{housing.facilities}}</p>
-  <p>price: ${{housing.price}}</p>
-  <p>id: {{housing.id}}</p>
-  <button (click)="deleteHousing(housing
-  )" title="delete ticket" value="housing.id" mat-raised-button>Delete</button>
-  <mat-card>
+  <mat-card class="housingcard">
+    <mat-card-header>
+      <mat-card-title>
+        Listing Id {{housing.id}}
+      </mat-card-title>
+    </mat-card-header>
     <mat-card-content>
-      <button md-raised-button (click)="openDialog(housing)">Update</button>
+      <p>housing type: <span class="info">{{housing.residenceType}}</span> </p>
+      <p># of rooms: <span class="info">{{housing.rooms}}</span></p>
+      <p># of bathrooms: <span class="info">{{housing.bathrooms}}</span></p>
+      <p>address: <span class="info">{{housing.address}}</span></p>
+      <p>pets allowed: <span class="info">{{housing.petsAllowed}}</span></p>
+      <p>facilities: <span class="info">{{housing.facilities}}</span></p>
+      <p>price: <span class="info">${{housing.price}}</span></p>
+      <p>id: <span class="info">{{housing.id}}</span></p>
     </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button (click)="openDialog(housing)">Update</button>
+      <button (click)="deleteHousing(housing
+  )" title="delete ticket" value="housing.id" mat-raised-button>Delete</button>
+    </mat-card-actions>
+
   </mat-card>
 </div>
 
+<mat-accordion>
+  <mat-expansion-panel class="newlisting">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Create New Listing
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-form-field class="infomation">
+      <mat-select placeholder="type of housing" #residenceType>
+        <mat-option value="House">House</mat-option>
+        <mat-option value="Apartment">Apartment</mat-option>
+        <mat-option value="Condo">Condo</mat-option>
+        <mat-option value="Townouse">Townouse</mat-option>
+        <mat-option value="Duplex/Triplex">Duplex/Triplex</mat-option>
+        <mat-option value="Detached House">Detached House</mat-option>
+      </mat-select>
+    </mat-form-field>
 
+    <mat-form-field class="infomation">
+      <mat-select placeholder="number of rooms for rent" #rooms>
+        <mat-option value="1">1</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3">3</mat-option>
+        <mat-option value="4">4</mat-option>
+        <mat-option value="5">5</mat-option>
+        <mat-option value="6">6</mat-option>
+        <mat-option value="7">7</mat-option>
+        <mat-option value="8">8</mat-option>
+        <mat-option value="9">9</mat-option>
+        <mat-option value="10+">10+</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="infomation">
+      <mat-select placeholder="number of bathrooms" #bathrooms>
+        <mat-option value="1">1</mat-option>
+        <mat-option value="1.5">1.5</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="2.5">2.5</mat-option>
+        <mat-option value="3">3</mat-option>
+        <mat-option value="3.5">3.5</mat-option>
+        <mat-option value="4">4</mat-option>
+        <mat-option value="4.5">4.5</mat-option>
+        <mat-option value="5">5</mat-option>
+        <mat-option value="5.5">5.5</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="infomation">
+      <input matInput placeholder="Address" #address>
+    </mat-form-field>
+
+    <mat-form-field class="infomation">
+      <mat-select placeholder="pets allowed" #petsAllowed>
+        <mat-option value="Yes">Yes</mat-option>
+        <mat-option value="No">No</mat-option>
+      </mat-select>
+      <!-- <input matInput placeholder="if yes what kind"> -->
+    </mat-form-field>
+
+    <mat-form-field class="infomation">
+      <textarea #facilities matInput placeholder="please list facilities"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="infomation">
+      <input #price matInput placeholder="rent amount per month" type="number" class="example-right-align">
+      <span matPrefix>$&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field>
+
+    <button class="button" mat-raised-button (click)=submitHousing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
+
+
+  </mat-expansion-panel>
+</mat-accordion>
+<!-- <app-map-entry></app-map-entry> -->
 
 <agm-map [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>
-
-<div class="newentry">
-  <mat-form-field>
-    <mat-select placeholder="type of housing" #residenceType>
-      <mat-option value="House">House</mat-option>
-      <mat-option value="Apartment">Apartment</mat-option>
-      <mat-option value="Condo">Condo</mat-option>
-      <mat-option value="Townouse">Townouse</mat-option>
-      <mat-option value="Duplex/Triplex">Duplex/Triplex</mat-option>
-      <mat-option value="Detached House">Detached House</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-select placeholder="number of rooms for rent" #rooms>
-      <mat-option value="1">1</mat-option>
-      <mat-option value="2">2</mat-option>
-      <mat-option value="3">3</mat-option>
-      <mat-option value="4">4</mat-option>
-      <mat-option value="5">5</mat-option>
-      <mat-option value="6">6</mat-option>
-      <mat-option value="7">7</mat-option>
-      <mat-option value="8">8</mat-option>
-      <mat-option value="9">9</mat-option>
-      <mat-option value="10+">10+</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-select placeholder="number of bathrooms" #bathrooms>
-      <mat-option value="1">1</mat-option>
-      <mat-option value="1.5">1.5</mat-option>
-      <mat-option value="2">2</mat-option>
-      <mat-option value="2.5">2.5</mat-option>
-      <mat-option value="3">3</mat-option>
-      <mat-option value="3.5">3.5</mat-option>
-      <mat-option value="4">4</mat-option>
-      <mat-option value="4.5">4.5</mat-option>
-      <mat-option value="5">5</mat-option>
-      <mat-option value="5.5">5.5</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Address" #address>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-select placeholder="pets allowed" #petsAllowed>
-      <mat-option value="Yes">Yes</mat-option>
-      <mat-option value="No">No</mat-option>
-    </mat-select>
-    <!-- <input matInput placeholder="if yes what kind"> -->
-  </mat-form-field>
-
-  <mat-form-field class="facilities">
-    <textarea #facilities matInput placeholder="please list facilities"></textarea>
-  </mat-form-field>
-
-  <mat-form-field>
-    <input #price matInput placeholder="rent amount per month" type="number" class="example-right-align">
-    <span matPrefix>$&nbsp;</span>
-    <span matSuffix>.00</span>
-  </mat-form-field>
-
-  <button class="button" mat-raised-button (click)=submitHousing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
-
-</div>
-<!-- <app-map-entry></app-map-entry> -->

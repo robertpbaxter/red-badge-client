@@ -1,3 +1,29 @@
-<p>
-  housing-detail works!
-</p>
+<div>
+  <mat-list>
+    <mat-list-item>
+      <h3><i class="fas fa-home"></i> {{housing.residenceType}}</h3>
+    </mat-list-item>
+    <mat-list-item>
+      <p># of rooms: {{housing.rooms}}</p>
+    </mat-list-item>
+    <mat-list-item>
+      <p># of bathrooms: {{housing.bathrooms}}</p>
+    </mat-list-item>
+    <mat-list-item>
+      <p>address: {{housing.address}}</p>
+    </mat-list-item>
+    <mat-list-item>
+      <p>pets allowed: {{housing.petsAllowed}}</p>
+    </mat-list-item>
+    <mat-list-item>
+      <p>facilities: {{housing.facilities}}</p>
+    </mat-list-item>
+    <mat-list-item>
+      <p>price: ${{housing.price}}</p>
+    </mat-list-item>
+    <mat-list-item>
+      <p>id: {{housing.id}}</p>
+    </mat-list-item>
+  
+  </mat-list>
+</div>

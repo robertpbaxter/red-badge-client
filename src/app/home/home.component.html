@@ -4,12 +4,12 @@
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <ng-container matColumnDef="residenceType">
-      <th mat-header-cell *matHeaderCellDef> house type </th>
+      <th mat-header-cell *matHeaderCellDef><i class="fas fa-home"></i></th>
       <td mat-cell *matCellDef="let housing"> {{housing.residenceType}} </td>
     </ng-container>
 
     <ng-container matColumnDef="rooms">
-      <th mat-header-cell *matHeaderCellDef># of rooms </th>
+      <th mat-header-cell *matHeaderCellDef><i class="fas fa-hashtag"></i> of rooms </th>
       <td mat-cell *matCellDef="let housing"> {{housing.rooms}} </td>
     </ng-container>
 
@@ -19,7 +19,7 @@
     </ng-container>
 
     <ng-container matColumnDef="price">
-      <th mat-header-cell *matHeaderCellDef> price per month </th>
+      <th mat-header-cell *matHeaderCellDef><i class="fas fa-dollar-sign"></i> per month</th>
       <td mat-cell *matCellDef="let housing">${{housing.price}} </td>
     </ng-container>
 

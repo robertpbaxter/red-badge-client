@@ -12,3 +12,12 @@
  .example-spacer {
   flex: 1 1 auto;
  }
+
+ .fa-bars {
+     color: black;
+     font-size: 15pt
+ }
+
+ .menutitle {
+     color: black;
+ }

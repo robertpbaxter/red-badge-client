@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { Coords } from "./coords";
+import { last } from "@angular/router/src/utils/collection";
 
 @Injectable({
   providedIn: "root"
@@ -46,15 +47,19 @@ export class CoordsService {
       .pipe(catchError(this.handleError("fetchUserCoords", [])));
   }
 
-  getOneCoords(id: number): Observable<Coords> {
+  getOneCoords(id: number): Observable<any> {
     return this.http
       .get<Coords>(`${this.coordsUrl}/${id}`, this.httpOptions)
       .pipe(catchError(this.handleError<Coords>(`find coords id=${id}`)));
   }
 
-  updateCoords(id: number, coords: Coords): Observable<any> {
+  updateCoords(coords: Coords): Observable<any> {
+    let newCoords = {
+      latitude: coords.lat,
+      longitude: coords.lng
+    };
     return this.http
-      .put(`${this.coordsUrl}/${id}`, coords, this.httpOptions)
+      .put(`${this.coordsUrl}/${coords.housingId}`, newCoords, this.httpOptions)
       .pipe(catchError(this.handleError<Coords>("updateCoords")));
   }
 

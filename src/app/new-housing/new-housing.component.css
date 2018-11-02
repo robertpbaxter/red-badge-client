@@ -10,3 +10,26 @@
 agm-map {
   height: 50vh;
 }
+
+.info{
+  font-size: 12pt;
+  margin-left: 1%;
+}
+
+.housingcard {
+  width: 600px;
+  margin: 2%;
+}
+
+.information {
+  padding: 5px;
+}
+
+.newlisting {
+  margin: 2%;
+  width: 35vw;
+}
+
+.button {
+  margin: 10px;
+}
