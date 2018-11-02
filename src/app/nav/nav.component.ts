@@ -11,7 +11,7 @@ import { AuthService } from '../auth.service';
 export class NavComponent implements OnInit {
   // isAdmin: boolean = false;
   isLoggedIn = localStorage.getItem('token');
-  isAdmin = localStorage.getItem('permission');
+  // isAdmin = localStorage.getItem('role');
   
   constructor(
     // private router: Router,
@@ -28,9 +28,11 @@ export class NavComponent implements OnInit {
     window.location.href = '/auth'
   }
 
-  // verifyAdmin() {
-  //     if(localStorage.getItem('permission') !== 'admin'){
-  //       this.isAdmin = document.getElementById('adminbtn')
-  //     }
-  // }
+  verifyAdmin() {
+      if(localStorage.getItem('role') !== 'admin'){
+        return false
+      } else {
+        return true
+      }
+  }
 }
