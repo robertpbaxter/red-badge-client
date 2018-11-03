@@ -104,7 +104,7 @@ export class NewHousingComponent {
     let lng = this.lng;
     this.coordsService
       .newCoords({ housingId, lat, lng } as Coords)
-      .subscribe(results => console.log(results));
+      .subscribe(results => (window.location.href = "/home"));
   }
 
   getUserHousing(): void {
