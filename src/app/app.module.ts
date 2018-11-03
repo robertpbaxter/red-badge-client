@@ -26,6 +26,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MapDetailsComponent } from "./map-details/map-details.component";
 import { HousingDetailComponent } from "./housing-detail/housing-detail.component";
 import { UpdateHousingComponent } from "./update-housing/update-housing.component";
+import { UserSettingsComponent } from './user-settings/user-settings.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { UpdateHousingComponent } from "./update-housing/update-housing.componen
     UserComponent,
     MapDetailsComponent,
     HousingDetailComponent,
-    UpdateHousingComponent
+    UpdateHousingComponent,
+    UserSettingsComponent
   ],
   imports: [
     BrowserModule,
