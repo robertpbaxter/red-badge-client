@@ -3,10 +3,10 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.static(`${__dirname}/dist/nest-capstone-project`));
+app.use(express.static(`${__dirname}/dist/client`));
 
 app.get("/*", function(req, res) {
-  res.sendFile(`${__dirname}/dist/nest-capstone-project/index.html`);
+  res.sendFile(`${__dirname}/dist/client/index.html`);
 });
 
 app.listen(process.env.PORT || 4200);
