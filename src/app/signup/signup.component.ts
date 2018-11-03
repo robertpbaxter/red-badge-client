@@ -39,7 +39,7 @@ export class SignupComponent implements OnInit {
         localStorage.setItem("role", credentials.user.permission);
         email = "";
         // this.router.navigate(['/home'])
-        window.location.href = '/auth'
+        window.location.href = '/home'
       });
   }
 
