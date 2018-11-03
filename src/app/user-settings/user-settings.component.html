@@ -1,4 +1,4 @@
-<h1>Sign up</h1>
+<h1>Settings</h1>
 <form>
   <div class="form-group">
     <label for="firstName">
@@ -22,7 +22,5 @@
       <input type="password" #confirmPassword class="confirmPassword" />
     </label>
   </div>
-  <button type="submit" (click)=validateSignup(firstName.value,lastName.value,email.value,password.value,confirmPassword.value)>Create
-    account</button>
-  <span>Already a user? <a routerLink='/auth'>Log in</a></span>
+  <!-- <button type="submit" (click)=updateUser(firstName.value,lastName.value,email.value,password.value,confirmPassword.value)>Create account</button> -->
 </form>
