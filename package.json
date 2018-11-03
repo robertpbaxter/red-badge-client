@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --prod",
-    "start": "serve -s dist/nest-capstone-project"
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -32,7 +32,6 @@
     "google-maps-ng2": "^1.0.10",
     "path": "^0.12.7",
     "rxjs": "~6.3.3",
-    "serve": "^10.0.2",
     "typescript": "~3.1.1",
     "zone.js": "~0.8.26"
   },
