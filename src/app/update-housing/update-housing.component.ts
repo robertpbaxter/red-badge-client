@@ -29,7 +29,9 @@ export class UpdateHousingComponent implements OnInit {
       id: null,
       housingId: null,
       lat: null,
-      lng: null
+      lng: null,
+      latitude: null,
+      longitude: null
     };
     this.getOneCoords(this.data.housing.id);
   }
