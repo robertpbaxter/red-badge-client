@@ -47,9 +47,9 @@ export class UserService {
       .pipe(catchError(this.handleError<User>("updateUser")));
   }
 
-  deleteUser(id: number): Observable<User> {
+  deleteSelfUser(): Observable<User> {
     return this.http
-      .delete<User>(`${this.userUrl}/${id}`, this.httpOptions)
-      .pipe(catchError(this.handleError<User>("deleteUser")));
+      .delete<User>(`${this.userUrl}/deleteaccount`, this.httpOptions)
+      .pipe(catchError(this.handleError<User>("deleteSelfUser")));
   }
 }

@@ -57,4 +57,10 @@ export class TicketService {
       .delete<Ticket>(`${this.ticketUrl}/${id}`, this.httpOptions)
       .pipe(catchError(this.handleError<Ticket>("deleteTicket")));
   }
+
+  deleteSelfTicket(): Observable<Ticket> {
+    return this.http
+      .delete<Ticket>(`${this.ticketUrl}/deleteaccount`, this.httpOptions)
+      .pipe(catchError(this.handleError<Ticket>("deleteSelfTicket")));
+  }
 }

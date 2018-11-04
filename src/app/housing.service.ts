@@ -63,4 +63,10 @@ export class HousingService {
       .delete<Housing>(`${this.housingUrl}/${id}`, this.httpOptions)
       .pipe(catchError(this.handleError<Housing>("deleteHousing")));
   }
+
+  deleteSelfHousing(): Observable<Housing> {
+    return this.http
+      .delete<Housing>(`${this.housingUrl}/deleteaccount`, this.httpOptions)
+      .pipe(catchError(this.handleError<Housing>("deleteSelfHousing")));
+  }
 }

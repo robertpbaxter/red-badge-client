@@ -15,11 +15,11 @@
             <input type="password" #password required />
           </label>
         </div>
+        <mat-card-actions>
+          <button type="submit" (click)=validateLogin(email.value,password.value)>Log In</button>
+        </mat-card-actions>
       </form>
     </mat-card-content>
-    <mat-card-actions>
-      <button type="submit" (click)=validateLogin(email.value,password.value)>Log In</button>
-    </mat-card-actions>
     <span>Not a user? <a routerLink='/signup'>Sign up here</a></span>
   </mat-card>
 </div>

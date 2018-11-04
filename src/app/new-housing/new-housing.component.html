@@ -97,11 +97,10 @@
 
     <button class="button" mat-raised-button (click)=submitHousing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
 
+    <agm-map [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
 
   </mat-expansion-panel>
 </mat-accordion>
 <!-- <app-map-entry></app-map-entry> -->
-
-<agm-map [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
