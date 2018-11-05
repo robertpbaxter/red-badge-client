@@ -1,5 +1,5 @@
 .toolbar {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: #e8e3e2;
   background-color: #bcbab5;
 }
@@ -33,4 +33,12 @@
 
 .mat-badge-content {
   overflow: visible;
+}
+
+.mat-menu-content {
+  overflow: visible !important;
+}
+
+.mat-menu-panel {
+  overflow: visible !important;
 }

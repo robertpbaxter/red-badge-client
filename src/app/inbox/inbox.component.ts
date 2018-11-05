@@ -21,20 +21,13 @@ export class InboxComponent implements OnInit {
 
   ngOnInit() {
     this.getInboxMessages();
-    this.getOutboxMessages();
-    this.markMessagesAsRead();
   }
 
   getInboxMessages() {
-    this.messageService
-      .getInboxMessages()
-      .subscribe(messages => (this.incomingMessages = messages));
-  }
-
-  getOutboxMessages() {
-    this.messageService
-      .getOutboxMessages()
-      .subscribe(messages => (this.outgoingMessages = messages));
+    this.messageService.getInboxMessages().subscribe(messages => {
+      this.incomingMessages = messages;
+      this.markMessagesAsRead();
+    });
   }
 
   markMessagesAsRead() {
@@ -44,7 +37,6 @@ export class InboxComponent implements OnInit {
   deleteMessage(id: number) {
     this.messageService.deleteMessage(id).subscribe(() => {
       this.getInboxMessages();
-      this.getOutboxMessages();
     });
   }
 

@@ -12,3 +12,8 @@ $custom-typography: mat-typography-config(
   $headline: mat-typography-level(32px, 48px, 700),
   $body-1: mat-typography-level(16px, 24px, 500)
 ); */
+
+/* Material overwrites */
+.mat-menu-panel {
+  overflow: visible !important;
+}
