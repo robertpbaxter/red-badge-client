@@ -1,22 +1,24 @@
 agm-map {
-  height: 50vh;
+  height: 70vh;
   /* width: 80vw; */
   /* border: solid 2em #EEEEEE; */
 }
 
 .mapmap {
-  margin: 5% 0 5% 5%;
+  margin: 5em 1.5em 5em 2em;
   border: solid 2em #EEEEEE;
-  width: 50vw;
+  width: 55%;
   display: block;
   float: left;
 }
 
 .textdiv {
-  width: 30vw;
+  width: 25%;
+  height: 75vh;
+  overflow: auto;
   display: block;
-  float: right;
-  margin: 5% 5% 5% 0;
+  float: left;
+  margin: 5em 2em 1em 1.5em;
   font-family: 'Ubuntu', sans-serif;
   background-color: #E8E8E8; 
   padding: 1em;
@@ -28,4 +30,5 @@ h1 {
 
 p{
   font-weight: 100;
+  font-size: 1em;
 }
