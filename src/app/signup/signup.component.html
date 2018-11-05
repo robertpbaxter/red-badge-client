@@ -1,28 +1,31 @@
-<h1>Sign up</h1>
-<form>
-  <div class="form-group">
-    <label for="firstName">
-      First Name:
-      <input type="text" #firstName class="first" />
-    </label>
-    <label for="lastName">
-      Last Name:
-      <input type="text" #lastName class="last" />
-    </label>
-    <label for='email'>
-      Email:
-      <input type="text" #email class="email" />
-    </label>
-    <label for='password'>
-      Password:
-      <input type="password" #password class="password" />
-    </label>
-    <label for='confirmPassword'>
-      Confirm Password:
-      <input type="password" #confirmPassword class="confirmPassword" />
-    </label>
-  </div>
-  <button type="submit" (click)=validateSignup(firstName.value,lastName.value,email.value,password.value,confirmPassword.value)>Create
-    account</button>
-</form>
-<span>Already a user? <a routerLink='/auth'>Log in</a></span>
+<div class="wrapper">
+  <mat-card class="signup" fxLayoutAlign="center center">
+    <mat-card-title class="title">Sign up</mat-card-title>
+    <mat-card-content class="content">
+      <form>
+        <div class="form-group" fxLayoutAlign="center center">
+          <label for="firstName">
+            <input type="text" #firstName class="info" placeholder="FIRST NAME"/>
+          </label>
+          <label for="lastName">
+            <input type="text" #lastName class="info" placeholder="LAST NAME" />
+          </label>
+          <label for='email'>
+            <input type="text" #email class="info" placeholder="EMAIL" />
+          </label>
+          <label for='password'>
+            <input type="password" #password class="info" placeholder="PASSWORD" />
+          </label>
+          <label for='confirmPassword'>
+            <input type="password" #confirmPassword class="info" placeholder="CONFIRM PASSWORD" />
+          </label>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="submit" (click)=validateSignup(firstName.value,lastName.value,email.value,password.value,confirmPassword.value)>Create
+        account</button>
+    </mat-card-actions>
+    <span>Already a user? <a routerLink='/auth'>Log in</a></span>
+  </mat-card>
+</div>

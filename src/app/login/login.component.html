@@ -1,18 +1,14 @@
 <div class="login">
-  <mat-card>
+  <mat-card color="primary" fxLayout="center center">
     <mat-card-title>Login</mat-card-title>
     <mat-card-content>
       <form>
         <div class="form-group">
-          <label class='email'>
-            Email:
-            <input type="text" #email required />
+          <label for='email'>
+            <input type="text" #email required class="info" placeholder="EMAIL" />
           </label>
-        </div>
-        <div class="form-group">
           <label class='password'>
-            Password:
-            <input type="password" #password required />
+            <input type="password" #password required class="info" placeholder="PASSWORD" />
           </label>
         </div>
         <mat-card-actions>
@@ -20,6 +16,9 @@
         </mat-card-actions>
       </form>
     </mat-card-content>
+    <mat-card-actions >
+      <button mat-raised-button color="primary" type="submit" (click)=validateLogin(email.value,password.value)>Log In</button>
+    </mat-card-actions>
     <span>Not a user? <a routerLink='/signup'>Sign up here</a></span>
   </mat-card>
 </div>

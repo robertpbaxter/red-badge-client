@@ -1,18 +1,18 @@
 <nav>
-  <mat-toolbar class="toolbar">
+  <mat-toolbar color="primary" class="toolbar">
     <mat-toolbar-row>
       <button mat-button class="menutitle" [matMenuTriggerFor]="menu"><i class="fas fa-bars"></i> Menu</button>
       <mat-menu #menu="matMenu" class="menu">
-        <button class="navlink" routerLink='/tickets' *ngIf='verifyAdmin()' mat-menu-item>Tickets</button>
-        <button class="navlink" mat-menu-item routerLink='/home' *ngIf='isLoggedIn'>Home</button>
-        <button class="navlink" mat-menu-item routerLink='/about' *ngIf='isLoggedIn'>About</button>
-        <button class="navlink" mat-menu-item routerLink='/new' *ngIf='isLoggedIn'>Your Listings</button>
-        <button class="navlink" mat-menu-item routerLink='/settings' *ngIf='isLoggedIn'>Settings</button>
-        <button class="navlink" mat-menu-item [matBadge]='newMessages' matBadgeColor='accent' routerLink='/inbox'
-          *ngIf='isLoggedIn' style="overflow:visible">Inbox</button>
-        <button class="navlink" mat-menu-item routerLink='/contact' *ngIf='isLoggedIn'>Contact</button>
-        <button class="navlink"mat-menu-item routerLink='/auth' *ngIf='!isLoggedIn'>Login</button>
-        <button class="navlink"mat-menu-item (click)=logout() *ngIf='isLoggedIn'>Log Out</button>
+        <button class="navlink" routerLink='/tickets' *ngIf='verifyAdmin()' mat-menu-item>Tickets</button><br>
+        <button class="navlink" mat-menu-item routerLink='/home' *ngIf='isLoggedIn'>Home</button><br>
+        <button class="navlink" mat-menu-item routerLink='/about' *ngIf='isLoggedIn'>About</button><br>
+        <button class="navlink" mat-menu-item routerLink='/new' *ngIf='isLoggedIn'>Your Listings</button><br>
+        <button class="navlink" mat-menu-item routerLink='/settings' *ngIf='isLoggedIn'>Settings</button><br>
+        <button class="navlink" mat-menu-item [matBadge]='newMessages' matBadgeColor='accent' routerLink='/inbox' *ngIf='isLoggedIn'
+          style="overflow:visible">Inbox</button><br>
+        <button class="navlink" mat-menu-item routerLink='/contact' *ngIf='isLoggedIn'>Contact</button><br>
+        <button class="navlink" mat-menu-item routerLink='/auth' *ngIf='!isLoggedIn'>Login</button><br>
+        <button class="navlink" mat-menu-item (click)=logout() *ngIf='isLoggedIn'>Log Out</button>
       </mat-menu>
     </mat-toolbar-row>
     <!-- </mat-toolbar-row>

@@ -1,3 +1,7 @@
+.numbers{
+    width: 100px;
+}
+
 .toolbar {
   color: rgb(253, 246, 246);
 }
@@ -14,13 +18,15 @@
 }
 
 .fa-bars {
-  color: black;
-  font-size: 15pt;
+    color: black;
+    font-size: 15pt
 }
 
 .menutitle {
-  color: black;
+    color: black;
+  font-size: 15pt;
 }
+
 
 .mat-badge-content {
   overflow: visible;
