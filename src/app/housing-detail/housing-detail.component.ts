@@ -17,19 +17,7 @@ export class HousingDetailComponent implements OnInit {
     private housingService: HousingService,
     private route: ActivatedRoute,
     public dialog: MatDialog
-  ) {
-    this.housing = {
-      id: null,
-      residenceType: "",
-      rooms: "",
-      bathrooms: "",
-      address: "",
-      petsAllowed: "",
-      facilities: "",
-      price: "",
-      owner: null
-    };
-  }
+  ) {}
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get("id");
@@ -44,8 +32,14 @@ export class HousingDetailComponent implements OnInit {
   }
 
   sendMessage(recipientId: number): void {
+    let newMessage = {
+      senderId: null,
+      recipientId: recipientId,
+      subject: "",
+      content: ""
+    };
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.data = recipientId;
+    dialogConfig.data = newMessage;
     this.dialog.open(SendMessageComponent, dialogConfig);
   }
 }
