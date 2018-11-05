@@ -1,8 +1,20 @@
-h1 {
-  margin-top: 0;
-}
-
 .login {
   width: 30%;
   height: 50vh;
+  margin: auto;
+  text-align: center;
+  display: block;
+  border-radius: 0.87em;
+  font-family: 'Ubuntu', sans-serif;
 }
+
+.info {
+  margin: 2em auto;
+  text-align: center;
+  display: block;
+  padding: 1em;
+  border-radius: 0.87em;
+  width: 75%;
+}
+
+/* mediaquery!!! */
