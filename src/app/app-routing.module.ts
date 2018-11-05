@@ -11,7 +11,6 @@ import { HousingDetailComponent } from "./housing-detail/housing-detail.componen
 import { SignupComponent } from "./signup/signup.component";
 import { UserSettingsComponent } from "./user-settings/user-settings.component";
 import { InboxComponent } from "./inbox/inbox.component";
-// import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -24,7 +23,7 @@ const routes: Routes = [
   { path: "new", component: NewHousingComponent, canActivate: [AuthGuard] },
   { path: "inbox", component: InboxComponent, canActivate: [AuthGuard] },
   {
-    path: "settings",
+    path: "account",
     component: UserSettingsComponent,
     canActivate: [AuthGuard]
   },
@@ -33,7 +32,6 @@ const routes: Routes = [
     component: HousingDetailComponent,
     canActivate: [AuthGuard]
   }
-  // { path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
