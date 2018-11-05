@@ -3,7 +3,7 @@
     <mat-toolbar-row>
       <button mat-button class="menutitle" [matMenuTriggerFor]="menu"><i class="fas fa-bars"></i> Menu</button>
       <mat-menu #menu="matMenu">
-        <button class="navlink" routerLink='/tickets' *ngIf='verifyAdmin()' mat-stroked-button>Admin</button>
+        <button class="navlink" routerLink='/tickets' *ngIf='verifyAdmin()' mat-stroked-button>Tickets</button>
         <button class="navlink" mat-stroked-button routerLink='/home' *ngIf='isLoggedIn'>Home</button>
         <button class="navlink" mat-stroked-button routerLink='/about' *ngIf='isLoggedIn'>About</button>
         <button class="navlink" mat-stroked-button routerLink='/new' *ngIf='isLoggedIn'>Your Listings</button>
@@ -11,7 +11,6 @@
         <button class="navlink" mat-stroked-button [matBadge]='newMessages' matBadgeColor='accent' routerLink='/inbox'
           *ngIf='isLoggedIn' style="overflow:visible">Inbox</button>
         <button class="navlink" mat-stroked-button routerLink='/contact' *ngIf='isLoggedIn'>Contact</button>
-        <button class="navlink" mat-stroked-button routerLink='/tickets' *ngIf='isAdmin'>Tickets</button>
         <button class="navlink" mat-stroked-button routerLink='/auth' *ngIf='!isLoggedIn'>Login</button>
         <button class="navlink" mat-stroked-button (click)=logout() *ngIf='isLoggedIn'>Log Out</button>
       </mat-menu>
