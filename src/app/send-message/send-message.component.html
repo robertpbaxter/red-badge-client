@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Send Message</h1>
+<mat-dialog-content>
+  <mat-form-field>
+    <input matInput #subject placeholder="enter subject" [(ngModel)]='data.subject' />
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <textarea rows="6" matInput #content placeholder="enter your message" [(ngModel)]="data.content"></textarea>
+  </mat-form-field>
+  <mat-dialog-actions>
+    <button mat-button (click)="sendMessage()">Send</button>
+    <button mat-button (click)="cancel()">Cancel</button>
+  </mat-dialog-actions>
+</mat-dialog-content>

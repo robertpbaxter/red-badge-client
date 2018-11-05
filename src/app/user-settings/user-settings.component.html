@@ -3,24 +3,17 @@
   <div class="form-group">
     <label for="firstName">
       First Name:
-      <input type="text" #firstName class="first" />
+      <input type="text" #firstName name="firstName" [(ngModel)]="user.firstName" />
     </label>
     <label for="lastName">
       Last Name:
-      <input type="text" #lastName class="last" />
+      <input type="text" #lastName name="lastName" [(ngModel)]="user.lastName" />
     </label>
     <label for='email'>
       Email:
-      <input type="text" #email class="email" />
-    </label>
-    <label for='password'>
-      Password:
-      <input type="password" #password class="password" />
-    </label>
-    <label for='confirmPassword'>
-      Confirm Password:
-      <input type="password" #confirmPassword class="confirmPassword" />
+      <input type="text" #email name="email" [(ngModel)]="user.email" />
     </label>
   </div>
-  <!-- <button type="submit" (click)=updateUser(firstName.value,lastName.value,email.value,password.value,confirmPassword.value)>Create account</button> -->
+  <button type="submit" (click)=updateUser(firstName.value,lastName.value,email.value)>Update</button>
 </form>
+<button mat-raised-button (click)="confirmDelete()">Delete account</button>

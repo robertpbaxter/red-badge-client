@@ -26,7 +26,10 @@ import { MatIconModule } from "@angular/material/icon";
 import { MapDetailsComponent } from "./map-details/map-details.component";
 import { HousingDetailComponent } from "./housing-detail/housing-detail.component";
 import { UpdateHousingComponent } from "./update-housing/update-housing.component";
-import { UserSettingsComponent } from './user-settings/user-settings.component';
+import { UserSettingsComponent } from "./user-settings/user-settings.component";
+import { DeleteAccountComponent } from "./delete-account/delete-account.component";
+import { InboxComponent } from "./inbox/inbox.component";
+import { SendMessageComponent } from "./send-message/send-message.component";
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { UserSettingsComponent } from './user-settings/user-settings.component';
     MapDetailsComponent,
     HousingDetailComponent,
     UpdateHousingComponent,
-    UserSettingsComponent
+    UserSettingsComponent,
+    DeleteAccountComponent,
+    InboxComponent,
+    SendMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +68,11 @@ import { UserSettingsComponent } from './user-settings/user-settings.component';
     }),
     MatIconModule
   ],
-  entryComponents: [UpdateHousingComponent],
+  entryComponents: [
+    UpdateHousingComponent,
+    DeleteAccountComponent,
+    SendMessageComponent
+  ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
 })

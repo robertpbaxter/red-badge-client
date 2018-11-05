@@ -1,0 +1,35 @@
+<h1>Inbox</h1>
+<div *ngFor='let message of incomingMessages'>
+  <mat-accordion>
+    <mat-expansion-panel class="message">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <app-user [userId]="message.senderId"></app-user>: {{message.subject}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="messageContent">
+        <p>{{message.content}}</p>
+      </div>
+      <button mat-raised-button (click)="reply(message)">Reply</button>
+      <button mat-raised-button (click)="deleteMessage(message.id)">Delete</button>
+      <button mat-raised-button>Report</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<h1>Sent Messages</h1>
+<div *ngFor='let message of outgoingMessages'>
+  <mat-accordion>
+    <mat-expansion-panel class="message">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Subject: {{message.subject}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="messageContent">
+        <p>{{message.content}}</p>
+      </div>
+      <button mat-raised-button (click)="deleteMessage(message.id)">Delete</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

@@ -68,4 +68,10 @@ export class CoordsService {
       .delete<Coords>(`${this.coordsUrl}/${id}`, this.httpOptions)
       .pipe(catchError(this.handleError<Coords>("deleteCoords")));
   }
+
+  deleteSelfCoords(): Observable<Coords> {
+    return this.http
+      .delete<Coords>(`${this.coordsUrl}/deleteaccount`, this.httpOptions)
+      .pipe(catchError(this.handleError<Coords>("deleteSelfCoords")));
+  }
 }

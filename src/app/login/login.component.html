@@ -11,11 +11,17 @@
             <input type="password" #password required class="info" placeholder="PASSWORD" />
           </label>
         </div>
+        <mat-card-actions>
+          <button type="submit" (click)=validateLogin(email.value,password.value)>Log In</button>
+        </mat-card-actions>
       </form>
     </mat-card-content>
+<<<<<<< HEAD
     <mat-card-actions >
       <button mat-raised-button color="primary" type="submit" (click)=validateLogin(email.value,password.value)>Log In</button>
     </mat-card-actions>
+=======
+>>>>>>> c593206bd4cf88ad9d18abf30a9fc0d39775b870
     <span>Not a user? <a routerLink='/signup'>Sign up here</a></span>
   </mat-card>
 </div>

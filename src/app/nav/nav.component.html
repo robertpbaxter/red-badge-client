@@ -2,15 +2,17 @@
   <mat-toolbar color="primary" class="toolbar">
     <mat-toolbar-row>
       <button mat-button class="menutitle" [matMenuTriggerFor]="menu"><i class="fas fa-bars"></i> Menu</button>
-      <mat-menu class="numbers" #menu="matMenu">
-        <a class="navlink" routerLink='/tickets' *ngIf='verifyAdmin()' mat-stroked-button>Admin</a>
-        <a class="navlink" mat-stroked-button routerLink='/home' *ngIf='isLoggedIn'>Home</a>
-        <a class="navlink" mat-stroked-button routerLink='/about' *ngIf='isLoggedIn'>About</a>
-        <a class="navlink" mat-stroked-button routerLink='/new' *ngIf='isLoggedIn'>Your Listings</a>
-        <a class="navlink" mat-stroked-button routerLink='/auth' *ngIf='!isLoggedIn'>Login</a>
-        <a class="navlink" mat-stroked-button routerLink='/contact' *ngIf='isLoggedIn'>Contact</a>
-        <a class="navlink" mat-stroked-button routerLink='/tickets'>Admin</a>
-        <button class="navlink" mat-stroked-button (click)=logout() *ngIf='isLoggedIn'>Log Out</button>
+      <mat-menu #menu="matMenu" class="menu">
+        <button class="navlink" routerLink='/tickets' *ngIf='verifyAdmin()' mat-menu-item>Tickets</button>
+        <button class="navlink" mat-menu-item routerLink='/home' *ngIf='isLoggedIn'>Home</button>
+        <button class="navlink" mat-menu-item routerLink='/about' *ngIf='isLoggedIn'>About</button>
+        <button class="navlink" mat-menu-item routerLink='/new' *ngIf='isLoggedIn'>Your Listings</button>
+        <button class="navlink" mat-menu-item routerLink='/settings' *ngIf='isLoggedIn'>Settings</button>
+        <button class="navlink" mat-menu-item [matBadge]='newMessages' matBadgeColor='accent' routerLink='/inbox'
+          *ngIf='isLoggedIn' style="overflow:visible">Inbox</button>
+        <button class="navlink" mat-menu-item routerLink='/contact' *ngIf='isLoggedIn'>Contact</button>
+        <button class="navlink"mat-menu-item routerLink='/auth' *ngIf='!isLoggedIn'>Login</button>
+        <button class="navlink"mat-menu-item (click)=logout() *ngIf='isLoggedIn'>Log Out</button>
       </mat-menu>
     </mat-toolbar-row>
     <!-- </mat-toolbar-row>
@@ -19,4 +21,5 @@
       </ng-template> -->
   </mat-toolbar>
 </nav>
+
 <router-outlet></router-outlet>
