@@ -4,6 +4,7 @@ import { UserService } from "../user.service";
 import { HousingService } from "../housing.service";
 import { CoordsService } from "../coords.service";
 import { TicketService } from "../ticket.service";
+import { MessageService } from "../message.service";
 
 @Component({
   selector: "app-delete-account",
@@ -16,6 +17,7 @@ export class DeleteAccountComponent {
     private housingService: HousingService,
     private coordsService: CoordsService,
     private ticketService: TicketService,
+    private messageService: MessageService,
     public dialogRef: MatDialogRef<DeleteAccountComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
@@ -25,6 +27,7 @@ export class DeleteAccountComponent {
     this.coordsService.deleteSelfCoords().subscribe();
     this.housingService.deleteSelfHousing().subscribe();
     this.ticketService.deleteSelfTicket().subscribe();
+    this.messageService.deleteSelfMessages().subscribe();
     alert("Goodbye!");
     localStorage.clear();
     window.location.href = "/auth";

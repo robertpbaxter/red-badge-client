@@ -28,7 +28,8 @@ import { HousingDetailComponent } from "./housing-detail/housing-detail.componen
 import { UpdateHousingComponent } from "./update-housing/update-housing.component";
 import { UserSettingsComponent } from "./user-settings/user-settings.component";
 import { DeleteAccountComponent } from "./delete-account/delete-account.component";
-import { InboxComponent } from './inbox/inbox.component';
+import { InboxComponent } from "./inbox/inbox.component";
+import { SendMessageComponent } from "./send-message/send-message.component";
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { InboxComponent } from './inbox/inbox.component';
     UpdateHousingComponent,
     UserSettingsComponent,
     DeleteAccountComponent,
-    InboxComponent
+    InboxComponent,
+    SendMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,11 @@ import { InboxComponent } from './inbox/inbox.component';
     }),
     MatIconModule
   ],
-  entryComponents: [UpdateHousingComponent, DeleteAccountComponent],
+  entryComponents: [
+    UpdateHousingComponent,
+    DeleteAccountComponent,
+    SendMessageComponent
+  ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
