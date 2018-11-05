@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+html {
+  background-color: rgba(140, 60, 39, 0.75);
+  /* font-family: '!Ubuntu', sans-serif; */
+}
 
 /* Define a custom typography config that overrides the font-family as well as the
 `headlines` and `body-1` levels.
