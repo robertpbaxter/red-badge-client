@@ -1,11 +1,17 @@
-<h1>Nest</h1>
-
-<agm-map [latitude]="startingLat" [longitude]="startingLng">
-  <div *ngFor="let coord of coords">
-    <agm-marker id="coord.housingId" [latitude]="coord.latitude" [longitude]="coord.longitude">
-      <agm-info-window>
-        <app-map-details [housingId]="coord.housingId"></app-map-details>
-      </agm-info-window>
-    </agm-marker>
+<div class="mapdiv">
+  <div class="mapmap">
+    <agm-map [latitude]="startingLat" [longitude]="startingLng">
+      <div *ngFor="let coord of coords">
+        <agm-marker id="coord.housingId" [latitude]="coord.latitude" [longitude]="coord.longitude">
+          <agm-info-window>
+            <app-map-details [housingId]="coord.housingId"></app-map-details>
+          </agm-info-window>
+        </agm-marker>
+      </div>
+    </agm-map>
   </div>
-</agm-map>
+  <div class="textdiv">
+    <h1>Welcome to Nest!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Pellentesque ipsum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> <br/> <p>Etiam neque. Donec quis nibh at felis congue commodo. Aliquam id dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus.</p> <br/> <p>Anean placerat. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nullam faucibus mi quis velit. Duis pulvinar.</p>
+  </div>
+</div>

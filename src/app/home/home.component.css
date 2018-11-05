@@ -1,3 +1,5 @@
 table {
-    width: 80vw;
-  }
+  width: 80vw;
+  margin: 10%;
+  font-family: 'Ubuntu', sans-serif;
+}

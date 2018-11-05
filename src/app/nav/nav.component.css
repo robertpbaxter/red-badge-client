@@ -1,5 +1,6 @@
 .toolbar {
   color: rgb(253, 246, 246);
+  font-family: 'Ubuntu', sans-serif;
 }
 .navlink {
   margin-right: 10px;
@@ -24,4 +25,8 @@
 
 .mat-badge-content {
   overflow: visible;
+}
+
+.mat-menu-panel{
+  max-width: 400px !important;
 }
