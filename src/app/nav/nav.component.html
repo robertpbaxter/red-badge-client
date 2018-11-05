@@ -3,6 +3,7 @@
     <mat-toolbar-row class="toolbar">
       <button mat-button class="menutitle" [matMenuTriggerFor]="menu"><i class="fas fa-bars"></i> Menu</button>
       <mat-menu #menu="matMenu" class="menu">
+        
           <button class="navlink" routerLink='/tickets' *ngIf='verifyAdmin()' mat-menu-item>Tickets</button>
           <button class="navlink" mat-menu-item routerLink='/home' *ngIf='isLoggedIn'>Home</button>
           <button class="navlink" mat-menu-item routerLink='/about' *ngIf='isLoggedIn'>About</button>
