@@ -28,6 +28,7 @@ import { HousingDetailComponent } from "./housing-detail/housing-detail.componen
 import { UpdateHousingComponent } from "./update-housing/update-housing.component";
 import { UserSettingsComponent } from "./user-settings/user-settings.component";
 import { DeleteAccountComponent } from "./delete-account/delete-account.component";
+import { InboxComponent } from './inbox/inbox.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { DeleteAccountComponent } from "./delete-account/delete-account.componen
     HousingDetailComponent,
     UpdateHousingComponent,
     UserSettingsComponent,
-    DeleteAccountComponent
+    DeleteAccountComponent,
+    InboxComponent
   ],
   imports: [
     BrowserModule,

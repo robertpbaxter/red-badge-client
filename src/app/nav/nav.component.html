@@ -8,9 +8,11 @@
         <button class="navlink" mat-stroked-button routerLink='/about' *ngIf='isLoggedIn'>About</button>
         <button class="navlink" mat-stroked-button routerLink='/new' *ngIf='isLoggedIn'>Your Listings</button>
         <button class="navlink" mat-stroked-button routerLink='/settings' *ngIf='isLoggedIn'>Settings</button>
-        <button class="navlink" mat-stroked-button routerLink='/auth' *ngIf='!isLoggedIn'>Login</button>
+        <button class="navlink" mat-stroked-button [matBadge]='newMessages' matBadgeColor='accent' routerLink='/inbox'
+          *ngIf='isLoggedIn' style="overflow:visible">Inbox</button>
         <button class="navlink" mat-stroked-button routerLink='/contact' *ngIf='isLoggedIn'>Contact</button>
         <button class="navlink" mat-stroked-button routerLink='/tickets' *ngIf='isAdmin'>Tickets</button>
+        <button class="navlink" mat-stroked-button routerLink='/auth' *ngIf='!isLoggedIn'>Login</button>
         <button class="navlink" mat-stroked-button (click)=logout() *ngIf='isLoggedIn'>Log Out</button>
       </mat-menu>
     </mat-toolbar-row>
@@ -20,4 +22,5 @@
       </ng-template> -->
   </mat-toolbar>
 </nav>
+
 <router-outlet></router-outlet>

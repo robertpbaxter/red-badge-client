@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-import { AuthService } from "../auth.service";
+import { MessageService } from "../message.service";
 // import { Location } from '@angular/common';
 
 @Component({
@@ -11,15 +10,18 @@ import { AuthService } from "../auth.service";
 export class NavComponent implements OnInit {
   isLoggedIn = localStorage.getItem("token");
   isAdmin = this.verifyAdmin();
+  newMessages = null;
 
-  constructor(private authService: AuthService) {}
+  constructor(private messageService: MessageService) {}
 
   ngOnInit() {
     this.isLoggedIn;
+    this.fetchNotifications();
   }
 
   logout(): void {
-    this.authService.logout();
+    localStorage.clear();
+    window.location.href = "/auth";
   }
 
   verifyAdmin() {
@@ -28,5 +30,13 @@ export class NavComponent implements OnInit {
     } else {
       return true;
     }
+  }
+
+  fetchNotifications() {
+    this.messageService.fetchNotifcations().subscribe(notifications => {
+      notifications > 0
+        ? (this.newMessages = notifications)
+        : (this.newMessages = "");
+    });
   }
 }
