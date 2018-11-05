@@ -7,14 +7,9 @@
           <app-user [userId]="message.senderId"></app-user>: {{message.subject}}
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <mat-list>
-        <mat-list-item>
-
-        </mat-list-item>
-        <mat-list-item>
-          <p>{{message.content}}</p>
-        </mat-list-item>
-      </mat-list>
+      <div class="messageContent">
+        <p>{{message.content}}</p>
+      </div>
       <button mat-raised-button (click)="reply(message)">Reply</button>
       <button mat-raised-button (click)="deleteMessage(message.id)">Delete</button>
       <button mat-raised-button>Report</button>
@@ -31,14 +26,9 @@
           Subject: {{message.subject}}
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <mat-list>
-        <mat-list-item>
-
-        </mat-list-item>
-        <mat-list-item>
-          <p>{{message.content}}</p>
-        </mat-list-item>
-      </mat-list>
+      <div class="messageContent">
+        <p>{{message.content}}</p>
+      </div>
       <button mat-raised-button (click)="deleteMessage(message.id)">Delete</button>
     </mat-expansion-panel>
   </mat-accordion>

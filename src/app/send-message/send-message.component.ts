@@ -9,8 +9,7 @@ import { Message } from "../message";
   styleUrls: ["./send-message.component.css"]
 })
 export class SendMessageComponent implements OnInit {
-  subject: string = "";
-  content: string = "";
+  message: Message = this.data;
 
   constructor(
     private messageService: MessageService,
@@ -20,10 +19,9 @@ export class SendMessageComponent implements OnInit {
 
   ngOnInit() {}
 
-  sendMessage(subject: string, content: string): void {
-    let recipientId = this.data;
+  sendMessage(): void {
     this.messageService
-      .sendMessage({ recipientId, subject, content } as Message)
+      .sendMessage(this.message)
       .subscribe(() => this.dialogRef.close());
   }
 
