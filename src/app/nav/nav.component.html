@@ -1,8 +1,8 @@
 <nav>
-  <mat-toolbar class="toolbar">
+  <mat-toolbar color="primary" class="toolbar">
     <mat-toolbar-row>
       <button mat-button class="menutitle" [matMenuTriggerFor]="menu"><i class="fas fa-bars"></i> Menu</button>
-      <mat-menu #menu="matMenu">
+      <mat-menu class="numbers" #menu="matMenu">
         <a class="navlink" routerLink='/tickets' *ngIf='verifyAdmin()' mat-stroked-button>Admin</a>
         <a class="navlink" mat-stroked-button routerLink='/home' *ngIf='isLoggedIn'>Home</a>
         <a class="navlink" mat-stroked-button routerLink='/about' *ngIf='isLoggedIn'>About</a>

@@ -1,23 +1,29 @@
 .toolbar{
     color:rgb(253, 246, 246);
- }
- .navlink {
+}
+.navlink {
     margin-right: 10px;
     background-color: rgb(51, 51, 82);
     color:rgb(253, 246, 246);
- }
- .example-icon {
+}
+
+.numbers{
+    width: 100px;
+}
+
+.example-icon {
   padding: 0 14px;
- }
- .example-spacer {
+}
+
+.example-spacer {
   flex: 1 1 auto;
- }
+}
 
- .fa-bars {
-     color: black;
-     font-size: 15pt
- }
+.fa-bars {
+    color: black;
+    font-size: 15pt
+}
 
- .menutitle {
-     color: black;
- }
+.menutitle {
+    color: black;
+}
