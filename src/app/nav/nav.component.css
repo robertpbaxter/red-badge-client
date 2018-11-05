@@ -1,25 +1,30 @@
 .toolbar {
-  color: rgb(253, 246, 246);
+  color: #e8e3e2;
+  background-color: #bcbab5;
 }
 .navlink {
   margin-right: 10px;
-  background-color: rgb(51, 51, 82);
-  color: rgb(253, 246, 246);
-}
-.example-icon {
-  padding: 0 14px;
+  background-color: #5d2914;
+  /* border-top: #4d2110 1px solid; */
+  border-bottom: #4d2110 2px solid;
+  color: #e8e3e2;
 }
 .example-spacer {
   flex: 1 1 auto;
 }
 
+.navlink:hover {
+  background-color: #8c3c27;
+}
+
 .fa-bars {
-  color: black;
+  color: #8c3c27;
   font-size: 15pt;
 }
 
 .menutitle {
   color: black;
+  font-size: 15pt;
 }
 
 .mat-badge-content {
