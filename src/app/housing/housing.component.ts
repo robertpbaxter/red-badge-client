@@ -78,6 +78,9 @@ export class HousingComponent {
     facilities: string,
     price: string
   ): void {
+    if (!this.lat || !this.lng) {
+      alert("You must select a location on the map first");
+    }
     this.housingService
       .newHousing({
         residenceType,
@@ -89,17 +92,14 @@ export class HousingComponent {
         price
       } as Housing)
       .subscribe(results => {
-        alert("Listing Added");
-        console.log(results.housing.id, this.lat, this.lng);
-        this.newCoords(results.housing.id);
+        if (results.housing.id) {
+          alert("Listing Added");
+          this.newCoords(results.housing.id);
+        }
       });
-    // window.location.href = '/new';?
   }
 
   newCoords(housingId: number): void {
-    if (!this.lat || !this.lng) {
-      alert("You must select a location on the map first");
-    }
     let lat = this.lat;
     let lng = this.lng;
     this.coordsService

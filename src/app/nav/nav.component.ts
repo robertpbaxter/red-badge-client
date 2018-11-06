@@ -16,7 +16,9 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     this.isLoggedIn;
-    this.fetchNotifications();
+    if (this.isLoggedIn) {
+      this.fetchNotifications();
+    }
   }
 
   goToInbox(): void {

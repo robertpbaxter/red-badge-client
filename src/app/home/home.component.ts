@@ -1,7 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { Housing } from "../housing";
 import { HousingService } from "../housing.service";
-import { MatTableDataSource } from "@angular/material";
+import { MatSort, MatTableDataSource } from "@angular/material";
 
 @Component({
   selector: "app-home",
@@ -10,11 +10,14 @@ import { MatTableDataSource } from "@angular/material";
 })
 export class HomeComponent implements OnInit {
   dataSource;
-  displayedColumns = ["residenceType", "rooms", "address", "price"];
+  displayedColumns = ["residenceType", "rooms", "city / neigborhood", "price"];
 
   housing: Housing[];
 
   constructor(private housingService: HousingService) {}
+
+  @ViewChild(MatSort)
+  sort: MatSort;
 
   ngOnInit() {
     this.getAllHousing();
@@ -37,6 +40,7 @@ export class HomeComponent implements OnInit {
           }
         })
       );
+      this.dataSource.sort = this.sort;
     });
   }
 }
