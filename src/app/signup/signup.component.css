@@ -11,16 +11,21 @@
 }
 
 .title {
-  padding: 2em;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 23pt;
 }
 
 .signup {
-  width: 30%;
-  height: 55vh;
+  width: 40vw;
+  height: 65vh;
   margin: auto;
   text-align: center;
   display: block;
+  top: 125px;
+  background-color: #E8E8E8;
   border-radius: 0.87em;
+  box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .info {
@@ -29,4 +34,128 @@
   display: block;
   padding: 1em;
   border-radius: 0.87em;
+  font-family: "Raleway", "sans-serif";
+  font-size: 12pt;
+}
+
+.button {
+  background-color: #77726C;
+  color: #E8E8E8;
+  font-family: "Raleway", "sans-serif";
+  font-size: 12pt;
+}
+
+.button:hover {
+  background-color: #8C3C27;
+  color: black;
+}
+
+/* Ipad Pro COMPLETE */
+/* @media screen and (max-width: 1024px) {
+  .signup {
+    width: 40%;
+    height: 45vh;
+    margin: auto;
+    text-align: center;
+    display: block;
+    top: 125px;
+    background-color: #E8E8E8;
+    border-radius: 0.87em;
+    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+} */
+
+@media screen and (max-width: 769px) {
+  .signup {
+    width: 40%;
+    height: 60vh;
+    margin: auto;
+    text-align: center;
+    display: block;
+    top: 125px;
+    background-color: #E8E8E8;
+    border-radius: 0.87em;
+    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
+
+/* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
+@media screen and (max-width: 412px) {
+  .signup {
+    width: 68%;
+    height: 72vh;
+    margin: auto;
+    text-align: center;
+    display: block;
+    top: 70px;
+    background-color: #E8E8E8;
+    border-radius: 0.87em;
+    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
+
+/* Iphone 5/SE & Galaxy S5 */
+ @media screen and (max-width: 375px) { 
+  .signup {
+    width: 55vw;
+    height: 2vh;
+    margin: auto;
+    text-align: center;
+    display: block;
+    top: 2%;
+    background-color: #E8E8E8;
+    border-radius: 0.87em;
+    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15pt;
+  }
+
+  .info {
+    margin: 2em auto;
+    text-align: center;
+    display: block;
+    padding: 1em;
+    border-radius: 0.87em;
+    font-family: "Raleway", "sans-serif";
+    font-size: 9pt;
+  }
+} 
+
+/* Iphone 6/7/8 Plus COMPLETE */
+ @media screen and (max-width: 414px) {
+  .signup {
+    width: 70vw;
+    height: 73vh;
+    margin: auto;
+    text-align: center;
+    display: block;
+    top: 4%;
+    background-color: #E8E8E8;
+    border-radius: 0.87em;
+    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20pt;
+  }
+
+  .info {
+    margin: 2em auto;
+    text-align: center;
+    display: block;
+    padding: 1em;
+    border-radius: 0.87em;
+    font-family: "Raleway", "sans-serif";
+    font-size: 9pt;
+  }
 }

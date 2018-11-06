@@ -5,6 +5,14 @@
   padding: 1em;
   border-radius: 0.87em;
   width: 75%;
+  font-family: "Raleway", "sans-serif";
+  font-size: 12pt;
+}
+
+.title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 23pt;
+  margin-bottom: -8px;
 }
 
 /* mediaquery!!! */
@@ -16,6 +24,30 @@
   text-align: center;
   display: block;
   border-radius: 0.87em;
+  font-family: 'Ubuntu', sans-serif;
+  
+}
+
+.cardstuff {
+  top: 125px;
+  background-color: #E8E8E8;
+  border-radius: 0.87em;
+  box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+}
+
+.button {
+  background-color: #77726C;
+  color: #E8E8E8;
+  font-family: "Raleway", "sans-serif";
+  font-size: 12pt;
+}
+
+.button:hover {
+  background-color: #8C3C27;
+  color: black;
+}
+
+.notuser {
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -69,13 +101,17 @@
     border-radius: 0.87em;
     font-family: 'Ubuntu', sans-serif;
   }
+
+  .cardstuff {
+    top: 25%;
+  }
 }
 
 /* Iphone 5/SE & Galaxy S5 */
 @media screen and (max-width: 375px) {
   .login {
     /* top: 30%; */
-    width: 40vh;
+    width: 73vw;
     height: 50vh;
     margin: auto;
     text-align: center;
@@ -85,6 +121,6 @@
   }
 
   .cardstuff{
-    top: 100px;
+    top: 5%;
   }
 }
