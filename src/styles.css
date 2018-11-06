@@ -2,8 +2,6 @@
 
 html {
   background-color: #8c3c27bf;
-  /* background-image: url('../src/assets/images/vectorstock_7742830.jpg') */
-  /* font-family: '!Ubuntu', sans-serif; */
 }
 
 .mat-menu-panel {
@@ -16,10 +14,6 @@ html {
   width: 250px;
 }
 
-/* .mat-accordian>.mat-expansion-panel-spacing:first-child {
-  margin-top: 100px;
-} */
-/* 
-.mat-expansion-panel {
-  margin-top: 100px;
-} */
+.menu{
+  overflow: visible !important;
+}

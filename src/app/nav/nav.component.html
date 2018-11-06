@@ -2,7 +2,7 @@
   <mat-toolbar color="primary" class="toolbar">
     <mat-toolbar-row class="toolbar">
       <button mat-button class="menutitle" [matMenuTriggerFor]="menu"><i class="fas fa-bars"></i> Menu</button>
-      <mat-menu #menu="matMenu" class="menu" style="overflow:visible ;padding: 0">
+      <mat-menu #menu="matMenu" class="menu" style="overflow:visible">
         <button class="navlink" mat-menu-item routerLink='/home' *ngIf='isLoggedIn'>Home</button>
         <button class="navlink" mat-menu-item routerLink='/about' *ngIf='isLoggedIn'>About</button>
         <button class="navlink" mat-menu-item routerLink='/housing' *ngIf='isLoggedIn'>Your Listings</button>
