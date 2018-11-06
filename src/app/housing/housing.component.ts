@@ -80,23 +80,23 @@ export class HousingComponent {
   ): void {
     if (!this.lat || !this.lng) {
       alert("You must select a location on the map first");
+    } else {
+      this.housingService
+        .newHousing({
+          residenceType,
+          rooms,
+          bathrooms,
+          address,
+          petsAllowed,
+          facilities,
+          price
+        } as Housing)
+        .subscribe(results => {
+          if (results.housing.id) {
+            this.newCoords(results.housing.id);
+          }
+        });
     }
-    this.housingService
-      .newHousing({
-        residenceType,
-        rooms,
-        bathrooms,
-        address,
-        petsAllowed,
-        facilities,
-        price
-      } as Housing)
-      .subscribe(results => {
-        if (results.housing.id) {
-          alert("Listing Added");
-          this.newCoords(results.housing.id);
-        }
-      });
   }
 
   newCoords(housingId: number): void {
@@ -104,12 +104,16 @@ export class HousingComponent {
     let lng = this.lng;
     this.coordsService
       .newCoords({ housingId, lat, lng } as Coords)
-      .subscribe(results => (window.location.href = "/home"));
+      .subscribe(results => {
+        if (results.coords.id) {
+          alert("Listing Added");
+          window.location.href = "/home";
+        }
+      });
   }
 
   getUserHousing(): void {
     this.housingService.getUserHousing().subscribe(housing => {
-      console.log(housing);
       this.housing = housing.sort((a, b) => {
         let idA = a.id;
         let idB = b.id;
@@ -124,14 +128,12 @@ export class HousingComponent {
   }
 
   updateHousing(housing: Housing): void {
-    console.log(housing);
     this.housingService
       .updateHousing(housing)
       .subscribe(results => this.getUserHousing());
   }
 
   deleteHousing(housing: Housing): void {
-    console.log("ticket deleted!", housing.id);
     this.housingService
       .deleteHousing(housing.id)
       .subscribe(result => this.getUserHousing());
