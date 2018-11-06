@@ -1,48 +1,59 @@
 <h1>Current Tickets</h1>
+<div fxLayoutAlign="center center">
+  <div *ngFor="let ticket of tickets">
+    <mat-card class="ticket">
+      <mat-card-header>
+        <mat-card-title class="status">{{ticket.status}}</mat-card-title>
+        <mat-card-subtitle class="subtitle">From: <app-user [userId]="ticket.contactId"></app-user>
+        </mat-card-subtitle>
+        <mat-card-subtitle class="subtitle">{{ticket.type}}: {{ticket.issue}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="content">
+        {{ticket.content}}
+      </mat-card-content>
 
-<div *ngFor="let ticket of tickets">
-  <mat-card class="ticket">
-    <mat-card-header>
-      <mat-card-title>{{ticket.status}}</mat-card-title>
-      <mat-card-subtitle>
-        From: <app-user [userId]="ticket.contactId"></app-user>
-      </mat-card-subtitle>
-      <mat-card-subtitle>{{ticket.type}}: {{ticket.issue}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      {{ticket.content}}
-    </mat-card-content>
+      <hr />
+      <div class="bottomhalf">
 
-    <mat-form-field class="dropdown">
-      <mat-select placeholder="change status" value="ticket.status" #status>
-        <mat-option value="pending">pending</mat-option>
-        <mat-option value="resolved">resolved</mat-option>
-        <mat-option value="rejected">rejected</mat-option>
-      </mat-select>
+        <mat-accordion>
+          <mat-expansion-panel class="moreactions">
+            <mat-expansion-panel-header class="moreactions">
+              <mat-panel-title class="moreactions">more actions</mat-panel-title>
+            </mat-expansion-panel-header>
 
-    </mat-form-field>
-    <button class="buttonupdate" (click)="updateTicket(status.value, ticket.id)" mat-raised-button>update</button>
-    <button (click)="deleteTicket(ticket)" title="delete ticket" class="deletebutton" value="ticket.id"
-      mat-raised-button>Delete</button>
-    <hr />
+            <mat-form-field class="dropdown">
+              <mat-select placeholder="change status" value="ticket.status" #status class="dropdown">
+                <mat-option class="select" value="pending">pending</mat-option>
+                <mat-option class="select" value="resolved">resolved</mat-option>
+                <mat-option class="select" value="rejected">rejected</mat-option>
+              </mat-select>
 
-    <mat-accordion *ngIf="ticket.housingId">
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Reported housing:</mat-panel-title>
-        </mat-expansion-panel-header>
-        <app-reported-housing [housingId]="ticket.housingId"></app-reported-housing>
-      </mat-expansion-panel>
-    </mat-accordion>
+            </mat-form-field>
+            <button class="buttonupdate" (click)="updateTicket(status.value, ticket.id)" mat-raised-button>update</button>
+            <button (click)="deleteTicket(ticket)" title="delete ticket" class="deletebutton" value="ticket.id"
+              mat-raised-button>Delete</button>
 
-    <mat-accordion *ngIf="ticket.messageId">
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Reported message:</mat-panel-title>
-        </mat-expansion-panel-header>
-        <app-reported-message [messageId]="ticket.messageId"></app-reported-message>
-      </mat-expansion-panel>
-    </mat-accordion>
+            <mat-accordion *ngIf="ticket.housingId" class="reportedhousing">
+              <mat-expansion-panel class="reportedhousing">
+                <mat-expansion-panel-header class="reportedhousingtitle">
+                  <mat-panel-title>Reported housing details</mat-panel-title>
+                </mat-expansion-panel-header>
+                <app-reported-housing [housingId]="ticket.housingId"></app-reported-housing>
+              </mat-expansion-panel>
+            </mat-accordion>
 
-  </mat-card>
-</div>
+            <mat-accordion *ngIf="ticket.messageId" class="reportedmessage">
+              <mat-expansion-panel class="reportedmessage">
+                <mat-expansion-panel-header class="reportedmessagetitle">
+                  <mat-panel-title>Reported message details</mat-panel-title>
+                </mat-expansion-panel-header>
+                <app-reported-message [messageId]="ticket.messageId"></app-reported-message>
+              </mat-expansion-panel>
+            </mat-accordion>
+
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+
+    </mat-card>
+  </div>
