@@ -1,6 +1,6 @@
 <div class="login">
   <mat-card class="cardstuff" color="primary" fxLayout="center center">
-    <mat-card-title>Login</mat-card-title>
+    <mat-card-title class="title">Login</mat-card-title>
     <mat-card-content>
       <form>
         <div class="form-group">
@@ -12,10 +12,10 @@
           </label>
         </div>
         <mat-card-actions >
-          <button mat-raised-button color="primary" type="submit" (click)=validateLogin(email.value,password.value)>Log In</button>
+          <button mat-raised-button color="primary" type="submit" (click)=validateLogin(email.value,password.value) class="button">Log In</button>
         </mat-card-actions>
       </form>
     </mat-card-content>
-    <span>Not a user? <a routerLink='/signup'>Sign up here</a></span>
+    <span class="notuser">Not a user? <a routerLink='/signup'>Sign up here</a></span>
   </mat-card>
 </div>
