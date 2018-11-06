@@ -16,8 +16,8 @@
 }
 
 .signup {
-  width: 40vw;
-  height: 65vh;
+  width: 30%;
+  height: 60vh;
   margin: auto;
   text-align: center;
   display: block;
@@ -36,6 +36,7 @@
   border-radius: 0.87em;
   font-family: "Raleway", "sans-serif";
   font-size: 12pt;
+  width: 75%;
 }
 
 .button {
