@@ -78,6 +78,9 @@ export class HousingComponent {
     facilities: string,
     price: string
   ): void {
+    if (!this.lat || !this.lng) {
+      alert("You must select a location on the map first");
+    }
     this.housingService
       .newHousing({
         residenceType,
@@ -97,9 +100,6 @@ export class HousingComponent {
   }
 
   newCoords(housingId: number): void {
-    if (!this.lat || !this.lng) {
-      alert("You must select a location on the map first");
-    }
     let lat = this.lat;
     let lng = this.lng;
     this.coordsService
