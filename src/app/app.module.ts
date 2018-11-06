@@ -8,7 +8,7 @@ import { NavComponent } from "./nav/nav.component";
 import { HomeComponent } from "./home/home.component";
 import { AuthComponent } from "./auth/auth.component";
 import { AboutComponent } from "./about/about.component";
-import { ContactComponent } from "./contact/contact.component";
+import { SupportFormComponent } from "./support-form/support-form.component";
 import { MaterialModule } from "./materialmodule";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LoginComponent } from "./login/login.component";
@@ -18,7 +18,7 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 import { MapComponent } from "./map/map.component";
 import { AgmCoreModule } from "@agm/core";
 import { MapEntryComponent } from "./map-entry/map-entry.component";
-import { NewHousingComponent } from "./new-housing/new-housing.component";
+import { HousingComponent } from "./housing/housing.component";
 import { AuthGuard } from "./auth.guard";
 import { TicketsComponent } from "./tickets/tickets.component";
 import { UserComponent } from "./user/user.component";
@@ -31,8 +31,8 @@ import { DeleteAccountComponent } from "./delete-account/delete-account.componen
 import { InboxComponent } from "./inbox/inbox.component";
 import { SendMessageComponent } from "./send-message/send-message.component";
 import { ReportComponent } from "./report/report.component";
-import { ReportedHousingComponent } from './reported-housing/reported-housing.component';
-import { ReportedMessageComponent } from './reported-message/reported-message.component';
+import { ReportedHousingComponent } from "./reported-housing/reported-housing.component";
+import { ReportedMessageComponent } from "./reported-message/reported-message.component";
 
 @NgModule({
   declarations: [
@@ -41,13 +41,13 @@ import { ReportedMessageComponent } from './reported-message/reported-message.co
     HomeComponent,
     AuthComponent,
     AboutComponent,
-    ContactComponent,
+    SupportFormComponent,
     LoginComponent,
     SignupComponent,
     PageNotFoundComponent,
     MapComponent,
     MapEntryComponent,
-    NewHousingComponent,
+    HousingComponent,
     TicketsComponent,
     UserComponent,
     MapDetailsComponent,

@@ -7,11 +7,11 @@ import { MatDialog, MatDialogConfig } from "@angular/material";
 import { UpdateHousingComponent } from "../update-housing/update-housing.component";
 
 @Component({
-  selector: "app-new-housing",
-  templateUrl: "./new-housing.component.html",
-  styleUrls: ["./new-housing.component.css"]
+  selector: "app-housing",
+  templateUrl: "./housing.component.html",
+  styleUrls: ["./housing.component.css"]
 })
-export class NewHousingComponent {
+export class HousingComponent {
   dialogResult = "";
 
   ngOnInit() {

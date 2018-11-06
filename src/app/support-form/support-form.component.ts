@@ -3,11 +3,11 @@ import { TicketService } from "../ticket.service";
 import { Ticket } from "../ticket";
 
 @Component({
-  selector: "app-support",
-  templateUrl: "./contact.component.html",
-  styleUrls: ["./contact.component.css"]
+  selector: "app-support-form",
+  templateUrl: "./support-form.component.html",
+  styleUrls: ["./support-form.component.css"]
 })
-export class ContactComponent implements OnInit {
+export class SupportFormComponent implements OnInit {
   private type = "support";
   private status = "new";
 
