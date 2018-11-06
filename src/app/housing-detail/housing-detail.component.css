@@ -1,4 +1,36 @@
 agm-map {
-  height: 400px;
-  width: 400px;
+  height: 50vh;
+  width: 50vh;
+}
+
+.map {
+  float: left;
+  margin: 5%;
+  border: solid 1px black;
+}
+
+.info {
+  margin: 5%;
+}
+
+h3 {
+  font-family: "Raleway", "sans-serif";
+  font-size: 26pt;
+  margin-top: -8%;
+}
+
+.ptag{
+  margin-top: 2%;
+  font-family: "Raleway", "sans-serif";
+  font-size: 14pt;
+}
+
+.all {
+  margin: auto;
+  margin-top: 5%;
+  background-color: #E8E8E8;
+  border-radius: 0.87em;
+  width: 70vw;
+  height: 60vh;
+ 
 }
