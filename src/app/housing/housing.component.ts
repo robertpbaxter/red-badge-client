@@ -92,11 +92,11 @@ export class HousingComponent {
         price
       } as Housing)
       .subscribe(results => {
-        alert("Listing Added");
-        console.log(results.housing.id, this.lat, this.lng);
-        this.newCoords(results.housing.id);
+        if (results.housing.id) {
+          alert("Listing Added");
+          this.newCoords(results.housing.id);
+        }
       });
-    // window.location.href = '/new';?
   }
 
   newCoords(housingId: number): void {
