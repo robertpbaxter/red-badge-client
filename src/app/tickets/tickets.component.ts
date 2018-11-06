@@ -35,10 +35,4 @@ export class TicketsComponent implements OnInit {
       .updateTicket({ status, id } as Ticket)
       .subscribe(results => this.getTickets());
   }
-
-  deleteTicket(ticket: Ticket): void {
-    this.ticketService
-      .deleteTicket(ticket.id)
-      .subscribe(result => this.getTickets());
-  }
 }

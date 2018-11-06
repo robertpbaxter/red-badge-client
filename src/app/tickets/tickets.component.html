@@ -30,8 +30,6 @@
 
             </mat-form-field>
             <button class="buttonupdate" (click)="updateTicket(status.value, ticket.id)" mat-raised-button>update</button>
-            <button (click)="deleteTicket(ticket)" title="delete ticket" class="deletebutton" value="ticket.id"
-              mat-raised-button>Delete</button>
 
             <mat-accordion *ngIf="ticket.housingId" class="reportedhousing">
               <mat-expansion-panel class="reportedhousing">

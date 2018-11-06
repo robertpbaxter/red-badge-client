@@ -36,7 +36,7 @@ export class TicketService {
 
   getTickets(): Observable<Ticket[]> {
     return this.http
-      .get<Ticket[]>(this.ticketUrl, this.httpOptions)
+      .get<Ticket[]>(`${this.ticketUrl}/active`, this.httpOptions)
       .pipe(catchError(this.handleError("fetchTickets", [])));
   }
 
@@ -50,12 +50,6 @@ export class TicketService {
     return this.http
       .put(`${this.ticketUrl}/${ticket.id}`, ticket, this.httpOptions)
       .pipe(catchError(this.handleError<Ticket>("updateTicket")));
-  }
-
-  deleteTicket(id: number): Observable<Ticket> {
-    return this.http
-      .delete<Ticket>(`${this.ticketUrl}/${id}`, this.httpOptions)
-      .pipe(catchError(this.handleError<Ticket>("deleteTicket")));
   }
 
   deleteSelfTicket(): Observable<Ticket> {
