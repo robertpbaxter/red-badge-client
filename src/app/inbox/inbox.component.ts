@@ -26,7 +26,16 @@ export class InboxComponent implements OnInit {
 
   getInboxMessages(): void {
     this.messageService.getInboxMessages().subscribe(messages => {
-      this.incomingMessages = messages;
+      this.incomingMessages = messages.sort((a, b) => {
+        let idA = a.id;
+        let idB = b.id;
+        if (idA < idB) {
+          return -1;
+        }
+        if (idA > idB) {
+          return 1;
+        }
+      });
       this.markMessagesAsRead();
     });
   }

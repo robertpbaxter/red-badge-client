@@ -25,7 +25,18 @@ export class HomeComponent implements OnInit {
       if (!housing) {
         return;
       }
-      this.dataSource = new MatTableDataSource(housing);
+      this.dataSource = new MatTableDataSource(
+        housing.sort((a, b) => {
+          let idA = a.id;
+          let idB = b.id;
+          if (idA < idB) {
+            return -1;
+          }
+          if (idA > idB) {
+            return 1;
+          }
+        })
+      );
     });
   }
 }
