@@ -20,7 +20,6 @@ agm-map {
 .housingcard {
   width: 100vh;
   margin: 2%;
-  top: 60vh;
 }
 
 .information {
@@ -30,7 +29,6 @@ agm-map {
 .newlisting {
   margin: 2%;
   width: 100vh;
-  top: 60vh
 }
 
 .button {
@@ -41,10 +39,4 @@ agm-map {
 .button:hover{
   background-color: #A14426;
   color: #e8e8e8;
-}
-
-.newhousing {
-  margin: auto;
-  top: 60vh;
-  width: 100vh;
 }

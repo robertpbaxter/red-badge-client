@@ -6,6 +6,7 @@
   width: 30vh;
   float: left;
   display: block;
+  margin: auto;
 }
 
 .formcontainer {
@@ -14,7 +15,7 @@
   width: 50vw;
   background-color: #E8E8E8;
   color: #77726C;
-  margin-left: 2vh;
+  margin: auto;
 }
 
 .button {
