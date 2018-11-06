@@ -40,7 +40,7 @@ export class MessageService {
       .pipe(catchError(this.handleError("getOutboxMessages", [])));
   }
 
-  sendMessage(message: Message): Observable<Message> {
+  sendMessage(message: Message): Observable<any> {
     return this.http
       .post<Message>(`${this.messageUrl}`, message, this.httpOptions)
       .pipe(catchError(this.handleError<Message>("sendMessage")));

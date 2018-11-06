@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Message } from "../message";
 import { MessageService } from "../message.service";
+import { UserService } from "../user.service";
 
 @Component({
   selector: "app-reported-message",
@@ -11,7 +12,11 @@ export class ReportedMessageComponent implements OnInit {
   @Input()
   messageId = this.messageId;
   message: Message;
-  constructor(private messageService: MessageService) {}
+  sentBy: string = "";
+  constructor(
+    private messageService: MessageService,
+    private userService: UserService
+  ) {}
 
   ngOnInit() {
     this.findMessage(this.messageId);
@@ -21,5 +26,14 @@ export class ReportedMessageComponent implements OnInit {
     this.messageService
       .findMessage(id)
       .subscribe(message => (this.message = message));
+  }
+
+  populateName(senderId: number): void {
+    this.userService.getUser(senderId).subscribe(result => {
+      console.log(result);
+      this.sentBy = `${result.lastName}, ${result.firstName}, (${
+        result.email
+      })`;
+    });
   }
 }

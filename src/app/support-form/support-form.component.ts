@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { TicketService } from "../ticket.service";
 import { Ticket } from "../ticket";
 
@@ -11,7 +12,7 @@ export class SupportFormComponent implements OnInit {
   private type = "support";
   private status = "new";
 
-  constructor(private ticketService: TicketService) {}
+  constructor(private ticketService: TicketService, private router: Router) {}
 
   submitSupport(issue: string, content: string): void {
     this.support(this.type, issue, content, this.status);
@@ -21,7 +22,10 @@ export class SupportFormComponent implements OnInit {
     this.ticketService
       .newTicket({ type, issue, content, status } as Ticket)
       .subscribe(results => {
-        alert("Request Sent");
+        if (results.ticket.id) {
+          alert("Request Sent");
+          this.router.navigate(["/home"]);
+        }
       });
   }
 
