@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent, canActivate: [AuthGuard] },
   {
-    path: "contact",
+    path: "support",
     component: SupportFormComponent,
     canActivate: [AuthGuard]
   },
@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: "signup", component: SignupComponent },
   { path: "about", component: AboutComponent, canActivate: [AuthGuard] },
   { path: "tickets", component: TicketsComponent, canActivate: [AuthGuard] },
-  { path: "new", component: HousingComponent, canActivate: [AuthGuard] },
+  { path: "housing", component: HousingComponent, canActivate: [AuthGuard] },
   { path: "inbox", component: InboxComponent, canActivate: [AuthGuard] },
   {
     path: "account",

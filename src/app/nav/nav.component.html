@@ -5,20 +5,16 @@
       <mat-menu #menu="matMenu" class="menu" style="overflow:visible">
         <button class="navlink" mat-menu-item routerLink='/home' *ngIf='isLoggedIn'>Home</button>
         <button class="navlink" mat-menu-item routerLink='/about' *ngIf='isLoggedIn'>About</button>
-        <button class="navlink" mat-menu-item routerLink='/new' *ngIf='isLoggedIn'>Your Listings</button>
+        <button class="navlink" mat-menu-item routerLink='/housing' *ngIf='isLoggedIn'>Your Listings</button>
         <button class="navlink" mat-menu-item routerLink='/account' *ngIf='isLoggedIn'>Account</button>
         <button class="navlink" mat-menu-item [matBadge]='newMessages' matBadgeColor='accent' (click)="goToInbox()"
           *ngIf='isLoggedIn' style="overflow:visible">Inbox</button>
         <button class="navlink" routerLink='/tickets' *ngIf='verifyAdmin()' mat-menu-item>Tickets</button>
-        <button class="navlink" mat-menu-item routerLink='/contact' *ngIf='isLoggedIn'>Contact</button>
+        <button class="navlink" mat-menu-item routerLink='/support' *ngIf='isLoggedIn'>Support</button>
         <button class="navlink" mat-menu-item routerLink='/auth' *ngIf='!isLoggedIn'>Login</button>
         <button class="navlink" mat-menu-item (click)=logout() *ngIf='isLoggedIn'>Log Out</button>
       </mat-menu>
     </mat-toolbar-row>
-    <!-- </mat-toolbar-row>
-      <ng-template #loggedOut >
-        <a class="navlink" mat-stroked-button routerLink='/auth'>Login/ Signup</a>
-      </ng-template> -->
   </mat-toolbar>
 </nav>
 
