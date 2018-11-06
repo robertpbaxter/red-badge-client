@@ -1,20 +1,338 @@
 .ticket{
-    margin: 1%;
-    width: 46%;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 40%;
     padding: 15px;
-    float: left;
+    background-color:  #E8E8E8;
 }
 
 .dropdown {
-    width: 130px;
-    margin-right: 5px;
+    width: 200px;
+    margin-left: 0px;
+    font-family: "Raleway", "sans-serif";
+}
+
+.select {
+    font-family: "Ubuntu", "sans-serif";
+}
+
+.status {
+    font-family: "Raleway", "sans-serif";
+    font-weight: 600;
+}
+
+.subtitle {
+    margin-left: 10px;
+    font-family: "Raleway", "sans-serif"
+
+}
+
+.content {
+    font-family: "Ubuntu", "sans-serif";
+}
+
+.bottomhalf{
+    background-color: white;
 }
 
 .buttonupdate {
     margin-right: 5px;
-    background-color: #EBE2D9;
+    margin-left: 35px;
+    background-color: #77726C;
+    color: #E8E8E8;
+    font-family: "Ubuntu", "sans-serif";
+}
+
+.buttonupdate:hover {
+    background-color: #E8E8E8;
+    color: #77726C;
 }
 
 .deletebutton {
-    background-color: rgb(177, 65, 27);
+    background-color: #77726C;
+    color: #E8E8E8;
+    font-family: "Ubuntu", "sans-serif";
 }
+
+.deletebutton:hover {
+    background-color: #8C3C27;
+    color: black;
+}
+
+   
+.deletebutton:hover {
+    background-color: #8C3C27;
+    color: black;
+}
+
+.reportedhousing {
+    font-family: "Raleway", "sans-serif";
+    margin-top: 15px;
+}
+
+.reportedmessage {
+    font-family: "Raleway", "sans-serif";
+    margin-top: 15px;
+}
+
+.moreactions {
+    font-family: "Raleway", "sans-serif";
+}
+
+
+
+/* Ipad Pro COMPLETE */
+@media screen and (max-width: 1024px) {
+    .ticket{
+        margin: auto;
+        margin-bottom: 2%;
+        width: 45%;
+        padding: 15px;
+        background-color:  #E8E8E8;
+    }
+    
+    .dropdown {
+        width: 200px;
+        margin-left: 0px;
+        font-family: "Raleway", "sans-serif";
+    }
+    
+    .select {
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .status {
+        font-family: "Raleway", "sans-serif";
+        font-weight: 600;
+    }
+    
+    .subtitle {
+        margin-left: 10px;
+        font-family: "Raleway", "sans-serif"
+    
+    }
+    
+    .content {
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .bottomhalf{
+        background-color: white;
+    }
+    
+    .buttonupdate {
+        margin-right: 5px;
+        margin-left: 35px;
+        background-color: #77726C;
+        color: #E8E8E8;
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .buttonupdate:hover {
+        background-color: #E8E8E8;
+        color: #77726C;
+    }
+    
+    .deletebutton {
+        background-color: #77726C;
+        color: #E8E8E8;
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .deletebutton:hover {
+        background-color: #8C3C27;
+        color: black;
+    }
+    
+    .reportedhousing {
+        margin-top: 15px;
+    }
+
+    .reportedhousingtitle {
+        font-family: "Raleway", "sans-serif";
+    }
+    
+    .reportedmessage {
+        margin-top: 15px;
+    }
+
+    .reportedmessagetitle {
+        font-family: "Raleway", "sans-serif";
+
+    }
+    
+    .moreactions {
+        font-family: "Raleway", "sans-serif";
+    }
+}
+
+/* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
+@media screen and (max-width: 412px) {
+    .ticket{
+        margin: auto;
+        margin-bottom: 2%;
+        width: 80%;
+        padding: 15px;
+        background-color:  #E8E8E8;
+    }
+    
+    .dropdown {
+        width: 200px;
+        margin-left: 0px;
+        font-family: "Raleway", "sans-serif";
+    }
+    
+    .select {
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .status {
+        font-family: "Raleway", "sans-serif";
+        font-weight: 600;
+    }
+    
+    .subtitle {
+        margin-left: 10px;
+        font-family: "Raleway", "sans-serif"
+    
+    }
+    
+    .content {
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .bottomhalf{
+        background-color: white;
+    }
+    
+    .buttonupdate {
+        margin-right: 5px;
+        margin-left: 60px;
+        background-color: #77726C;
+        color: #E8E8E8;
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .buttonupdate:hover {
+        background-color: #E8E8E8;
+        color: #77726C;
+    }
+    
+    .deletebutton {
+        background-color: #77726C;
+        color: #E8E8E8;
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .deletebutton:hover {
+        background-color: #8C3C27;
+        color: black;
+    }
+    
+    .reportedhousing {
+        margin-top: 15px;
+    }
+
+    .reportedhousingtitle {
+        font-family: "Raleway", "sans-serif";
+    }
+    
+    .reportedmessage {
+        margin-top: 15px;
+    }
+
+    .reportedmessagetitle {
+        font-family: "Raleway", "sans-serif";
+
+    }
+    
+    .moreactions {
+        font-family: "Raleway", "sans-serif";
+    }
+}
+
+/* Iphone 5/SE & Galaxy S5 */
+@media screen and (max-width: 375px) {
+    .ticket{
+        margin: auto;
+        margin-bottom: 2%;
+        width: 80%;
+        padding: 15px;
+        background-color:  #E8E8E8;
+    }
+    
+    .dropdown {
+        width: 200px;
+        margin-left: 0px;
+        font-family: "Raleway", "sans-serif";
+    }
+    
+    .select {
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .status {
+        font-family: "Raleway", "sans-serif";
+        font-weight: 600;
+    }
+    
+    .subtitle {
+        margin-left: 10px;
+        font-family: "Raleway", "sans-serif"
+    
+    }
+    
+    .content {
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .bottomhalf{
+        background-color: white;
+    }
+    
+    .buttonupdate {
+        margin-right: 5px;
+        margin-left: 20px;
+        background-color: #77726C;
+        color: #E8E8E8;
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .buttonupdate:hover {
+        background-color: #E8E8E8;
+        color: #77726C;
+    }
+    
+    .deletebutton {
+        background-color: #77726C;
+        color: #E8E8E8;
+        font-family: "Ubuntu", "sans-serif";
+    }
+    
+    .deletebutton:hover {
+        background-color: #8C3C27;
+        color: black;
+    }
+    
+    .reportedhousing {
+        margin-top: 15px;
+    }
+
+    .reportedhousingtitle {
+        font-family: "Raleway", "sans-serif";
+    }
+    
+    .reportedmessage {
+        margin-top: 15px;
+    }
+
+    .reportedmessagetitle {
+        font-family: "Raleway", "sans-serif";
+
+    }
+    
+    .moreactions {
+        font-family: "Raleway", "sans-serif";
+    }
+}
+
