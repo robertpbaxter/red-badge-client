@@ -17,20 +17,26 @@ export class TicketsComponent implements OnInit {
 
   getTickets(): void {
     this.ticketService.getTickets().subscribe(tickets => {
-      console.log(tickets);
-      this.tickets = tickets;
+      this.tickets = tickets.sort((a, b) => {
+        let idA = a.id;
+        let idB = b.id;
+        if (idA < idB) {
+          return -1;
+        }
+        if (idA > idB) {
+          return 1;
+        }
+      });
     });
   }
 
   updateTicket(status: string, id: number): void {
-    console.log(status, id);
     this.ticketService
       .updateTicket({ status, id } as Ticket)
       .subscribe(results => this.getTickets());
   }
 
   deleteTicket(ticket: Ticket): void {
-    // console.log("ticket deleted!", ticket.id);
     this.ticketService
       .deleteTicket(ticket.id)
       .subscribe(result => this.getTickets());

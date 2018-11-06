@@ -110,7 +110,16 @@ export class NewHousingComponent {
   getUserHousing(): void {
     this.housingService.getUserHousing().subscribe(housing => {
       console.log(housing);
-      this.housing = housing;
+      this.housing = housing.sort((a, b) => {
+        let idA = a.id;
+        let idB = b.id;
+        if (idA < idB) {
+          return -1;
+        }
+        if (idA > idB) {
+          return 1;
+        }
+      });
     });
   }
 
