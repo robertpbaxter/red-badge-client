@@ -4,6 +4,7 @@ import { Message } from "../message";
 import { MatDialogConfig, MatDialog } from "@angular/material";
 import { SendMessageComponent } from "../send-message/send-message.component";
 import { formatDate } from "@angular/common";
+import { ReportComponent } from "../report/report.component";
 
 @Component({
   selector: "app-inbox",
@@ -23,24 +24,24 @@ export class InboxComponent implements OnInit {
     this.getInboxMessages();
   }
 
-  getInboxMessages() {
+  getInboxMessages(): void {
     this.messageService.getInboxMessages().subscribe(messages => {
       this.incomingMessages = messages;
       this.markMessagesAsRead();
     });
   }
 
-  markMessagesAsRead() {
+  markMessagesAsRead(): void {
     this.messageService.markMessagesAsRead().subscribe();
   }
 
-  deleteMessage(id: number) {
+  deleteMessage(id: number): void {
     this.messageService.deleteMessage(id).subscribe(() => {
       this.getInboxMessages();
     });
   }
 
-  reply(message: Message) {
+  reply(message: Message): void {
     let replyMessage = {
       senderId: message.recipientId,
       recipientId: message.senderId,
@@ -54,5 +55,11 @@ export class InboxComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data = replyMessage;
     this.dialog.open(SendMessageComponent, dialogConfig);
+  }
+
+  report(message: Message): void {
+    const reportConfig = new MatDialogConfig();
+    reportConfig.data = { messageId: message.id };
+    this.dialog.open(ReportComponent, reportConfig);
   }
 }

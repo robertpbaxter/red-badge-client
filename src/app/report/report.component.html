@@ -1,0 +1,17 @@
+<div class="formcontainer">
+  <h1>Report Form</h1>
+  <mat-form-field>
+    <mat-select placeholder="What is Your Issue" #issue>
+      <mat-option value="Harassment">Harassment / Sexual Harassment</mat-option>
+      <mat-option value="Fake">Scam / Spam / Fake</mat-option>
+      <mat-option value="Illegal">Illegal</mat-option>
+      <mat-option value="Other">Other</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput #content placeholder="Please Describe">
+  </mat-form-field>
+
+  <button class="button" mat-raised-button (click)=submitReport(issue.value,content.value)>Submit</button>
+</div>

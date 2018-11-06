@@ -1,0 +1,12 @@
+<mat-list *ngIf="messageId">
+  <mat-list-item>
+    <p>Sender: <app-user [userId]="message.senderId"></app-user>
+    </p>
+  </mat-list-item>
+  <mat-list-item>
+    <p>Subject: {{message?.subject}}</p>
+  </mat-list-item>
+  <mat-list-item>
+    <p>Content: {{message?.subject}}</p>
+  </mat-list-item>
+</mat-list>

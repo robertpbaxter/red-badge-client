@@ -5,13 +5,13 @@
     <mat-card-header>
       <mat-card-title>{{ticket.status}}</mat-card-title>
       <mat-card-subtitle>
-        <app-user [userId]="ticket.contactId"></app-user>
+        From: <app-user [userId]="ticket.contactId"></app-user>
       </mat-card-subtitle>
       <mat-card-subtitle>{{ticket.type}}: {{ticket.issue}}</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content>{{ticket.content}}
+    <mat-card-content>
+      {{ticket.content}}
     </mat-card-content>
-
 
     <mat-form-field class="dropdown">
       <mat-select placeholder="change status" value="ticket.status" #status>
@@ -24,5 +24,25 @@
     <button class="buttonupdate" (click)="updateTicket(status.value, ticket.id)" mat-raised-button>update</button>
     <button (click)="deleteTicket(ticket)" title="delete ticket" class="deletebutton" value="ticket.id"
       mat-raised-button>Delete</button>
+    <hr />
+
+    <mat-accordion *ngIf="ticket.housingId">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Reported housing:</mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-reported-housing [housingId]="ticket.housingId"></app-reported-housing>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-accordion *ngIf="ticket.messageId">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Reported message:</mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-reported-message [messageId]="ticket.messageId"></app-reported-message>
+      </mat-expansion-panel>
+    </mat-accordion>
+
   </mat-card>
 </div>

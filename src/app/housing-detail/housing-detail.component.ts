@@ -4,6 +4,7 @@ import { Housing } from "../housing";
 import { ActivatedRoute } from "@angular/router";
 import { MatDialog, MatDialogConfig } from "@angular/material";
 import { SendMessageComponent } from "../send-message/send-message.component";
+import { ReportComponent } from "../report/report.component";
 
 @Component({
   selector: "app-housing-detail",
@@ -41,5 +42,11 @@ export class HousingDetailComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data = newMessage;
     this.dialog.open(SendMessageComponent, dialogConfig);
+  }
+
+  report(housing: Housing): void {
+    const reportConfig = new MatDialogConfig();
+    reportConfig.data = { housingId: housing.id };
+    this.dialog.open(ReportComponent, reportConfig);
   }
 }
