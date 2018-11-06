@@ -16,5 +16,5 @@ $custom-typography: mat-typography-config(
 
 /* Material overwrites */
 .mat-menu-panel {
-  overflow: visible !important;
+  overflow: visible;
 }

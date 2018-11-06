@@ -5,6 +5,7 @@ import { ActivatedRoute } from "@angular/router";
 import { MatDialog, MatDialogConfig } from "@angular/material";
 import { SendMessageComponent } from "../send-message/send-message.component";
 import { ReportComponent } from "../report/report.component";
+import { CoordsService } from "../coords.service";
 
 @Component({
   selector: "app-housing-detail",
@@ -13,9 +14,12 @@ import { ReportComponent } from "../report/report.component";
 })
 export class HousingDetailComponent implements OnInit {
   housing: Housing;
+  lat: number;
+  lng: number;
 
   constructor(
     private housingService: HousingService,
+    private coordsService: CoordsService,
     private route: ActivatedRoute,
     public dialog: MatDialog
   ) {}
@@ -23,11 +27,19 @@ export class HousingDetailComponent implements OnInit {
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get("id");
     this.getOneHousing(id);
+    this.getOneCoords(id);
   }
 
   getOneHousing(id: number): void {
     this.housingService.getOneHousing(id).subscribe(housing => {
       this.housing = housing;
+    });
+  }
+
+  getOneCoords(id: number): void {
+    this.coordsService.getOneCoords(id).subscribe(coords => {
+      this.lat = coords.latitude;
+      this.lng = coords.longitude;
     });
   }
 
