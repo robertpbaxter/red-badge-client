@@ -2,19 +2,8 @@
 
 html {
   background-color: rgba(140, 60, 39, 0.75);
-  /* background-image: url('../src/assets/images/vectorstock_7742830.jpg') */
-  /* font-family: '!Ubuntu', sans-serif; */
 }
 
-/* Define a custom typography config that overrides the font-family as well as the
-`headlines` and `body-1` levels.
-$custom-typography: mat-typography-config(
-  $font-family: 'Roboto, monospace',
-  $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500)
-); */
-
-/* Material overwrites */
 .mat-menu-panel {
   overflow: visible;
 }
