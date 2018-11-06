@@ -8,7 +8,9 @@
 }
 
 agm-map {
-  height: 100vh;
+  height: 30vh;
+  width: 40vh;
+  margin: 0 10vh;
 }
 
 .info {
@@ -18,8 +20,9 @@ agm-map {
 }
 
 .housingcard {
-  width: 50vh;
-  margin: 2%;
+  width: 45vh;
+  margin: 7vh 3.5vh 0 8vh;
+  float: left;
   display: block;
 }
 
@@ -28,14 +31,15 @@ agm-map {
 }
 
 .newlisting {
-  margin: 2%;
-  width: 40vh;
+  margin: 6vh;
+  width: 45vh;
   float: left;
-  top: 2vh;
+  top: 4vh;
+  height: 100%;
 }
 
 .button {
-  margin: 5vh 40vh;
+  margin: 5vh;
   font-family: "Ubuntu", "sans-serif";
 }
 
@@ -44,7 +48,11 @@ agm-map {
   color: #e8e8e8;
 }
 
-.leftcolumn {
-  width: 50vh;
-  /* display: inline-block; */
+.left {
+  width: 30%;
+}
+
+.right {
+  width: 70%;
+  float: left;
 }
