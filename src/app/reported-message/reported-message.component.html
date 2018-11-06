@@ -1,7 +1,6 @@
 <mat-list *ngIf="messageId">
   <mat-list-item>
-    <p>Sender: <app-user [userId]="message.senderId"></app-user>
-    </p>
+    <p (click)="populateName(message?.senderId)">Sent by (<u><b>click to show name</b></u>): {{sentBy}}</p>
   </mat-list-item>
   <mat-list-item>
     <p>Subject: {{message?.subject}}</p>

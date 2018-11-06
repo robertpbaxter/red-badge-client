@@ -5,11 +5,15 @@
 }
 .navlink {
   margin-right: 10px;
-  background-color: #5d2914;
+  background-color: #E8E8E8;
   /* border-top: #4d2110 1px solid; */
-  border-bottom: #4d2110 2px solid;
-  color: #e8e3e2;
+  border-bottom: rgb(228, 228, 228) 1px solid;
+  color: black;
+  height: 50px;
+  font-size: 12pt;
+  font-family: "Raleway", "sans-serif";
 }
+
 .example-icon {
   padding: 0 14px;
 }
@@ -18,7 +22,7 @@
 }
 
 .navlink:hover {
-  background-color: #8c3c27;
+  background-color: #8C3C27;
 }
 
 .fa-bars {
@@ -28,7 +32,8 @@
 
 .menutitle {
   color: black;
-  font-size: 15pt;
+  font-size: 16pt;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .mat-badge-content {
@@ -37,6 +42,11 @@
 
 .mat-menu-content {
   overflow: visible !important;
+}
+
+.mat-menu-content:not(:empty){
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .mat-menu-panel {

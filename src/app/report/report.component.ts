@@ -50,7 +50,12 @@ export class ReportComponent implements OnInit {
         housingId,
         messageId
       } as Ticket)
-      .subscribe(() => this.dialogRef.close());
+      .subscribe(result => {
+        if (result.ticket.id) {
+          alert("Report sent.");
+          this.dialogRef.close();
+        }
+      });
   }
 
   cancel(): void {

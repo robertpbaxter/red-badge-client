@@ -23,7 +23,13 @@
       <td mat-cell *matCellDef="let housing">${{housing?.price}} </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <ng-container matColumnDef="profile">
+      <th mat-header-cell *matHeaderCellDef>details</th>
+      <td mat-cell *matCellDef="let housing"><a routerLink="/detail/{{housing?.id}}">view</a></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns">
+    </tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>

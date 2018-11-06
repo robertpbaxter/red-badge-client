@@ -10,7 +10,7 @@ import { MatSort, MatTableDataSource } from "@angular/material";
 })
 export class HomeComponent implements OnInit {
   dataSource;
-  displayedColumns = ["residenceType", "rooms", "city / neigborhood", "price"];
+  displayedColumns = ["residenceType", "rooms", "city / neigborhood", "price","profile"];
 
   housing: Housing[];
 

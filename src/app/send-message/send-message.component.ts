@@ -20,9 +20,11 @@ export class SendMessageComponent implements OnInit {
   ngOnInit() {}
 
   sendMessage(): void {
-    this.messageService.sendMessage(this.message).subscribe(data => {
-      console.log(data);
-      this.dialogRef.close();
+    this.messageService.sendMessage(this.message).subscribe(result => {
+      if (result.id) {
+        alert("Message sent.");
+        this.dialogRef.close();
+      }
     });
   }
 
