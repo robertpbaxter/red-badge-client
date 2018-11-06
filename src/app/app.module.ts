@@ -30,6 +30,9 @@ import { UserSettingsComponent } from "./user-settings/user-settings.component";
 import { DeleteAccountComponent } from "./delete-account/delete-account.component";
 import { InboxComponent } from "./inbox/inbox.component";
 import { SendMessageComponent } from "./send-message/send-message.component";
+import { ReportComponent } from "./report/report.component";
+import { ReportedHousingComponent } from './reported-housing/reported-housing.component';
+import { ReportedMessageComponent } from './reported-message/reported-message.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,10 @@ import { SendMessageComponent } from "./send-message/send-message.component";
     UserSettingsComponent,
     DeleteAccountComponent,
     InboxComponent,
-    SendMessageComponent
+    SendMessageComponent,
+    ReportComponent,
+    ReportedHousingComponent,
+    ReportedMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +77,8 @@ import { SendMessageComponent } from "./send-message/send-message.component";
   entryComponents: [
     UpdateHousingComponent,
     DeleteAccountComponent,
-    SendMessageComponent
+    SendMessageComponent,
+    ReportComponent
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

@@ -10,8 +10,7 @@
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput #content  placeholder="Please Describe">
-    <!-- <mat-hint align="end">{{input.value?.length || 0}}/2000</mat-hint> -->
+    <input matInput #content placeholder="Please Describe">
   </mat-form-field>
 
   <button class="button" mat-raised-button (click)=submitSupport(issue.value,content.value)>Submit</button>
