@@ -1,19 +1,26 @@
-<h1>Settings</h1>
-<form>
-  <div class="form-group">
-    <label for="firstName">
-      First Name:
-      <input type="text" #firstName name="firstName" [(ngModel)]="user.firstName" />
-    </label>
-    <label for="lastName">
-      Last Name:
-      <input type="text" #lastName name="lastName" [(ngModel)]="user.lastName" />
-    </label>
-    <label for='email'>
-      Email:
-      <input type="text" #email name="email" [(ngModel)]="user.email" />
-    </label>
-  </div>
-  <button type="submit" (click)=updateUser(firstName.value,lastName.value,email.value)>Update</button>
-</form>
-<button mat-raised-button (click)="confirmDelete()">Delete account</button>
+<div class="user">
+  <h1>Account Information</h1>
+  <form>
+    <div class="form-group">
+      <label for="firstName">
+        First Name
+        <br/>
+        <input class="userinfo" type="text" #firstName name="firstName" [(ngModel)]="user.firstName" />
+      </label>
+      <br/>
+      <label for="lastName">
+        Last Name
+        <br/>
+        <input class="userinfo" type="text" #lastName name="lastName" [(ngModel)]="user.lastName" />
+      </label>
+      <br/>
+      <label for='email'>
+        Email
+        <br/>
+        <input class="userinfo" type="text" #email name="email" [(ngModel)]="user.email" />
+      </label>
+    </div>
+    <button mat-raised-button fxLayoutAlign="center center" type="submit" class="update" (click)=updateUser(firstName.value,lastName.value,email.value)>Update</button>
+    <button mat-raised-button fxLayoutAlign="center center" class="delete" (click)="confirmDelete()">Delete Account</button>
+  </form>
+</div>

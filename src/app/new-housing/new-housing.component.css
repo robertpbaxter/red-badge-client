@@ -8,17 +8,19 @@
 }
 
 agm-map {
-  height: 400px;
+  height: 100vh;
 }
 
 .info {
   font-size: 12pt;
   margin-left: 1%;
+  font-family: "Ubuntu", "sans-serif";
 }
 
 .housingcard {
-  width: 600px;
+  width: 100vh;
   margin: 2%;
+  top: 60vh;
 }
 
 .information {
@@ -27,9 +29,22 @@ agm-map {
 
 .newlisting {
   margin: 2%;
-  width: 35vw;
+  width: 100vh;
+  top: 60vh
 }
 
 .button {
-  margin: 10px;
+  margin: 5vh 40vh;
+  font-family: "Ubuntu", "sans-serif";
+}
+
+.button:hover{
+  background-color: #A14426;
+  color: #e8e8e8;
+}
+
+.newhousing {
+  margin: auto;
+  top: 60vh;
+  width: 100vh;
 }
