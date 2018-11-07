@@ -5,6 +5,7 @@ import { SupportFormComponent } from "./support-form/support-form.component";
 import { AuthComponent } from "./auth/auth.component";
 import { AboutComponent } from "./about/about.component";
 import { AuthGuard } from "./auth.guard";
+import { AdminGuard } from "./admin.guard";
 import { HousingComponent } from "./housing/housing.component";
 import { TicketsComponent } from "./tickets/tickets.component";
 import { HousingDetailComponent } from "./housing-detail/housing-detail.component";
@@ -23,7 +24,7 @@ const routes: Routes = [
   { path: "auth", component: AuthComponent },
   { path: "signup", component: SignupComponent },
   { path: "about", component: AboutComponent, canActivate: [AuthGuard] },
-  { path: "tickets", component: TicketsComponent, canActivate: [AuthGuard] },
+  { path: "tickets", component: TicketsComponent, canActivate: [AuthGuard, AdminGuard] },
   { path: "housing", component: HousingComponent, canActivate: [AuthGuard] },
   { path: "inbox", component: InboxComponent, canActivate: [AuthGuard] },
   {

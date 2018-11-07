@@ -1,0 +1,32 @@
+.toolbar {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  align-content: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9em;
+  min-height: 5.5vh;
+  position: fixed;
+  margin-top: 40px;
+}
+
+span {
+  text-align: center;
+  margin: auto auto 0.8vh auto;
+}
+
+a {
+  color: black; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8C3C27;
+  background-color: transparent;
+}
+
+.giticon {
+  font-size: 2em;
+  text-align: right;
+}

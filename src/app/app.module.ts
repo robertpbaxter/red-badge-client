@@ -33,6 +33,7 @@ import { SendMessageComponent } from "./send-message/send-message.component";
 import { ReportComponent } from "./report/report.component";
 import { ReportedHousingComponent } from "./reported-housing/reported-housing.component";
 import { ReportedMessageComponent } from "./reported-message/reported-message.component";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { ReportedMessageComponent } from "./reported-message/reported-message.co
     SendMessageComponent,
     ReportComponent,
     ReportedHousingComponent,
-    ReportedMessageComponent
+    ReportedMessageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
