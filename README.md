@@ -12,4 +12,4 @@ Back-end repository: <a href="https://github.com/robertpbaxter/red-badge-server"
 
 -Users can list or search for rental / roommate opportunities using housing entries with a corresponding google maps coordinate (maps are employed instead of concrete addresses to allow user-defined levels of privacy)
 
--Administrators are a special role that can monitor and process tickets as support or report requests via routes accessible only to users with administrator permissions (log in with the email 'admin@admin' and password 'admin' to view the admin components)
+-Administrators are a special role that can monitor and process tickets as support or report requests via routes accessible only to users with administrator permissions (log in with the email `admin@admin'` and password `admin` to view the admin components)
