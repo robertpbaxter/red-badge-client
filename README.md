@@ -15,5 +15,5 @@ Back-end repository: <a href="https://github.com/robertpbaxter/red-badge-server"
 - Administrators are a special role that can monitor and process tickets as support or report requests via routes accessible only to users with administrator permissions
 
 - Sample admin credentials:
-  - email `admin@admin`
-  - password `admin`
+  - email: `admin@admin`
+  - password: `admin`
