@@ -36,3 +36,122 @@ p{
   font-weight: 100;
   font-size: 1em;
 }
+
+/* Ipad Pro COMPLETE */
+@media screen and (max-width: 1024px) {
+  agm-map {
+    height: 25vh;
+    width: 89vw;
+  }
+
+  .mapmap {
+    border: solid 2px  #EEEEEE;
+    width: 89vw;
+    display: block;
+    margin-left: 5.5%;
+    margin-top: 5%;
+  }
+
+  .textdiv {
+    width: 80vw;
+    height: 30vh;
+    overflow: auto;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #E8E8E8; 
+    padding: 1em;
+    margin-top: -6%;
+    margin-bottom: 4%;
+    margin-left: 9%;
+  }
+  
+
+}
+
+@media screen and (max-width: 415px) { 
+  agm-map {
+    height: 45vh;
+    width: 85vw;
+    /* border: solid 2em #EEEEEE; */
+  }
+
+  .mapmap {
+    border: solid 2px  #EEEEEE;
+    width: 85vw;
+    display: block;
+    margin-left: 6.6%;
+    margin-top: 3%;
+    margin-bottom: 10%;
+  }
+  .textdiv {
+    width: 85vw;
+    height: 70vh;
+    overflow: auto;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #E8E8E8; 
+    padding: 1em;
+    margin-left: 3.4%
+  }
+
+}
+
+/* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
+@media screen and (max-width: 412px) {
+  agm-map {
+    height: 40vh;
+    width: 85vw;
+    /* border: solid 2em #EEEEEE; */
+  }
+
+  .mapmap {
+    border: solid 2px  #EEEEEE;
+    width: 85vw;
+    display: block;
+    margin-left: 6.7%;
+    margin-top: 1%;
+    margin-bottom: 10%;
+  }
+  .textdiv {
+    width: 85vw;
+    height: 70vh;
+    overflow: auto;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #E8E8E8; 
+    padding: 1em;
+    margin-left: 3.4%
+  }
+  
+}
+
+/* Iphone 5/SE & Galaxy S5 */
+@media screen and (max-width: 375px) {
+  agm-map {
+    height: 40vh;
+    width: 85vw;
+    /* border: solid 2em #EEEEEE; */
+  }
+
+  .mapmap {
+    border: solid 2px  #EEEEEE;
+    width: 85vw;
+    display: block;
+    margin-left: 6.6%;
+    margin-top: 5%;
+  }
+  .textdiv {
+    width: 84vw;
+    height: 75vh;
+    overflow: auto;
+    display: block;
+    float: left;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #E8E8E8; 
+    padding: 1em;
+    margin-top: -1%;
+    margin-left: 3%;
+  }
+  
+}
+
