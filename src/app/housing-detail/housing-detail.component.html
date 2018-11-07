@@ -1,38 +1,39 @@
-<mat-card class="all">
-  <mat-card-content>
-    <div class="map">
-      <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-      </agm-map>
-    </div>
-    <mat-list class="info">
-      <mat-list-item>
-        <h3><i class="fas fa-home"></i> {{housing?.residenceType}}</h3>
-      </mat-list-item>
-      <mat-list-item>
-        <p class="ptag"># of rooms: {{housing?.rooms}}</p>
-      </mat-list-item>
-      <mat-list-item>
-        <p class="ptag"># of bathrooms: {{housing?.bathrooms}}</p>
-      </mat-list-item>
-      <mat-list-item>
-        <p class="ptag">address: {{housing?.address}}</p>
-      </mat-list-item>
-      <mat-list-item>
-        <p class="ptag">pets allowed: {{housing?.petsAllowed}}</p>
-      </mat-list-item>
-      <mat-list-item>
-        <p class="ptag">facilities: {{housing?.facilities}}</p>
-      </mat-list-item>
-      <mat-list-item>
-        <p class="ptag">price: ${{housing?.price}}</p>
-      </mat-list-item>
-      <mat-list-item>
-        <p class="ptag">id: {{housing?.id}}</p>
-      </mat-list-item>
+<div class="all">
+  <mat-card class="housingcard">
+    <mat-card-content>
+      <div class="map">
+        <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </div>
+      <div class="info">
+        <div class="menu">
+          <button mat-icon-button matTooltip="More Actions" [matMenuTriggerFor]="menu">
+            <mat-icon><i class="fas fa-ellipsis-v"></i></mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)=sendMessage(housing.owner) class="menubutton">Message</button>
+            <button class="menubutton" mat-menu-item (click)=report(housing)>Report</button>
+          </mat-menu>
+        </div>
+        <h3 class="title"><i class="fas fa-home"></i> {{housing?.residenceType}}</h3>
 
-    </mat-list>
-    <button mat-raised-button (click)=sendMessage(housing.owner)>Message</button>
-    <button mat-raised-button (click)=report(housing)>Report</button>
-  </mat-card-content>
-</mat-card>
+        <p class="ptag"># of rooms: {{housing?.rooms}}</p>
+
+        <p class="ptag"># of bathrooms: {{housing?.bathrooms}}</p>
+
+        <p class="ptag">address: {{housing?.address}}</p>
+
+        <p class="ptag">pets allowed: {{housing?.petsAllowed}}</p>
+
+        <p class="ptag">facilities: {{housing?.facilities}}</p>
+
+        <p class="ptag">price: ${{housing?.price}}</p>
+
+        <p class="ptag">id: {{housing?.id}}</p>
+      </div>
+
+
+    </mat-card-content>
+  </mat-card>
+</div>

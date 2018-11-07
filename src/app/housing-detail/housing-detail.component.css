@@ -1,36 +1,137 @@
 agm-map {
-  height: 50vh;
-  width: 50vh;
+  width: 40vw;
+  height: 65vh;
+  
 }
 
 .map {
   float: left;
-  margin: 5%;
-  border: solid 1px black;
+  margin-right: 5%;
+  margin-left: 4%;
 }
 
 .info {
-  margin: 5%;
+  margin-right: 4%;
+  white-space: pre-wrap;
+  margin-left: 67%;
 }
 
-h3 {
+.title {
+  font-size: 23pt;
   font-family: "Raleway", "sans-serif";
-  font-size: 26pt;
-  margin-top: -8%;
 }
 
-.ptag{
-  margin-top: 2%;
+.menu {
+  float: right;
+}
+
+.menubutton {
   font-family: "Raleway", "sans-serif";
-  font-size: 14pt;
 }
 
-.all {
+.menubutton:hover {
+  background-color: #8C3C27;
+}
+
+.ptag {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12pt;
+}
+
+.fa-ellipsis-v{
+font-size: 18pt;
+}
+
+.all{
+  margin: auto;
+}
+
+.housingcard {
+  width: 70vw;
+  min-height: 70vh;
   margin: auto;
   margin-top: 5%;
-  background-color: #E8E8E8;
+  background-color:  #E8E8E8;
   border-radius: 0.87em;
-  width: 70vw;
-  height: 60vh;
- 
 }
+
+/* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
+@media screen and (max-width: 412px) {
+  .map {
+    margin-bottom: 8%;
+    margin-left: -1%;
+  }
+  agm-map {
+    width: 85vw;
+    height: 45vh;
+  }
+
+  .info {
+    margin-left: -2%;
+    white-space: pre-wrap;
+  }
+
+  .housingcard {
+    width: 100vw;
+    min-height: 70vh;
+    margin-left:3.5%;
+    margin-top: 5%;
+    background-color:  #E8E8E8;
+    border-radius: 0.87em;
+  }
+
+}
+
+/* Iphone 5/SE & Galaxy S5 */
+@media screen and (max-width: 375px) { 
+  .map {
+    margin-bottom: 8%;
+    margin-left: -1%;
+  }
+  agm-map {
+    width: 85vw;
+    height: 45vh;
+  }
+
+  .info {
+    margin-left: -2%;
+    white-space: pre-wrap;
+  }
+
+  .housingcard {
+    width: 100vw;
+    min-height: 70vh;
+    margin-left: 3%;
+    margin-top: 5%;
+    background-color:  #E8E8E8;
+    border-radius: 0.87em;
+  }
+
+}
+
+/* Ipad Pro COMPLETE */
+@media screen and (max-width: 1024px) {
+  .map {
+    margin-bottom: 8%;
+    margin-left: 1%;
+  }
+  agm-map {
+    width: 84vw;
+    height: 45vh;
+  }
+
+  .info {
+    margin-left: -1%;
+    white-space: pre-wrap;
+  }
+
+  .housingcard {
+    width: 85vw;
+    min-height: 70vh;
+    margin-right: 6%;
+    margin-top: 5%;
+    background-color:  #E8E8E8;
+    border-radius: 0.87em;
+  }
+}
+
