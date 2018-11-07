@@ -8,8 +8,12 @@ Back-end repository: <a href="https://github.com/robertpbaxter/red-badge-server"
 
 # Features:
 
-Designed in Angular 7 and styled with Angular Material + CSS
+- Designed in Angular 7 and styled with Angular Material + CSS
 
-User authentication via AuthGuard is required to access rental listings (which will otherwise re-route users to the login component), and all queries outside of login and registration require a JWT retained in local storage
+- User authentication via AuthGuard is required to access rental listings (which will otherwise re-route users to the login component), and all queries outside of login and registration require a JWT retained in local storage
 
-Administrators are a special role that can monitor and process tickets as support or report requests via routes accessible only to users with administrator permissions (log in with the email `admin@admin` and password `admin` to view the admin components)
+- Administrators are a special role that can monitor and process tickets as support or report requests via routes accessible only to users with administrator permissions
+
+- Sample admin credentials:
+  - email `admin@admin`
+  - password `admin`
