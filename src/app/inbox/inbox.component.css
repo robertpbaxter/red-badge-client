@@ -1,3 +1,16 @@
+h1 {
+  margin: auto;
+}
+
+.message {
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 40%;
+  padding: 15px;
+  background-color:  #E8E8E8;
+}
+
 .messageContent {
   white-space: pre-wrap;
   padding: 2rem;
@@ -6,3 +19,19 @@
 .mat-form-field {
   width: 100%;
 }
+
+.fa-ellipsis-v{
+  font-size: 18pt;
+  }
+
+  .menu {
+    float: right;
+  }
+
+  .menubutton {
+    font-family: "Raleway", "sans-serif";
+  }
+  
+  .menubutton:hover {
+    background-color: #8C3C27;
+  }
