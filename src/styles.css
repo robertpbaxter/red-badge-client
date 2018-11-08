@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-html {
+/* html {
   background-color: #8c3c27bf;
+} */
+
+.outletwrapper{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mat-menu-panel {

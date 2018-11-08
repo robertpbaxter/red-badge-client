@@ -1,6 +1,6 @@
 /* .wrapper { */
 .wrapper {  
-  background-image: url('../../assets/images/gabriele-diwald-190721-unsplash.jpg');
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('../../assets/images/gabriele-diwald-190721-unsplash.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
