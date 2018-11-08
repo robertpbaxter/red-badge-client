@@ -20,14 +20,14 @@ agm-map {
 
 .textdiv {
   width: 25%;
-  height: 75vh;
+  height: 68vh;
   overflow: auto;
   display: block;
   float: left;
   margin: 5em 2em 1em 1.5em;
   font-family: 'Ubuntu', sans-serif;
-  background-color: #E8E8E8; 
-  padding: 1em;
+  background-color: #ECEDF1; 
+  padding: 2em;
 }
 
 h1 {
@@ -37,6 +37,44 @@ h1 {
 p{
   font-weight: 100;
   font-size: 1em;
+}
+
+@media screen and (max-width: 1920px) {
+  .textdiv {
+    width: 25%;
+    height: 68vh;
+    overflow: auto;
+    display: block;
+    float: left;
+    margin: 5em 2em 1em 1.5em;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #ECEDF1; 
+    padding: 2em;
+  }
+
+  .mapmap {
+    margin: 5em 1.5em 5em 6.5em;
+    border: solid 1em transparent;
+    border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    width: 55%;
+    display: block;
+    float: left;
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+  .mapmap {
+    margin: 5em 1.5em 5em 3.5em;
+    border: solid 1em transparent;
+    border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    width: 55%;
+    display: block;
+    float: left;
+  }
+
 }
 
 /* Ipad Pro COMPLETE */
