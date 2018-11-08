@@ -6,3 +6,28 @@
 .mat-form-field {
   width: 100%;
 }
+
+.formcontainer {
+  border-radius: 0.87em;
+}
+
+h1{
+  font-family: "Raleway", "sans-serif";
+}
+
+input{
+  font-family: "Ubuntu", "sans-serif";
+}
+
+.option:hover {
+  background-color: #349fad;
+}
+
+button {
+  background-color:  #E8E8E8;
+  font-family: "Raleway", "sans-serif";
+}
+
+button:hover {
+  background-color: #8C3C27;
+}
