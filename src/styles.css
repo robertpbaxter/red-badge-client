@@ -1,8 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* html {
-  background-color: #8c3c27bf;
-} */
+ml {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */
+}
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
 
 .outletwrapper{
   margin-left: auto;
@@ -21,4 +34,11 @@
 
 .menu{
   overflow: visible !important;
+}
+
+.brand {
+  position: absolute;
+  right: 0 !important;
+  height: 10vh;
+  margin-right: 3vh;
 }
