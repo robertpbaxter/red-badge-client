@@ -34,6 +34,7 @@ import { ReportComponent } from "./report/report.component";
 import { ReportedHousingComponent } from "./reported-housing/reported-housing.component";
 import { ReportedMessageComponent } from "./reported-message/reported-message.component";
 import { FooterComponent } from './footer/footer.component';
+import { MiniMapComponent } from './mini-map/mini-map.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { FooterComponent } from './footer/footer.component';
     ReportComponent,
     ReportedHousingComponent,
     ReportedMessageComponent,
-    FooterComponent
+    FooterComponent,
+    MiniMapComponent
   ],
   imports: [
     BrowserModule,

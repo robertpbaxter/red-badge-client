@@ -8,10 +8,17 @@
   width: 50%;
 }
 
-agm-map {
+.new {
   height: 30vh;
   /* width: 40vh; */
   margin: 0 10vh;
+}
+
+.minimap {
+  height: 20vh;
+  width: 20vw;
+  float: right;
+  margin-right: -10%;
 }
 
 .info {
