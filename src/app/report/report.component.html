@@ -1,12 +1,12 @@
 <div class="formcontainer">
-  <h1>Report Form</h1>
+  <h1 mat-dialog-title>Report Form</h1>
   <mat-form-field>
     <mat-select placeholder="What is Your Issue" #issue>
-      <mat-option value="Harassment">Harassment / Sexual Harassment</mat-option>
-      <mat-option value="Descrimination">Descrimination (racial, gender, sexual orientation)</mat-option>
-      <mat-option value="Fake">Scam / Spam / Fake</mat-option>
-      <mat-option value="Illegal">Illegal</mat-option>
-      <mat-option value="Other">Other</mat-option>
+      <mat-option value="Harassment" class="option">Harassment / Sexual Harassment</mat-option>
+      <mat-option value="Descrimination" class="option">Descrimination (racial, gender, sexual orientation)</mat-option>
+      <mat-option value="Fake" class="option">Scam / Spam / Fake</mat-option>
+      <mat-option value="Illegal" class="option">Illegal</mat-option>
+      <mat-option value="Other" class="option">Other</mat-option>
     </mat-select>
   </mat-form-field>
 
@@ -14,5 +14,5 @@
     <input matInput #content placeholder="Please Describe">
   </mat-form-field>
 
-  <button class="button" mat-raised-button (click)=submitReport(issue.value,content.value)>Submit</button>
+  <button class="button" mat-raised-button (click)=submitReport(issue.value,content.value)>Send Report</button>
 </div>

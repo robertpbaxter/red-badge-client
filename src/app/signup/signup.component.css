@@ -22,7 +22,7 @@
   text-align: center;
   display: block;
   top: 125px;
-  background-color: #E8E8E8;
+  background-color: #ECEDF1;
   border-radius: 0.87em;
   box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
   font-family: 'Ubuntu', sans-serif;
@@ -40,15 +40,15 @@
 }
 
 .button {
-  background-color: #77726C;
-  color: #E8E8E8;
+  background-color:  #182A2B;
+  color: white;
   font-family: "Raleway", "sans-serif";
   font-size: 12pt;
 }
 
 .button:hover {
-  background-color: #8C3C27;
-  color: black;
+  background-color: #349fad;
+
 }
 
 /* Ipad Pro COMPLETE */
