@@ -1,6 +1,6 @@
 <div class="left">
   <mat-accordion>
-    <mat-expansion-panel class="newlisting" style="margin-top: 7vh" >
+    <mat-expansion-panel class="newlisting" style="margin-top: 7vh">
       <mat-expansion-panel-header style="background-color:#e8e8e8">
         <mat-panel-title>
           Create New Listing
@@ -67,13 +67,13 @@
         <span matPrefix>$&nbsp;</span>
         <span matSuffix>.00</span>
       </mat-form-field>
-      
-      <agm-map [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
+
+      <agm-map class="new" [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
       </agm-map>
-      
+
       <button class="button" mat-raised-button color="primary" fxLayout="center center" (click)=submitHousing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
-      
+
     </mat-expansion-panel>
   </mat-accordion>
 </div>
@@ -84,6 +84,10 @@
       <mat-card-header>
         <mat-card-title>
           Listing {{housing.id}}
+          <div class="minimap">
+            <app-mini-map [id]="housing.id">
+            </app-mini-map>
+          </div>
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
@@ -103,10 +107,11 @@
         <br />
         <p>id: <span class="info">{{housing.id}}</span></p>
       </mat-card-content>
-      
+
       <mat-card-actions class="buttons">
         <button class="update" mat-raised-button (click)="openDialog(housing)">Update</button>
-        <button class="delete" (click)="deleteHousing(housing)" title="delete ticket" value="housing.id" mat-raised-button>Delete</button>
+        <button class="delete" (click)="deleteHousing(housing)" title="delete ticket" value="housing.id"
+          mat-raised-button>Delete</button>
       </mat-card-actions>
 
     </mat-card>
