@@ -30,16 +30,16 @@ table {
 }
 
 /* Ipad Pro COMPLETE */
-/* @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .table {
     width: 95vw;
     font-family: 'Ubuntu', sans-serif;
     font-size: 70%;
   }
 
-} */
+}
 
-/* @media screen and (max-width: 415px) { 
+ @media screen and (max-width: 415px) { 
   .table {
     width: 85vw;
     font-family: 'Ubuntu', sans-serif;
@@ -47,10 +47,10 @@ table {
     margin-left: -5.5%;
   }
 
-} */
+}
 
 /* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
-/* @media screen and (max-width: 412px) {
+ @media screen and (max-width: 412px) {
   table {
     width: 80vw;
     font-family: 'Ubuntu', sans-serif;
@@ -58,8 +58,8 @@ table {
     margin-left: 9%;
   }
 
-} */
-/* 
+}
+
 @media screen and (max-width: 375px) {
   .table {
     width: 85vw;
@@ -75,10 +75,10 @@ table {
     th {
       font-size: 100%;
     }
-} */
+}
 
-/* @media screen and (max-width: 360px) {
-  .table {
+ @media screen and (max-width: 360px) {
+ .table {
     width: 85vw;
     font-family: 'Ubuntu', sans-serif;
     margin-left: -4%;
@@ -92,11 +92,11 @@ table {
     th {
       font-size: 100%;
     }
-} */
+}
 
 
 /* Iphone 5/SE & Galaxy S5 */
-/* @media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .table {
     width: 85vw;
     font-family: 'Ubuntu', sans-serif;
@@ -111,4 +111,4 @@ table {
   th {
     font-size: 100%;
   }
-} */
+}

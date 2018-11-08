@@ -85,20 +85,25 @@ p{
   }
 
   .mapmap {
-    border: solid 2px  #EEEEEE;
+    border: solid 1em transparent;
+    border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    -webkit-border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    -o-border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    width: 85vw;
     width: 89vw;
     display: block;
-    margin-left: 5.5%;
+    margin-left: 3.5%;
     margin-top: 5%;
   }
 
   .textdiv {
     width: 80vw;
-    height: 30vh;
+    height: 24vh;
     overflow: auto;
     display: block;
     font-family: 'Ubuntu', sans-serif;
-    background-color: #E8E8E8; 
+    background-color: #ECEDF1; 
     padding: 1em;
     margin-top: -6%;
     margin-bottom: 4%;
@@ -116,20 +121,24 @@ p{
   }
 
   .mapmap {
-    border: solid 2px  #EEEEEE;
+    border: solid 1em transparent;
+    border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    -webkit-border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    -o-border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
     width: 85vw;
     display: block;
-    margin-left: 6.6%;
+    margin-left: 3.5%;
     margin-top: 3%;
     margin-bottom: 10%;
   }
   .textdiv {
     width: 85vw;
-    height: 70vh;
+    height: 23vh;
     overflow: auto;
     display: block;
     font-family: 'Ubuntu', sans-serif;
-    background-color: #E8E8E8; 
+    background-color: #ECEDF1; 
     padding: 1em;
     margin-left: 3.4%
   }
@@ -139,26 +148,30 @@ p{
 /* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
 @media screen and (max-width: 412px) {
   agm-map {
-    height: 40vh;
+    height: 45vh;
     width: 85vw;
     /* border: solid 2em #EEEEEE; */
   }
 
   .mapmap {
-    border: solid 2px  #EEEEEE;
+    border: solid 1em transparent;
+    border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    -webkit-border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    -o-border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
     width: 85vw;
     display: block;
-    margin-left: 6.7%;
-    margin-top: 1%;
+    margin-left: 3.8%;
+    margin-top: 2%;
     margin-bottom: 10%;
   }
   .textdiv {
     width: 85vw;
-    height: 70vh;
+    height: 23vh;
     overflow: auto;
     display: block;
     font-family: 'Ubuntu', sans-serif;
-    background-color: #E8E8E8; 
+    background-color: #ECEDF1; 
     padding: 1em;
     margin-left: 3.4%
   }
@@ -168,29 +181,32 @@ p{
 /* Iphone 5/SE & Galaxy S5 */
 @media screen and (max-width: 375px) {
   agm-map {
-    height: 40vh;
+    height:43vh;
     width: 85vw;
-    /* border: solid 2em #EEEEEE; */
   }
 
   .mapmap {
-    border: solid 2px  #EEEEEE;
+    border: solid 1em transparent;
+    border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    -webkit-border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    -o-border-image: url(../../assets/images/blueframe.jpg) 30 stretch;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
     width: 85vw;
     display: block;
-    margin-left: 6.6%;
+    margin-left: 3%;
     margin-top: 5%;
   }
   .textdiv {
     width: 84vw;
-    height: 75vh;
+    height: 21vh;
     overflow: auto;
     display: block;
     float: left;
     font-family: 'Ubuntu', sans-serif;
-    background-color: #E8E8E8; 
+    background-color: #ECEDF1; 
     padding: 1em;
-    margin-top: -1%;
-    margin-left: 3%;
+    margin-top: -5%;
+    margin-left: 3.5%;
   }
   
 }
