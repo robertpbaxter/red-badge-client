@@ -52,3 +52,7 @@
 .mat-menu-panel {
   overflow: visible !important;
 }
+
+img {
+  right: 0 !important;
+}
