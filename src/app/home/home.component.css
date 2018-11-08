@@ -1,3 +1,28 @@
+.wrapper {
+  background-image: url('../../assets/images/nathan-fertig-249917-unsplash.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */
+}
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
 table {
   width: 80vw;
   margin: 10%;
@@ -5,16 +30,16 @@ table {
 }
 
 /* Ipad Pro COMPLETE */
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .table {
     width: 95vw;
     font-family: 'Ubuntu', sans-serif;
     font-size: 70%;
   }
 
-}
+} */
 
-@media screen and (max-width: 415px) { 
+/* @media screen and (max-width: 415px) { 
   .table {
     width: 85vw;
     font-family: 'Ubuntu', sans-serif;
@@ -22,10 +47,10 @@ table {
     margin-left: -5.5%;
   }
 
-}
+} */
 
 /* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
-@media screen and (max-width: 412px) {
+/* @media screen and (max-width: 412px) {
   table {
     width: 80vw;
     font-family: 'Ubuntu', sans-serif;
@@ -33,8 +58,8 @@ table {
     margin-left: 9%;
   }
 
-}
-
+} */
+/* 
 @media screen and (max-width: 375px) {
   .table {
     width: 85vw;
@@ -50,9 +75,9 @@ table {
     th {
       font-size: 100%;
     }
-}
+} */
 
-@media screen and (max-width: 360px) {
+/* @media screen and (max-width: 360px) {
   .table {
     width: 85vw;
     font-family: 'Ubuntu', sans-serif;
@@ -67,11 +92,11 @@ table {
     th {
       font-size: 100%;
     }
-}
+} */
 
 
 /* Iphone 5/SE & Galaxy S5 */
-@media screen and (max-width: 320px) {
+/* @media screen and (max-width: 320px) {
   .table {
     width: 85vw;
     font-family: 'Ubuntu', sans-serif;
@@ -86,5 +111,4 @@ table {
   th {
     font-size: 100%;
   }
-}
-
+} */
