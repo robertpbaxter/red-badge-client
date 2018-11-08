@@ -1,11 +1,11 @@
 .toolbar {
   font-family: "Ubuntu", sans-serif;
   color: #e8e3e2;
-  background-color: #E8E8E8;
+  background-color: #ECEDF1;
 }
 .navlink {
   margin-right: 10px;
-  background-color: #E8E8E8;
+  background-color: #ECEDF1;
   /* border-top: #4d2110 1px solid; */
   border-bottom: rgb(228, 228, 228) 1px solid;
   color: black;

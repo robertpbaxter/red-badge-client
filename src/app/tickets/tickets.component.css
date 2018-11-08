@@ -4,8 +4,11 @@
     margin-bottom: 4%;
     width: 40%;
     padding: 15px;
-    background-color:  #E8E8E8;
+    background-color:  #ECEDF1;
+    border-radius: 0.87em;
 }
+
+
 
 .dropdown {
     width: 200px;
@@ -15,6 +18,10 @@
 
 .select {
     font-family: "Ubuntu", "sans-serif";
+}
+
+.select:hover {
+    background-color: #349fad;
 }
 
 .status {
@@ -39,14 +46,14 @@
 .buttonupdate {
     margin-right: 5px;
     margin-left: 35px;
-    background-color: #77726C;
+    background-color: #182A2B;
     color: #E8E8E8;
     font-family: "Ubuntu", "sans-serif";
 }
 
 .buttonupdate:hover {
-    background-color: #E8E8E8;
-    color: #77726C;
+    background-color: #349fad;
+    color: black;
 }
 
 .deletebutton {
@@ -90,7 +97,7 @@
         margin-bottom: 2%;
         width: 45%;
         padding: 15px;
-        background-color:  #E8E8E8;
+        background-color:  #ECEDF1;
     }
     
     .dropdown {
@@ -125,14 +132,14 @@
     .buttonupdate {
         margin-right: 5px;
         margin-left: 35px;
-        background-color: #77726C;
+        background-color: #182A2B;
         color: #E8E8E8;
         font-family: "Ubuntu", "sans-serif";
     }
     
     .buttonupdate:hover {
-        background-color: #E8E8E8;
-        color: #77726C;
+        background-color: #349fad;
+        color: black;
     }
     
     .deletebutton {
@@ -176,7 +183,7 @@
         margin-bottom: 2%;
         width: 80%;
         padding: 15px;
-        background-color:  #E8E8E8;
+        background-color:  #ECEDF1;
     }
     
     .dropdown {
@@ -217,8 +224,8 @@
     }
     
     .buttonupdate:hover {
-        background-color: #E8E8E8;
-        color: #77726C;
+        background-color: #349fad;
+        color: black;
     }
     
     .deletebutton {
@@ -262,7 +269,7 @@
         margin-bottom: 2%;
         width: 80%;
         padding: 15px;
-        background-color:  #E8E8E8;
+        background-color:  #ECEDF1;
     }
     
     .dropdown {
@@ -303,8 +310,8 @@
     }
     
     .buttonupdate:hover {
-        background-color: #E8E8E8;
-        color: #77726C;
+        background-color: #349fad;
+        color: black;
     }
     
     .deletebutton {
