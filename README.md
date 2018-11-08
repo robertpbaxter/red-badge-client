@@ -2,9 +2,9 @@
 
 This repo represents the front end Angular application created by Robert Baxter, Jessica Brandt, and Ingeborg Slegers of Eleven Fifty Academy. This project is still a work in progress and will be officially submitted on 11/15/2018 (components may still be in development).
 
-View the deployed application (in its current state) at <a href="https://nest-capstone-project.herokuapp.com/home">https://nest-capstone-project.herokuapp.com/home</a>
+View the deployed application (in its current state) at https://nest-capstone-project.herokuapp.com/home
 
-Back-end repository: <a href="https://github.com/robertpbaxter/red-badge-server">https://github.com/robertpbaxter/red-badge-server</a>
+Back-end repository: https://github.com/robertpbaxter/red-badge-server
 
 # Features:
 
