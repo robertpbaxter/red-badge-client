@@ -30,7 +30,7 @@ agm-map {
 }
 
 .menubutton:hover {
-  background-color: #8C3C27;
+  background-color: #349fad;
 }
 
 .ptag {
@@ -51,15 +51,57 @@ font-size: 18pt;
   min-height: 70vh;
   margin: auto;
   margin-top: 4%;
-  background-color:  #E8E8E8;
+  background-color:  #ECEDF1;
   border-radius: 0.87em;
+}
+
+/* Ipad Pro COMPLETE */
+@media screen and (max-width: 1024px) {
+  .map {
+    margin-bottom: 8%;
+    margin-left: 3%;
+  }
+  agm-map {
+    width: 65vw;
+    height: 45vh;
+  }
+
+  .info {
+    margin-left: 3%;
+    white-space: pre-wrap;
+  }
+
+  .housingcard {
+    width: 70vw;
+    min-height: 70vh;
+    margin-right: 13%;
+    margin-top: 5%;
+    margin-bottom: 14%;
+    background-color:  #ECEDF1;
+    border-radius: 0.87em;
+  }
+  
+}
+
+@media screen and (max-width: 414px) {
+  
+  .housingcard {
+    width: 70vw;
+    min-height: 70vh;
+    margin-right: 13%;
+    margin-top: 5%;
+    margin-bottom: 25%;
+    background-color:  #ECEDF1;
+    border-radius: 0.87em;
+  }
 }
 
 /* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
 @media screen and (max-width: 412px) {
   .map {
+    border: .1em solid black;
     margin-bottom: 8%;
-    margin-left: -1%;
+    margin-left: -.5%;
   }
   agm-map {
     width: 85vw;
@@ -72,11 +114,12 @@ font-size: 18pt;
   }
 
   .housingcard {
-    width: 100vw;
+    width: 85vw;
     min-height: 70vh;
     margin-left:3.5%;
     margin-top: 5%;
-    background-color:  #E8E8E8;
+    margin-bottom: 20%;
+    background-color:  #ECEDF1;
     border-radius: 0.87em;
   }
 
@@ -99,39 +142,16 @@ font-size: 18pt;
   }
 
   .housingcard {
-    width: 100vw;
+    width: 85vw;
     min-height: 70vh;
     margin-left: 3%;
     margin-top: 5%;
-    background-color:  #E8E8E8;
+    margin-bottom: 25%;
+    background-color:  #ECEDF1;
     border-radius: 0.87em;
   }
 
 }
 
-/* Ipad Pro COMPLETE */
-@media screen and (max-width: 1024px) {
-  .map {
-    margin-bottom: 8%;
-    margin-left: 1%;
-  }
-  agm-map {
-    width: 84vw;
-    height: 45vh;
-  }
 
-  .info {
-    margin-left: -1%;
-    white-space: pre-wrap;
-  }
-
-  .housingcard {
-    width: 85vw;
-    min-height: 70vh;
-    margin-right: 6%;
-    margin-top: 5%;
-    background-color:  #E8E8E8;
-    border-radius: 0.87em;
-  }
-}
 

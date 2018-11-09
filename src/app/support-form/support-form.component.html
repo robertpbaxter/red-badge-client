@@ -1,21 +1,21 @@
-<div>
-  <h1>Support Form</h1>
+<div class="wrapper">
   <div class="textbox">
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Pellentesque ipsum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Etiam neque. Donec quis nibh at felis congue commodo. Aliquam id dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Anean placerat. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nullam faucibus mi quis velit. Duis pulvinar.</p>
+    <p>We are sorry for any inconveniences you are experiencing. Please fill out the form so the problem can get solved as soon as possible. Thank you</p>
   </div>
   <div class="formcontainer">
+    <p>Support Form</p>
     <mat-form-field>
-      <mat-select placeholder="What is Your Issue" #issue>
-        <mat-option value="Adding a new housing listing">Adding a new housing listing</mat-option>
-        <mat-option value="Updating or editing a current listing">Updating or editing a current listing</mat-option>
-        <mat-option value="Update account information">Update account information</mat-option>
-        <mat-option value="Inbox or messaging issues">Inbox or messaging issues</mat-option>
-        <mat-option value="Other">Other</mat-option>
+      <mat-select class="input" placeholder="What is Your Issue" #issue>
+        <mat-option class="select" value="Adding a new housing listing">Adding a new housing listing</mat-option>
+        <mat-option class="select" value="Updating or editing a current listing">Updating or editing a current listing</mat-option>
+        <mat-option class="select" value="Update account information">Update account information</mat-option>
+        <mat-option class="select" value="Inbox or messaging issues">Inbox or messaging issues</mat-option>
+        <mat-option class="select" value="Other">Other</mat-option>
       </mat-select>
     </mat-form-field>
     
     <mat-form-field>
-      <input matInput #content placeholder="Please Describe">
+      <textarea class="input" matInput #content placeholder="Please Describe"></textarea>
     </mat-form-field>
     
     <button class="button" mat-raised-button (click)=submitSupport(issue.value,content.value)>Submit</button>

@@ -35,3 +35,11 @@ h1 {
   .menubutton:hover {
     background-color: #8C3C27;
   }
+
+.mat-accordion>.mat-expansion-panel-spacing:last-child, .mat-accordion>:last-child:not(.mat-expansion-panel) .mat-expansion-panel-spacing {
+  margin-bottom: 10vh;
+}
+
+.mat-accordion{
+  margin-bottom: 10vh;
+}

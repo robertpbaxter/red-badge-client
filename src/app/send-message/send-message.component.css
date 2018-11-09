@@ -1,8 +1,36 @@
 .mat-dialog-content {
   width: 600px;
   min-height: 300px;
+  border-radius: 0.87em;
 }
 
 .mat-form-field {
   width: 100%;
+  border-radius: 0.87em;
+}
+
+h1{
+  font-family: "Raleway", "sans-serif";
+}
+
+input {
+  font-family: "Ubuntu", "sans-serif";
+}
+
+textarea {
+  font-family: "Ubuntu", "sans-serif";
+}
+
+button {
+  background-color:  #182A2B;
+  color: white;
+  font-family: "Raleway", "sans-serif";
+}
+
+.buttonsend:hover {
+  background-color: #349fad;
+}
+
+.buttoncancel:hover {
+  background-color: #8C3C27;
 }
