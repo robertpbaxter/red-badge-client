@@ -16,7 +16,6 @@ import { SupportFormComponent } from "./support-form/support-form.component";
 import { MaterialModule } from "./materialmodule";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
-import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { MapComponent } from "./map/map.component";
 import { MapEntryComponent } from "./map-entry/map-entry.component";
 import { HousingComponent } from "./housing/housing.component";
@@ -46,7 +45,6 @@ import { MiniMapComponent } from "./mini-map/mini-map.component";
     SupportFormComponent,
     LoginComponent,
     SignupComponent,
-    PageNotFoundComponent,
     MapComponent,
     MapEntryComponent,
     HousingComponent,
