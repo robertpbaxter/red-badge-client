@@ -1,21 +1,56 @@
 /* Desktop PC & Responsive */
+.wrapper {
+  background-image: url('../../assets/images/nathan-fertig-249917-unsplash.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 93vh;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
 .textbox {
-  background-color: #E8E8E8;
-  color: #77726C;
-  padding: 5vh;
+  background-color:  #ECEDF1;
+  box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+  padding: 2vh;
   width: 30vh;
   float: left;
   display: block;
-  margin: auto;
+  margin-left: 7%;
+  margin-top: 7%;
+  border-radius: .87em;
+}
+
+p {
+  font-family: "Raleway", "sans-serif";
+  font-size: 1.5em;
 }
 
 .formcontainer {
   display: flex;
   flex-direction: column;
   width: 50vw;
-  background-color: #E8E8E8;
-  color: #77726C;
+  background-color:  #ECEDF1;
+  padding: 2%;
+  box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
   margin: auto;
+  margin-top: 7%;
+  border-radius: .87em;
+}
+
+.select {
+  font-family: "Raleway", "sans-serif";
+}
+
+.select:hover {
+  background-color: #349fad;
+
+}
+
+.input {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .button {
@@ -23,19 +58,72 @@
   margin-top: 20px;
   margin-left: 0;
   margin-right: 0;
+  background-color:  #182A2B;
+  color: white;
+  font-family: "Raleway", "sans-serif";
+}
+
+.button:hover{
+  background-color: #349fad;
+}
+
+@media screen and (max-width: 1285px) {
+  .textbox {
+    background-color:  #ECEDF1;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    padding: 2vh;
+    width: 25vw;
+    float: left;
+    display: block;
+    margin-left: 7%;
+    margin-top: 7%;
+    border-radius: .87em;
+  }
+  .formcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    background-color:  #ECEDF1;
+    padding: 2%;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    margin: auto;
+    margin-top: 7%;
+    border-radius: .87em;
+  }
+
+  .button {
+    width: 15%;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color:  #182A2B;
+    color: white;
+    font-family: "Raleway", "sans-serif";
+  }
+
 }
 
 /* Ipad Pro COMPLETE */
 @media screen and (max-width: 1024px) {
+
+  .textbox {
+    background-color:  #ECEDF1;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    padding: 2vh;
+    width: 30vh;
+    margin-left: 27%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    border-radius: .87em;
+  }
+
   .formcontainer {
-    display: flex;
-    flex-direction: column;
     width: 50vw;
-    margin: 10px;
+    margin-left: 22%;
   }
   
   .button {
-    width: 10%;
+    width: 15%;
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
@@ -44,15 +132,25 @@
 
 /* Ipad COMPLETE */
 @media screen and (max-width: 769px) {
+  
+  .textbox {
+    background-color:  #ECEDF1;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    padding: 2vh;
+    width: 30vh;
+    margin-left: 27%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    border-radius: .87em;
+  }
+
   .formcontainer {
-    display: flex;
-    flex-direction: column;
     width: 50vw;
-    margin: 10px;
+    margin-left: 22%;
   }
   
   .button {
-    width: 10%;
+    width:25%;
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
@@ -61,15 +159,26 @@
 
 /* Iphone 6/7/8 Plus COMPLETE */
 @media screen and (max-width: 414px) {
+  .textbox {
+    background-color:  #ECEDF1;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    padding: 2vh;
+    width: 45vh;
+    margin-left: 7%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    border-radius: .87em;
+  }
+
   .formcontainer {
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
-    margin: 10px;
+    width: 83vw;
+    margin-left: 7%;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    border-radius: .87em;
   }
   
   .button {
-    width: 10%;
+    width: 25%;
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
@@ -78,32 +187,67 @@
 
 /* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
 @media screen and (max-width: 412px) {
+  .textbox {
+    background-color:  #ECEDF1;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    padding: 2vh;
+    width: 45vh;
+    margin-left: 7%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    border-radius: .87em;
+  }
   .formcontainer {
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
-    margin: 10px;
+    width: 83vw;
+    margin-left: 7%;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    border-radius: .87em;
   }
   
   .button {
-    width: 10%;
+    width: 25%;
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
   }
 }
 
+@media screen and (max-width: 411px) {
+  .textbox {
+    background-color:  #ECEDF1;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    padding: 2vh;
+    width: 39vh;
+    margin-left: 7%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    border-radius: .87em;
+  }
+}
+
 /* Iphone 5/SE & Galaxy S5 */
 @media screen and (max-width: 375px) {
   .formcontainer {
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
-    margin: 10px;
+    width: 83vw;
+    margin-left: 7%;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    margin-bottom: 20%;
+    border-radius: .87em;
+  }
+
+  .textbox {
+    background-color:  #ECEDF1;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    padding: 2vh;
+    width: 45vh;
+    margin-left: 7%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    border-radius: .87em;
   }
   
   .button {
-    width: 10%;
+    width: 25%;
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
