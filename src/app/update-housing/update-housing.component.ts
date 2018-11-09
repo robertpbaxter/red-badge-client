@@ -37,7 +37,6 @@ export class UpdateHousingComponent implements OnInit {
 
   getOneCoords(id: number): void {
     this.coordsService.getOneCoords(id).subscribe(coords => {
-      console.log(coords);
       this.coords = coords;
       this.newLat = coords.latitude;
       this.newLng = coords.longitude;
@@ -45,7 +44,6 @@ export class UpdateHousingComponent implements OnInit {
   }
 
   onPickedLocation(event) {
-    console.log(event);
     this.newLat = event.coords.lat;
     this.newLng = event.coords.lng;
   }
@@ -72,18 +70,14 @@ export class UpdateHousingComponent implements OnInit {
         price
       } as Housing)
       .subscribe(results => {
-        console.log(results);
         this.updateCoords(this.data.housing.id, this.newLat, this.newLng);
-        // this.thisDialogReg.close("Confirm");
       });
   }
 
   updateCoords(housingId: number, lat: number, lng: number): void {
-    console.log(housingId, lat, lng);
     this.coordsService
       .updateCoords({ housingId, lat, lng } as Coords)
       .subscribe(result => {
-        console.log(result);
         this.thisDialogReg.close("Confirm");
       });
   }
