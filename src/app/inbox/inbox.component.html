@@ -1,27 +1,28 @@
-<h1>Your Messages <i class="far fa-envelope"></i></h1>
-<div *ngFor='let message of incomingMessages'>
-  <mat-accordion>
-    <mat-expansion-panel class="message">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <app-user [userId]="message.senderId"></app-user>: {{message.subject}} <b *ngIf="message.status==='new'">
-            (NEW)</b>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <div class="messageContent">
-        <p>{{message.content}}</p>
-      </div>
-      <hr />
-      <div class="menu">
-        <button mat-icon-button matTooltip="More Actions" [matMenuTriggerFor]="menu">
-          <mat-icon><i class="fas fa-ellipsis-v"></i></mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item (click)="reply(message)" class="menubutton">Reply</button>
-          <button mat-menu-item (click)="deleteMessage(message.id)" class="menubutton">Delete</button>
-          <button mat-menu-item (click)="report(message)" class="menubutton">Report</button>
-        </mat-menu>
-      </div>
-    </mat-expansion-panel>
-  </mat-accordion>
+<div class="wrapper">
+  <h1>Your Messages <i class="far fa-envelope"></i></h1>
+  <div *ngFor='let message of incomingMessages'>
+    <mat-accordion class="inbox">
+      <mat-expansion-panel class="message">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <app-user [userId]="message.senderId"></app-user>: {{message.subject}} <b *ngIf="message.status==='new'">
+              (NEW)</b>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="messageContent">
+          <p>{{message.content}}</p>
+        </div>
+        <div class="menu">
+          <button mat-icon-button matTooltip="More Actions" [matMenuTriggerFor]="menu">
+            <mat-icon><i class="fas fa-ellipsis-v"></i></mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="reply(message)" class="menubutton">Reply</button>
+            <button mat-menu-item (click)="deleteMessage(message.id)" class="menubutton">Delete</button>
+            <button mat-menu-item (click)="report(message)" class="menubutton">Report</button>
+          </mat-menu>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 </div>
