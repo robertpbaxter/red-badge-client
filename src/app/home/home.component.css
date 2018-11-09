@@ -30,6 +30,8 @@ table {
   box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
 }
 
+
+
 /* Ipad Pro COMPLETE */
 @media screen and (max-width: 1024px) {
   .table {
