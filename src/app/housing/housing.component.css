@@ -89,9 +89,9 @@ p{
 }
 
 .delete {
-  background-color:  #182A2B;
-  color: white;
-  font-family: "Raleway", "sans-serif";
+  background-color: #77726C;
+  color: #E8E8E8;
+  font-family: "Ubuntu", "sans-serif";
 }
 
 .delete:hover {
@@ -203,9 +203,9 @@ p{
   }
 
   .delete {
-    background-color:  #182A2B;
-    color: white;
-    font-family: "Raleway", "sans-serif";
+    background-color: #77726C;
+    color: #E8E8E8;
+    font-family: "Ubuntu", "sans-serif";
   }
   
   .delete:hover {
@@ -302,11 +302,15 @@ p{
     width: 70%;
     float: left;
   }
-
   .delete {
-    background-color:  #182A2B;
-    color: white;
-    font-family: "Raleway", "sans-serif";
+    background-color: #77726C;
+    color: #E8E8E8;
+    font-family: "Ubuntu", "sans-serif";
+  }
+  
+  .delete:hover {
+    background-color: #8C3C27;
+    color: black;
   }
 
   .update {
@@ -400,9 +404,14 @@ p{
   }
 
   .delete {
-    background-color:  #182A2B;
-    color: white;
-    font-family: "Raleway", "sans-serif";
+    background-color: #77726C;
+    color: #E8E8E8;
+    font-family: "Ubuntu", "sans-serif";
+  }
+  
+  .delete:hover {
+    background-color: #8C3C27;
+    color: black;
   }
 
   .update {
@@ -495,9 +504,14 @@ p{
   }
 
   .delete {
-    background-color:  #182A2B;
-    color: white;
-    font-family: "Raleway", "sans-serif";
+    background-color: #77726C;
+    color: #E8E8E8;
+    font-family: "Ubuntu", "sans-serif";
+  }
+  
+  .delete:hover {
+    background-color: #8C3C27;
+    color: black;
   }
 
   .update {
@@ -590,9 +604,14 @@ p{
   }
 
   .delete {
-    background-color:  #182A2B;
-    color: white;
-    font-family: "Raleway", "sans-serif";
+    background-color: #77726C;
+    color: #E8E8E8;
+    font-family: "Ubuntu", "sans-serif";
+  }
+  
+  .delete:hover {
+    background-color: #8C3C27;
+    color: black;
   }
 
   .update {
