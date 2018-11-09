@@ -2,6 +2,7 @@
   font-family: "Ubuntu", sans-serif;
   color: #e8e3e2;
   background-color: #ECEDF1;
+  position: fixed;
 }
 .navlink {
   margin-right: 10px;

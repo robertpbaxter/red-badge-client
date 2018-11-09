@@ -71,14 +71,14 @@
     </mat-form-field>
 
     <mat-dialog-actions>
-      <button mat-raised-button (click)="updateHousing(data.housing.id,residenceType.value,
+      <button class="update" mat-raised-button (click)="updateHousing(data.housing.id,residenceType.value,
     rooms.value,
     bathrooms.value,
     address.value,
     petsAllowed.value,
     facilities.value,
     price.value)">update</button>
-      <button mat-raised-button (click)="onCloseCancel()">cancel</button>
+      <button class="cancel" mat-raised-button (click)="onCloseCancel()">cancel</button>
     </mat-dialog-actions>
 
   </mat-dialog-content>

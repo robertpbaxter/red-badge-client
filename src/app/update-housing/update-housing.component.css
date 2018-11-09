@@ -6,3 +6,17 @@ agm-map {
 .editsingle {
   margin: 10px;
 }
+
+.update {
+  font-family: "Ubuntu", "sans-serif";
+}
+
+.update:hover {
+  background-color: #349fad;
+}
+
+.cancel:hover {
+  background-color: #77726C;
+  color: #E8E8E8;
+  font-family: "Ubuntu", "sans-serif";
+}
