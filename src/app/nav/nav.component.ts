@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { MessageService } from "../message.service";
 import { Router } from "@angular/router";
+import { UserService } from "../user.service";
 
 @Component({
   selector: "app-nav",
@@ -12,13 +13,27 @@ export class NavComponent implements OnInit {
   isAdmin = this.verifyAdmin();
   newMessages = null;
 
-  constructor(private messageService: MessageService, private router: Router) {}
+  constructor(
+    private messageService: MessageService,
+    private userService: UserService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
+    this.getSelf();
     this.isLoggedIn;
     if (this.isLoggedIn) {
       this.fetchNotifications();
     }
+  }
+
+  getSelf(): void {
+    this.userService.getSelf().subscribe(user => {
+      if (!user) {
+        localStorage.clear();
+        this.router.navigate(["/auth"]);
+      }
+    });
   }
 
   goToInbox(): void {

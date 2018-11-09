@@ -38,7 +38,6 @@ export class SignupComponent implements OnInit {
     email: string,
     password: string
   ): void {
-    console.log("You are in!");
     let permission = "user";
     this.authService
       .signup({ firstName, lastName, email, password, permission } as User)

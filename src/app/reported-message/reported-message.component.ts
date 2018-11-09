@@ -30,7 +30,6 @@ export class ReportedMessageComponent implements OnInit {
 
   populateName(senderId: number): void {
     this.userService.getUser(senderId).subscribe(result => {
-      console.log(result);
       this.sentBy = `${result.lastName}, ${result.firstName}, (${
         result.email
       })`;
