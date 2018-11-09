@@ -27,6 +27,7 @@ agm-map {
   margin: 5em 2em 1em 1.5em;
   font-family: 'Ubuntu', sans-serif;
   background-color: #ECEDF1; 
+  box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
   padding: 2em;
 }
 

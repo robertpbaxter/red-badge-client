@@ -70,25 +70,6 @@
       <span matSuffix>.00</span>
     </mat-form-field>
 
-    <mat-form-field>
-      <mat-select placeholder="pets allowed" #petsAllowed [(ngModel)]='data.housing.petsAllowed'>
-        <mat-option value="Yes">Yes</mat-option>
-        <mat-option value="No">No</mat-option>
-      </mat-select>
-      <!-- <input matInput placeholder="if yes what kind"> -->
-    </mat-form-field>
-
-    <mat-form-field class="facilities">
-      <textarea [(ngModel)]='data.housing.facilities' #facilities matInput placeholder="please list facilities"></textarea>
-    </mat-form-field>
-
-    <mat-form-field>
-      <input [(ngModel)]='data.housing.price' #price matInput placeholder="rent amount per month" type="number" class="example-right-align">
-      <span matPrefix>$&nbsp;</span>
-      <span matSuffix>.00</span>
-    </mat-form-field>
-
-
     <mat-dialog-actions>
       <button mat-raised-button (click)="updateHousing(data.housing.id,residenceType.value,
     rooms.value,
