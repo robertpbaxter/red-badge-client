@@ -5,10 +5,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+<<<<<<< HEAD
   height: 93.5vh;
   width: 100%;
   margin: 0;
   /* overflow: scroll; */
+=======
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+>>>>>>> jnb
   overflow-x: hidden;
 }
 
@@ -16,11 +22,13 @@
   width: 60vh;
   height: 80vh;
   /* font-family: "Ubuntu", "sans-serif"; */
-  background-color: #E8E8E8;
+  background-color:  #ECEDF1;
   margin: auto;
   text-align: center;
   top: 50vh;
   border-radius: 0.87em;
+  box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+
 }
 
 .userinfo {
@@ -38,18 +46,20 @@
 }
 
 .update {
-  background-color: #77726C;
+  background-color: #182A2B;
   color: #E8E8E8;
+  font-family: "Ubuntu", "sans-serif";
 }
 
 .update:hover {
-  background-color: #E8E8E8;
-  color: #77726C;
+  background-color: #349fad;
+  color: black;
 }
 
 .delete {
   background-color: #77726C;
   color: #E8E8E8;
+  font-family: "Ubuntu", "sans-serif";
 }
 
 .delete:hover {
@@ -68,13 +78,24 @@ button{
   margin: 5vh 2vh;
 }
 
+@media screen and (max-width: 1282px) {
+  .user {
+    width: 50vh;
+    height: 60vh;
+    /* font-family: "Ubuntu", "sans-serif"; */
+    margin: auto;
+    text-align: center;
+    top: 50vh;
+    border-radius: 0.87em;
+  }
+}
+
 /* Ipad Pro COMPLETE */
 @media screen and (max-width: 1024px) {
   .user {
     width: 60vh;
-    height: 80vh;
+    height: 65vh;
     /* font-family: "Ubuntu", "sans-serif"; */
-    background-color: #E8E8E8;
     margin: auto;
     text-align: center;
     top: 50vh;
@@ -89,30 +110,6 @@ button{
     border-radius: 0.87em;
     font-size: 1em;
     font-weight: lighter;
-  }
-  
-  .form-group{
-    font-family: "Raleway", "sans-serif"
-  }
-  
-  .update {
-    background-color: #77726C;
-    color: #E8E8E8;
-  }
-  
-  .update:hover {
-    background-color: #E8E8E8;
-    color: #77726C;
-  }
-  
-  .delete {
-    background-color: #8C3C27;
-    color: #E8E8E8;
-  }
-  
-  .delete:hover {
-    background-color: #8C3C27;
-    color: black;
   }
   
   h1{
@@ -133,7 +130,6 @@ button{
     width: 50vh;
     height: 80vh;
     /* font-family: "Ubuntu", "sans-serif"; */
-    background-color: #E8E8E8;
     margin: auto;
     text-align: center;
     top: 50vh;
@@ -148,30 +144,6 @@ button{
     border-radius: 0.87em;
     font-size: 1em;
     font-weight: lighter;
-  }
-  
-  .form-group{
-    font-family: "Raleway", "sans-serif"
-  }
-  
-  .update {
-    background-color: #77726C;
-    color: #E8E8E8;
-  }
-  
-  .update:hover {
-    background-color: #E8E8E8;
-    color: #77726C;
-  }
-  
-  .delete {
-    background-color: #8C3C27;
-    color: #E8E8E8;
-  }
-  
-  .delete:hover {
-    background-color: #8C3C27;
-    color: black;
   }
   
   h1{
@@ -193,7 +165,6 @@ button{
     max-width: 45vh;
     height: 80vh;
     /* font-family: "Ubuntu", "sans-serif"; */
-    background-color: #E8E8E8;
     margin: auto;
     text-align: center;
     top: 50vh;
@@ -208,30 +179,6 @@ button{
     border-radius: 0.87em;
     font-size: 1em;
     font-weight: lighter;
-  }
-  
-  .form-group{
-    font-family: "Raleway", "sans-serif"
-  }
-  
-  .update {
-    background-color: #77726C;
-    color: #E8E8E8;
-  }
-  
-  .update:hover {
-    background-color: #E8E8E8;
-    color: #77726C;
-  }
-  
-  .delete {
-    background-color: #8C3C27;
-    color: #E8E8E8;
-  }
-  
-  .delete:hover {
-    background-color: #8C3C27;
-    color: black;
   }
   
   h1{
@@ -253,7 +200,6 @@ button{
     width: 50vh;
     height: 80vh;
     /* font-family: "Ubuntu", "sans-serif"; */
-    background-color: #E8E8E8;
     margin: auto;
     text-align: center;
     top: 50vh;
@@ -270,29 +216,6 @@ button{
     font-weight: lighter;
   }
   
-  .form-group{
-    font-family: "Raleway", "sans-serif"
-  }
-  
-  .update {
-    background-color: #77726C;
-    color: #E8E8E8;
-  }
-  
-  .update:hover {
-    background-color: #E8E8E8;
-    color: #77726C;
-  }
-  
-  .delete {
-    background-color: #8C3C27;
-    color: #E8E8E8;
-  }
-  
-  .delete:hover {
-    background-color: #8C3C27;
-    color: black;
-  }
   
   h1{
     padding: 4vh;
