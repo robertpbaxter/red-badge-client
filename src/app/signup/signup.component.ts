@@ -21,12 +21,12 @@ export class SignupComponent implements OnInit {
     let e = email.toLowerCase().trim();
     let p = password.trim();
 
-    if (password.length > 5 && password === confirmPassword) {
+    if (password.length >= 8 && password === confirmPassword) {
       this.signup(firstName, lastName, e, p);
-    } else if (password.length > 5 && password != confirmPassword) {
+    } else if (password.length >= 8 && password != confirmPassword) {
       alert("Your passwords don't match");
-    } else if (password.length < 6) {
-      alert("Password must be at least 6 characters long");
+    } else if (password.length < 8) {
+      alert("Password must be at least 8 characters long");
     } else {
       alert("Error!");
     }
