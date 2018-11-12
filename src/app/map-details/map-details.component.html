@@ -1,12 +1,13 @@
 <div *ngIf="housingId">
   <p><i class="fas fa-home"></i></p>
-  <p>{{housing.residenceType}}</p>
+  <p>{{housingId.residenceType}}</p>
   <!-- <p>{{housing.rooms}}</p> -->
   <!-- <p>{{housing.bathrooms}}</p> -->
-  <p>City / Neigborhood{{housing.address}}</p>
+  <p>City / Neigborhood{{housingId.address}}</p>
   <!-- <p>{{housing.petsAllowed}}</p> -->
   <!-- <p>{{housing.facilities}}</p> -->
-  <p>${{housing.price}} per month</p>
+  <p>${{housingId.price}} per month</p>
   <!-- <p>{{housing.owner}}</p> -->
-  <a routerLink="/detail/{{housing.id}}">more details</a>
+  
+  <a routerLink="/detail/{{housingId.id}}">more details</a>
 </div>
