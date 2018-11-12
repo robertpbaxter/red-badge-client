@@ -128,12 +128,13 @@
 /* Iphone 6/7/8 Plus COMPLETE */
  @media screen and (max-width: 414px) {
   .signup {
-    width: 70vw;
-    height: 73vh;
+    width: 75vw;
+    height: 78vh;
     margin: auto;
     text-align: center;
     display: block;
     top: 10vh;
+    bottom: 15vh;
     background-color:#ECEDF1;
     border-radius: 0.87em;
     box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
