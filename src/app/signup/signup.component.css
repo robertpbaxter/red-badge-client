@@ -221,7 +221,7 @@
 /* Iphone 5/SE & Galaxy S5 */
 @media screen and (max-width: 360px) { 
   .signup {
-    width: 55vw;
+    width: 65vw;
     height: 72vh;
     margin: auto;
     top: 12vh;
@@ -242,7 +242,7 @@
     margin: 2em auto;
     text-align: center;
     display: block;
-    padding: 1em;
+    padding: .8em;
     border-radius: 0.87em;
     font-family: "Raleway", "sans-serif";
     font-size: 9pt;
