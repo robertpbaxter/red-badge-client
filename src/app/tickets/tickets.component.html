@@ -1,7 +1,7 @@
 <div class="wrapper">
 <div fxLayoutAlign="center center">
   <div *ngFor="let ticket of tickets">
-    <mat-card class="ticket">
+    <mat-card class="ticket" >
       <mat-card-header>
         <mat-card-title class="status">{{ticket.status}}</mat-card-title>
         <mat-card-subtitle class="subtitle">From: <app-user [userId]="ticket.contactId"></app-user>
