@@ -1,13 +1,13 @@
 .toolbar {
   font-family: "Ubuntu", sans-serif;
   color: #e8e3e2;
-  background-color: #ECEDF1;
+  background-color: #ecedf1;
   position: fixed;
-  z-index: 10;
+  z-index: 1;
 }
 .navlink {
   margin-right: 10px;
-  background-color: #ECEDF1;
+  background-color: #ecedf1;
   /* border-top: #4d2110 1px solid; */
   border-bottom: rgb(228, 228, 228) 1px solid;
   color: black;
@@ -46,7 +46,7 @@
   overflow: visible !important;
 }
 
-.mat-menu-content:not(:empty){
+.mat-menu-content:not(:empty) {
   padding-top: 0px;
   padding-bottom: 0px;
 }

@@ -14,10 +14,10 @@ ml {
 
 /* optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  background: #ff0000;
 }
 
-.outletwrapper{
+.outletwrapper {
   margin-left: auto;
   margin-right: auto;
 }
@@ -26,13 +26,13 @@ ml {
   overflow: visible;
 }
 
-.mat-menu-content:not(:empty){
+.mat-menu-content:not(:empty) {
   padding-top: 0px !important;
-  padding-bottom: 0px  !important;
+  padding-bottom: 0px !important;
   width: 250px;
 }
 
-.menu{
+.menu {
   overflow: visible !important;
 }
 
@@ -41,4 +41,8 @@ ml {
   right: 0 !important;
   height: 10vh;
   margin-right: 3vh;
+}
+
+.cdk-overlay-pane {
+  max-height: 90vh;
 }
