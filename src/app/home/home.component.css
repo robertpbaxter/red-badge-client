@@ -1,4 +1,4 @@
-.wrapper {
+/* .wrapper {
   background-image: url('../../assets/images/nathan-fertig-249917-unsplash.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -9,7 +9,7 @@
   margin: 0;
   overflow: scroll;
   overflow-x: hidden;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 0px;

@@ -58,3 +58,9 @@
 img {
   right: 0 !important;
 }
+
+.empty {
+  width: 100%;
+  height: 4vh;
+  display: block;
+}
