@@ -17,11 +17,11 @@
 
 .signup {
   width: 30%;
-  height: 60vh;
+  height: 73vh;
   margin: auto;
   text-align: center;
   display: block;
-  top: 125px;
+  top: 11vh;
   background-color:#ECEDF1;
   border-radius: 0.87em;
   box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
@@ -53,8 +53,8 @@
 
 @media screen and (max-width: 1281px) {
   .signup {
-    width: 40%;
-    height: 57vh;
+    width: 30%;
+    height: 60vh;
     margin: auto;
     text-align: center;
     display: block;
