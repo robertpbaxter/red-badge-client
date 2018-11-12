@@ -55,6 +55,11 @@
   overflow: visible !important;
 }
 
+h6 {
+  color: #349fad;
+  font-family: "Ubuntu", "sans serif";
+}
+
 img {
   right: 0 !important;
 }
