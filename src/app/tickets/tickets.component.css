@@ -1,6 +1,6 @@
 .ticket{
     margin: auto;
-    margin-top: 2%;
+    margin-top: 10vh;
     margin-bottom: 4%;
     width: 40%;
     padding: 15px;
@@ -104,7 +104,7 @@
 @media screen and (max-width: 1024px) {
     .ticket{
         margin: auto;
-        margin-top: 2%;
+        margin-top: 5vh;
         margin-bottom: 2%;
         width: 45%;
         padding: 15px;
@@ -276,7 +276,7 @@
 @media screen and (max-width: 375px) {
     .ticket{
         margin: auto;
-        margin-top: 2%;
+        margin-top: 5vh;
         margin-bottom: 2%;
         width: 80%;
         padding: 15px;
