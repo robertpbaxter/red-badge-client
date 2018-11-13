@@ -1,3 +1,16 @@
+.wrapper {
+  background-image: url('../../assets/images/nathan-fertig-249917-unsplash.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
 agm-map {
   width: 40vw;
   height: 65vh;
@@ -50,7 +63,8 @@ font-size: 18pt;
   width: 70vw;
   min-height: 70vh;
   margin: auto;
-  margin-top: 4%;
+  top: 10vh;
+  /* margin-top: 4%; */
   background-color:  #ECEDF1;
   border-radius: 0.87em;
 }

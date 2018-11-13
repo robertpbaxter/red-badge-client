@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { MessageService } from "../message.service";
 import { Router } from "@angular/router";
 import { UserService } from "../user.service";
+import { User } from "../user";
 
 @Component({
   selector: "app-nav",
@@ -12,6 +13,7 @@ export class NavComponent implements OnInit {
   isLoggedIn = localStorage.getItem("token");
   isAdmin = this.verifyAdmin();
   newMessages = null;
+  user: User;
 
   constructor(
     private messageService: MessageService,
@@ -32,6 +34,8 @@ export class NavComponent implements OnInit {
       if (!user) {
         localStorage.clear();
         this.router.navigate(["/auth"]);
+      } else {
+        this.user = user;
       }
     });
   }

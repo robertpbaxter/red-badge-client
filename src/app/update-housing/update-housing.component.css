@@ -1,5 +1,5 @@
 agm-map {
-  height: 400px;
+  height: 200px;
   max-width: 600px;
 }
 
@@ -16,7 +16,7 @@ agm-map {
 }
 
 .cancel:hover {
-  background-color: #77726C;
-  color: #E8E8E8;
+  background-color: #77726c;
+  color: #e8e8e8;
   font-family: "Ubuntu", "sans-serif";
 }

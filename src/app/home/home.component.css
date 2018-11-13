@@ -4,7 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   margin: 0;
   overflow: scroll;
@@ -52,6 +52,16 @@ table {
 
 }
 
+@media screen and (max-width: 415px) { 
+  table {
+    width: 80vw;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 70%;
+    margin-left: 9%;
+    margin-bottom: 12vh;
+  }
+}
+
 /* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
  @media screen and (max-width: 412px) {
   table {
@@ -59,6 +69,7 @@ table {
     font-family: 'Ubuntu', sans-serif;
     font-size: 70%;
     margin-left: 9%;
+    margin-bottom: 10vh;
   }
 
 }
@@ -85,6 +96,7 @@ table {
     width: 85vw;
     font-family: 'Ubuntu', sans-serif;
     margin-left: -4%;
+    margin-bottom: 10vh;
     font-size: 90%;
     }
 
@@ -105,6 +117,7 @@ table {
     font-family: 'Ubuntu', sans-serif;
     margin-left: -2.7%;
     font-size: 70%;
+    margin-bottom: 12vh;
     }
 
   td {

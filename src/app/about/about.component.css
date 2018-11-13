@@ -12,8 +12,8 @@
 
 .card {
   margin:auto;
-  margin-top: 5vh;
-  bottom: 10vh;
+  margin-top: 15vh;
+  bottom: 12vh;
   width: 75vw;
   background-color:  #ECEDF1;
   border-radius: 0.87em;
@@ -24,7 +24,7 @@
 @media screen and (max-width: 412px) {
   .card {
     margin:auto;
-    margin-top: 5vh;
+    margin-top: 15vh;
     margin-bottom: 10em;
     width: 75vw;
     background-color:  #ECEDF1;

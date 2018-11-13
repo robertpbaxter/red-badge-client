@@ -21,7 +21,7 @@ agm-map {
 .textdiv {
   width: 25%;
   height: 68vh;
-  overflow: auto;
+  /* overflow: auto; */
   display: block;
   float: left;
   margin: 5em 2em 1em 1.5em;
@@ -39,6 +39,7 @@ h1 {
 p{
   font-weight: 100;
   font-size: 1em;
+  line-height: 1.6;
 }
 
 @media screen and (max-width: 1920px) {
@@ -96,7 +97,7 @@ p{
     width: 89vw;
     display: block;
     margin-left: 3.5%;
-    margin-top: 5%;
+    margin-top: 7vh;
   }
 
   .textdiv {
@@ -131,7 +132,7 @@ p{
     width: 85vw;
     display: block;
     margin-left: 3.5%;
-    margin-top: 3%;
+    margin-top: 12vh;
     margin-bottom: 10%;
   }
   .textdiv {
@@ -164,7 +165,7 @@ p{
     width: 85vw;
     display: block;
     margin-left: 3.8%;
-    margin-top: 2%;
+    margin-top: 10vh;
     margin-bottom: 10%;
   }
   .textdiv {
@@ -196,7 +197,7 @@ p{
     width: 85vw;
     display: block;
     margin-left: 3%;
-    margin-top: 5%;
+    margin-top: 12vh;
   }
   .textdiv {
     width: 84vw;

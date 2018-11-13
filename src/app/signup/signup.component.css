@@ -1,6 +1,6 @@
 /* .wrapper { */
 .wrapper {  
-  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('../../assets/images/gabriele-diwald-190721-unsplash.jpg');
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('../../assets/images/nathan-fertig-249917-unsplash.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,12 +17,12 @@
 
 .signup {
   width: 30%;
-  height: 60vh;
+  height: 73vh;
   margin: auto;
   text-align: center;
   display: block;
-  top: 125px;
-  background-color: #ECEDF1;
+  top: 11vh;
+  background-color:#ECEDF1;
   border-radius: 0.87em;
   box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
   font-family: 'Ubuntu', sans-serif;
@@ -51,8 +51,34 @@
 
 }
 
+@media screen and (max-width: 1281px) {
+  .signup {
+    width: 30%;
+    height: 60vh;
+    margin: auto;
+    text-align: center;
+    display: block;
+    top: 15vh;
+    background-color:#ECEDF1;
+    border-radius: 0.87em;
+    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .info {
+    margin: 2em auto;
+    text-align: center;
+    display: block;
+    padding: 1em;
+    border-radius: 0.87em;
+    font-family: "Raleway", "sans-serif";
+    font-size: 1em;
+    width: 75%;
+  }
+}
+
 /* Ipad Pro COMPLETE */
-/* @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .signup {
     width: 40%;
     height: 45vh;
@@ -60,26 +86,74 @@
     text-align: center;
     display: block;
     top: 125px;
-    background-color: #E8E8E8;
+    background-color:#ECEDF1;
     border-radius: 0.87em;
     box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
     font-family: 'Ubuntu', sans-serif;
   }
 
-} */
+}
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1022px) {
   .signup {
     width: 40%;
-    height: 60vh;
+    height: 73vh;
     margin: auto;
     text-align: center;
     display: block;
     top: 125px;
-    background-color: #E8E8E8;
+    background-color:#ECEDF1;
     border-radius: 0.87em;
     box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
     font-family: 'Ubuntu', sans-serif;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .signup {
+    width: 40%;
+    height: 64vh;
+    margin: auto;
+    text-align: center;
+    display: block;
+    top: 125px;
+    background-color:#ECEDF1;
+    border-radius: 0.87em;
+    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
+
+
+/* Iphone 6/7/8 Plus COMPLETE */
+ @media screen and (max-width: 414px) {
+  .signup {
+    width: 75vw;
+    height: 78vh;
+    margin: auto;
+    text-align: center;
+    display: block;
+    top: 10vh;
+    bottom: 15vh;
+    background-color:#ECEDF1;
+    border-radius: 0.87em;
+    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.3em;
+  }
+
+  .info {
+    margin: 2em auto;
+    text-align: center;
+    display: block;
+    padding: 1em;
+    border-radius: 0.87em;
+    font-family: "Raleway", "sans-serif";
+    font-size: 1em;
   }
 }
 
@@ -87,28 +161,74 @@
 @media screen and (max-width: 412px) {
   .signup {
     width: 68%;
-    height: 72vh;
+    height: 68vh;
     margin: auto;
     text-align: center;
     display: block;
     top: 70px;
-    background-color: #E8E8E8;
+    background-color:#ECEDF1;
     border-radius: 0.87em;
     box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
     font-family: 'Ubuntu', sans-serif;
+  }
+
+  .title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+  }
+
+  .info {
+    margin: 2em auto;
+    text-align: center;
+    display: block;
+    padding: .6em;
+    border-radius: 0.87em;
+    font-family: "Raleway", "sans-serif";
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .signup {
+    width: 68%;
+    height: 64vh;
+    margin: auto;
+    text-align: center;
+    display: block;
+    top: 13vh;
+    background-color:#ECEDF1;
+    border-radius: 0.87em;
+    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  
+  .title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+  }
+
+  .info {
+    margin: 2em auto;
+    text-align: center;
+    display: block;
+    padding: .5em;
+    border-radius: 0.87em;
+    font-family: "Raleway", "sans-serif";
+    font-size: .9em;
   }
 }
 
 /* Iphone 5/SE & Galaxy S5 */
- @media screen and (max-width: 375px) { 
+@media screen and (max-width: 360px) { 
   .signup {
-    width: 55vw;
-    height: 2vh;
+    width: 65vw;
+    height: 72vh;
     margin: auto;
+    top: 12vh;
     text-align: center;
     display: block;
-    top: 2%;
-    background-color: #E8E8E8;
+    background-color:#ECEDF1;
     border-radius: 0.87em;
     box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
     font-family: 'Ubuntu', sans-serif;
@@ -116,47 +236,47 @@
 
   .title {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 15pt;
+    font-size: 1.5em;
   }
 
   .info {
     margin: 2em auto;
     text-align: center;
     display: block;
-    padding: 1em;
-    border-radius: 0.87em;
-    font-family: "Raleway", "sans-serif";
-    font-size: 9pt;
-  }
-} 
-
-/* Iphone 6/7/8 Plus COMPLETE */
- @media screen and (max-width: 414px) {
-  .signup {
-    width: 70vw;
-    height: 73vh;
-    margin: auto;
-    text-align: center;
-    display: block;
-    top: 4%;
-    background-color: #E8E8E8;
-    border-radius: 0.87em;
-    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
-    font-family: 'Ubuntu', sans-serif;
-  }
-
-  .title {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 20pt;
-  }
-
-  .info {
-    margin: 2em auto;
-    text-align: center;
-    display: block;
-    padding: 1em;
+    padding: .8em;
     border-radius: 0.87em;
     font-family: "Raleway", "sans-serif";
     font-size: 9pt;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .signup {
+    width: 55vw;
+    height: 72vh;
+    margin: auto;
+    top: 12vh;
+    text-align: center;
+    display: block;
+    background-color:#ECEDF1;
+    border-radius: 0.87em;
+    box-shadow: 6px 6px rgba(7, 6, 6, 0.486);
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+  }
+
+  .info {
+    margin: 2em auto;
+    text-align: center;
+    display: block;
+    padding: .5em;
+    border-radius: 0.87em;
+    font-family: "Raleway", "sans-serif";
+    font-size: .8em;
+  }
+}
+

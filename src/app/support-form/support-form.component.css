@@ -112,7 +112,7 @@ p {
     padding: 2vh;
     width: 30vh;
     margin-left: 27%;
-    margin-top: 7%;
+    margin-top: 15%;
     margin-bottom: 7%;
     border-radius: .87em;
   }
@@ -139,7 +139,7 @@ p {
     padding: 2vh;
     width: 30vh;
     margin-left: 27%;
-    margin-top: 7%;
+    margin-top: 15%;
     margin-bottom: 7%;
     border-radius: .87em;
   }
@@ -165,7 +165,7 @@ p {
     padding: 2vh;
     width: 45vh;
     margin-left: 7%;
-    margin-top: 7%;
+    margin-top: 20%;
     margin-bottom: 7%;
     border-radius: .87em;
   }
@@ -193,7 +193,7 @@ p {
     padding: 2vh;
     width: 45vh;
     margin-left: 7%;
-    margin-top: 7%;
+    margin-top: 20%;
     margin-bottom: 7%;
     border-radius: .87em;
   }
@@ -219,14 +219,34 @@ p {
     padding: 2vh;
     width: 39vh;
     margin-left: 7%;
-    margin-top: 7%;
+    margin-top: 20%;
     margin-bottom: 7%;
     border-radius: .87em;
   }
 }
 
-/* Iphone 5/SE & Galaxy S5 */
 @media screen and (max-width: 375px) {
+  .textbox {
+    background-color:  #ECEDF1;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    padding: 2vh;
+    width: 36vh;
+    margin-left: 7%;
+    margin-top: 20%;
+    margin-bottom: 7%;
+    border-radius: .87em;
+  }
+  .formcontainer {
+    width: 83vw;
+    margin-left: 7%;
+    box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
+    margin-bottom: 20%;
+    border-radius: .87em;
+  }
+}
+
+/* Iphone 5/SE & Galaxy S5 */
+@media screen and (max-width: 361px) {
   .formcontainer {
     width: 83vw;
     margin-left: 7%;
@@ -241,7 +261,7 @@ p {
     padding: 2vh;
     width: 45vh;
     margin-left: 7%;
-    margin-top: 7%;
+    margin-top: 20%;
     margin-bottom: 7%;
     border-radius: .87em;
   }
