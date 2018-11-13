@@ -23,3 +23,21 @@ describe("AppComponent", () => {
     expect(app).toBeTruthy();
   });
 });
+
+// import { NavComponent } from "./nav/nav.component";
+// import { FooterComponent } from "./footer/footer.component";
+
+// describe("AppComponent", () => {
+//   beforeEach(async(() => {
+//     TestBed.configureTestingModule({
+//       imports: [RouterTestingModule],
+//       declarations: [AppComponent, NavComponent, FooterComponent]
+//     }).compileComponents();
+//   }));
+
+//   it("should create the app", () => {
+//     const fixture = TestBed.createComponent(AppComponent);
+//     const app = fixture.debugElement.componentInstance;
+//     expect(app).toBeTruthy();
+//   });
+// });

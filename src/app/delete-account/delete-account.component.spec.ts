@@ -1,16 +1,28 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import {
+  MatDialogModule,
+  MatDialogRef,
+  MAT_DIALOG_DATA
+} from "@angular/material";
+import { DeleteAccountComponent } from "./delete-account.component";
+import { HttpClient, HttpHandler } from "@angular/common/http";
 
-import { DeleteAccountComponent } from './delete-account.component';
-
-describe('DeleteAccountComponent', () => {
+describe("DeleteAccountComponent", () => {
+  const mockDialogRef = { confirm: jasmine.createSpy("confirm") };
   let component: DeleteAccountComponent;
   let fixture: ComponentFixture<DeleteAccountComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeleteAccountComponent ]
-    })
-    .compileComponents();
+      imports: [MatDialogModule],
+      declarations: [DeleteAccountComponent],
+      providers: [
+        HttpClient,
+        HttpHandler,
+        { provide: MatDialogRef, useValue: mockDialogRef },
+        MAT_DIALOG_DATA
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +31,7 @@ describe('DeleteAccountComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
