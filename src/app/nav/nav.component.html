@@ -81,7 +81,7 @@
           Log Out
         </button>
       </mat-menu>
-      <h6>Hi, {{ user?.firstName }}!</h6>
+      <h6 *ngIf="user">Hi, {{ user?.firstName }}!</h6>
       <img
         class="brand"
         src="../../assets/images/338a0518-02c6-41e7-8491-74981433c9c6.png"
