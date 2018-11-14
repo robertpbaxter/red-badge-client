@@ -23,8 +23,12 @@ const routes: Routes = [
   },
   { path: "auth", component: AuthComponent },
   { path: "signup", component: SignupComponent },
-  { path: "about", component: AboutComponent, canActivate: [AuthGuard] },
-  { path: "tickets", component: TicketsComponent, canActivate: [AuthGuard, AdminGuard] },
+  { path: "about", component: AboutComponent },
+  {
+    path: "tickets",
+    component: TicketsComponent,
+    canActivate: [AuthGuard, AdminGuard]
+  },
   { path: "housing", component: HousingComponent, canActivate: [AuthGuard] },
   { path: "inbox", component: InboxComponent, canActivate: [AuthGuard] },
   {
