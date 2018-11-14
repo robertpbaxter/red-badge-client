@@ -78,7 +78,9 @@ export class UpdateHousingComponent implements OnInit {
     this.coordsService
       .updateCoords({ housingId, lat, lng } as Coords)
       .subscribe(result => {
-        this.thisDialogReg.close("Confirm");
+        if (result[0] > 0) {
+          window.location.href = "/housing";
+        }
       });
   }
 

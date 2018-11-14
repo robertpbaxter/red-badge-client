@@ -3,9 +3,7 @@
     <mat-accordion>
       <mat-expansion-panel class="newlisting" style="margin-top: 15vh">
         <mat-expansion-panel-header style="background-color:#ECEDF1">
-          <mat-panel-title>
-            Create New Listing
-          </mat-panel-title>
+          <mat-panel-title> Create New Listing </mat-panel-title>
         </mat-expansion-panel-header>
         <mat-form-field class="infomation">
           <mat-select placeholder="type of housing" #residenceType>
@@ -49,7 +47,7 @@
         </mat-form-field>
         <br />
         <mat-form-field class="infomation">
-          <input matInput placeholder="city or neighborhood" #address>
+          <input matInput placeholder="city or neighborhood" #address />
         </mat-form-field>
         <br />
         <mat-form-field class="infomation">
@@ -60,21 +58,52 @@
         </mat-form-field>
         <br />
         <mat-form-field class="infomation">
-          <textarea #facilities matInput placeholder="please list facilities"></textarea>
+          <textarea
+            #facilities
+            matInput
+            placeholder="please list facilities"
+          ></textarea>
         </mat-form-field>
         <br />
         <mat-form-field class="infomation">
-          <input #price matInput placeholder="rent amount per month" type="number" class="example-right-align">
-          <span matPrefix>$&nbsp;</span>
-          <span matSuffix>.00</span>
+          <input
+            #price
+            matInput
+            placeholder="rent amount per month"
+            type="number"
+            class="example-right-align"
+          />
+          <span matPrefix>$&nbsp;</span> <span matSuffix>.00</span>
         </mat-form-field>
 
-        <agm-map class="new" [latitude]="startingLat" [longitude]="startingLng" (mapClick)="onPickedLocation($event)">
+        <agm-map
+          class="new"
+          [latitude]="startingLat"
+          [longitude]="startingLng"
+          (mapClick)="onPickedLocation($event)"
+        >
           <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
         </agm-map>
 
-        <button class="button" mat-raised-button color="primary" fxLayout="center center" (click)=submitHousing(residenceType.value,rooms.value,bathrooms.value,address.value,petsAllowed.value,facilities.value,price.value)>Submit</button>
-
+        <button
+          class="button"
+          mat-raised-button
+          color="primary"
+          fxLayout="center center"
+          (click)="
+            submitHousing(
+              residenceType.value,
+              rooms.value,
+              bathrooms.value,
+              address.value,
+              petsAllowed.value,
+              facilities.value,
+              price.value
+            )
+          "
+        >
+          Submit
+        </button>
       </mat-expansion-panel>
     </mat-accordion>
   </div>
@@ -83,38 +112,61 @@
     <div *ngFor="let housing of housing">
       <mat-card class="housingcard">
         <mat-card-header>
-          <mat-card-title>
-            Listing {{housing.id}}
-          </mat-card-title>
+          <mat-card-title> Listing {{ housing.id }} </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <p><i class="fas fa-home"></i> <span class="info">{{housing.residenceType}}</span> </p>
+          <p>
+            <i class="fas fa-home"></i>
+            <span class="info">{{ housing.residenceType }}</span>
+          </p>
           <br />
-          <p>number of rooms: <span class="info">{{housing.rooms}}</span></p>
+          <p>
+            number of rooms: <span class="info">{{ housing.rooms }}</span>
+          </p>
           <br />
-          <p>number of bathrooms: <span class="info">{{housing.bathrooms}}</span></p>
+          <p>
+            number of bathrooms:
+            <span class="info">{{ housing.bathrooms }}</span>
+          </p>
           <br />
-          <p>city / neigborhood: <span class="info">{{housing.address}}</span></p>
+          <p>
+            city / neigborhood: <span class="info">{{ housing.address }}</span>
+          </p>
           <br />
-          <p>pets allowed: <span class="info">{{housing.petsAllowed}}</span></p>
+          <p>
+            pets allowed: <span class="info">{{ housing.petsAllowed }}</span>
+          </p>
           <br />
-          <p>facilities: <span class="info">{{housing.facilities}}</span></p>
+          <p>
+            facilities: <span class="info">{{ housing.facilities }}</span>
+          </p>
           <br />
-          <p>price: <span class="info">${{housing.price}}</span></p>
-          <br />
-          <p>id: <span class="info">{{housing.id}}</span></p>
+          <p>
+            price: <span class="info">${{ housing.price }}</span>
+          </p>
           <div class="minimap">
-            <app-mini-map [id]="housing.id">
-            </app-mini-map>
+            <app-mini-map [id]="housing.id"> </app-mini-map>
           </div>
         </mat-card-content>
 
         <mat-card-actions class="buttons">
-          <button class="update" mat-raised-button (click)="openDialog(housing)">Update</button>
-          <button class="delete" (click)="deleteHousing(housing)" title="delete ticket" value="housing.id"
-            mat-raised-button>Delete</button>
+          <button
+            class="update"
+            mat-raised-button
+            (click)="openDialog(housing)"
+          >
+            Update
+          </button>
+          <button
+            class="delete"
+            (click)="deleteHousing(housing)"
+            title="delete ticket"
+            value="housing.id"
+            mat-raised-button
+          >
+            Delete
+          </button>
         </mat-card-actions>
-
       </mat-card>
     </div>
   </div>
