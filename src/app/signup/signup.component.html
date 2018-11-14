@@ -5,27 +5,57 @@
       <form>
         <div class="form-group" fxLayoutAlign="center center">
           <label for="firstName">
-            <input type="text" #firstName class="info" placeholder="FIRST NAME"/>
+            <input
+              type="text"
+              #firstName
+              class="info"
+              placeholder="FIRST NAME"
+            />
           </label>
           <label for="lastName">
             <input type="text" #lastName class="info" placeholder="LAST NAME" />
           </label>
-          <label for='email'>
-            <input type="text" #email class="info" placeholder="EMAIL" />
+          <label for="email">
+            <input type="email" #email class="info" placeholder="EMAIL" />
           </label>
-          <label for='password'>
-            <input type="password" #password class="info" placeholder="PASSWORD" />
+          <label for="password">
+            <input
+              type="password"
+              #password
+              class="info"
+              placeholder="PASSWORD"
+            />
           </label>
-          <label for='confirmPassword'>
-            <input type="password" #confirmPassword class="info" placeholder="CONFIRM PASSWORD" />
+          <label for="confirmPassword">
+            <input
+              type="password"
+              #confirmPassword
+              class="info"
+              placeholder="CONFIRM PASSWORD"
+            />
           </label>
         </div>
+
+        <mat-card-actions>
+          <button
+            mat-raised-button
+            type="submit"
+            (click)="
+              validateSignup(
+                firstName.value,
+                lastName.value,
+                email.value,
+                password.value,
+                confirmPassword.value
+              )
+            "
+            class="button"
+          >
+            Create account
+          </button>
+        </mat-card-actions>
       </form>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button type="submit" (click)=validateSignup(firstName.value,lastName.value,email.value,password.value,confirmPassword.value) class="button">Create
-        account</button>
-    </mat-card-actions>
-    <span>Already a user? <a routerLink='/auth'>Log in</a></span>
+    <span>Already a user? <a routerLink="/auth">Log in</a></span>
   </mat-card>
 </div>
