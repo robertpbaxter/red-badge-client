@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { HousingService } from "../housing.service";
+import { Housing } from "../housing";
 
 @Component({
   selector: "app-map-details",
@@ -9,16 +10,7 @@ import { HousingService } from "../housing.service";
 export class MapDetailsComponent implements OnInit {
   @Input()
   housingId = this.housingId;
-  housing = {
-    id: "",
-    residenceType: "",
-    rooms: "",
-    bathrooms: "",
-    address: "",
-    petsAllowed: "",
-    facilities: "",
-    price: ""
-  };
+  housing: Housing;
 
   constructor(private housingService: HousingService) {}
 
