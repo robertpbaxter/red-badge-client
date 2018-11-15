@@ -1,16 +1,26 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { MiniMapComponent } from './mini-map.component';
+import { MiniMapComponent } from "./mini-map.component";
+import { AgmCoreModule } from "@agm/core";
+import { HttpClient, HttpHandler } from "@angular/common/http";
 
-describe('MiniMapComponent', () => {
+describe("MiniMapComponent", () => {
   let component: MiniMapComponent;
   let fixture: ComponentFixture<MiniMapComponent>;
-
+  let MapsAPILoader;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MiniMapComponent ]
-    })
-    .compileComponents();
+      imports: [AgmCoreModule],
+      declarations: [MiniMapComponent],
+      providers: [
+        HttpClient,
+        HttpHandler,
+        {
+          provide: MapsAPILoader,
+          useValue: true
+        }
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +29,7 @@ describe('MiniMapComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

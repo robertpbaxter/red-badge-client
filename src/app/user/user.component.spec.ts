@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { UserComponent } from './user.component';
+import { UserComponent } from "./user.component";
+import { HttpClient, HttpHandler } from "@angular/common/http";
 
-describe('UserComponent', () => {
+describe("UserComponent", () => {
   let component: UserComponent;
   let fixture: ComponentFixture<UserComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserComponent ]
-    })
-    .compileComponents();
+      declarations: [UserComponent],
+      providers: [HttpClient, HttpHandler]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('UserComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -28,6 +28,10 @@ export class ReportedMessageComponent implements OnInit {
       .subscribe(message => (this.message = message));
   }
 
+  delete(id: number): void {
+    this.messageService.deleteMessage(id).subscribe(() => this.findMessage(id));
+  }
+
   populateName(senderId: number): void {
     this.userService.getUser(senderId).subscribe(result => {
       this.sentBy = `${result.lastName}, ${result.firstName}, (${

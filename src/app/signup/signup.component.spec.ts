@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-
+import { Router } from "@angular/router";
 import { SignupComponent } from "./signup.component";
+import { MatCardModule } from "@angular/material";
+import { HttpClient, HttpHandler } from "@angular/common/http";
 
 describe("SignupComponent", () => {
   let component: SignupComponent;
@@ -8,7 +10,18 @@ describe("SignupComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SignupComponent]
+      imports: [MatCardModule],
+      declarations: [SignupComponent],
+      providers: [
+        HttpClient,
+        HttpHandler,
+        {
+          provide: Router,
+          useClass: class {
+            navigate = jasmine.createSpy("navigate");
+          }
+        }
+      ]
     }).compileComponents();
   }));
 

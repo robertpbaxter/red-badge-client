@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-
 import { TicketsComponent } from "./tickets.component";
+import { MatCardModule, MatExpansionModule } from "@angular/material";
+import { Component, NO_ERRORS_SCHEMA } from "@angular/core";
+import { HttpClient, HttpHandler } from "@angular/common/http";
+
+@Component({ selector: "app-user", template: "" })
+class UserStubComponent {}
 
 describe("TicketsComponent", () => {
   let component: TicketsComponent;
@@ -8,7 +13,10 @@ describe("TicketsComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TicketsComponent]
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [MatCardModule, MatExpansionModule],
+      declarations: [TicketsComponent, UserStubComponent],
+      providers: [HttpClient, HttpHandler]
     }).compileComponents();
   }));
 

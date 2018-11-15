@@ -1,11 +1,15 @@
 <mat-list *ngIf="messageId">
   <mat-list-item>
-    <p (click)="populateName(message?.senderId)">Sent by (<u><b>click to show name</b></u>): {{sentBy}}</p>
+    <p (click)="populateName(message?.senderId)">
+      Sent by (<u><b>click to show name</b></u
+      >): {{ sentBy || "deleted" }}
+    </p>
   </mat-list-item>
   <mat-list-item>
-    <p>Subject: {{message?.subject}}</p>
+    <p>Subject: {{ message?.subject || "deleted" }}</p>
   </mat-list-item>
   <mat-list-item>
-    <p>Content: {{message?.subject}}</p>
+    <p>Content: {{ message?.subject || "deleted" }}</p>
   </mat-list-item>
+  <button mat-raised-button (click)="delete(message?.id)">Delete</button>
 </mat-list>
