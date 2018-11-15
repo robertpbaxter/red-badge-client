@@ -1,16 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ReportedMessageComponent } from './reported-message.component';
+import { ReportedMessageComponent } from "./reported-message.component";
+import { MatListModule } from "@angular/material";
+import { HttpClient, HttpHandler } from "@angular/common/http";
 
-describe('ReportedMessageComponent', () => {
+describe("ReportedMessageComponent", () => {
   let component: ReportedMessageComponent;
   let fixture: ComponentFixture<ReportedMessageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReportedMessageComponent ]
-    })
-    .compileComponents();
+      imports: [MatListModule],
+      declarations: [ReportedMessageComponent],
+      providers: [HttpClient, HttpHandler]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +22,7 @@ describe('ReportedMessageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

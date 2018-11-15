@@ -1,16 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { AgmCoreModule, MapsAPILoader } from "@agm/core";
+import { MapEntryComponent } from "./map-entry.component";
+import { HttpClient, HttpHandler } from "@angular/common/http";
 
-import { MapEntryComponent } from './map-entry.component';
-
-describe('MapEntryComponent', () => {
+describe("MapEntryComponent", () => {
   let component: MapEntryComponent;
   let fixture: ComponentFixture<MapEntryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MapEntryComponent ]
-    })
-    .compileComponents();
+      imports: [AgmCoreModule],
+      declarations: [MapEntryComponent],
+      providers: [
+        HttpClient,
+        HttpHandler,
+        {
+          provide: MapsAPILoader,
+          useValue: true
+        }
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +28,7 @@ describe('MapEntryComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

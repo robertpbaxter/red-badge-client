@@ -34,6 +34,7 @@ import { ReportedHousingComponent } from "./reported-housing/reported-housing.co
 import { ReportedMessageComponent } from "./reported-message/reported-message.component";
 import { FooterComponent } from "./footer/footer.component";
 import { MiniMapComponent } from "./mini-map/mini-map.component";
+import { MatInputModule } from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { MiniMapComponent } from "./mini-map/mini-map.component";
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
+    MatInputModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyBjo_g0gV5qXLS1ASDwVNCqvh0M9_IrZsM",
       libraries: ["places"]

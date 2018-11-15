@@ -8,7 +8,6 @@ import { DeleteAccountComponent } from "./delete-account.component";
 import { HttpClient, HttpHandler } from "@angular/common/http";
 
 describe("DeleteAccountComponent", () => {
-  const mockDialogRef = { confirm: jasmine.createSpy("confirm") };
   let component: DeleteAccountComponent;
   let fixture: ComponentFixture<DeleteAccountComponent>;
 
@@ -19,8 +18,8 @@ describe("DeleteAccountComponent", () => {
       providers: [
         HttpClient,
         HttpHandler,
-        { provide: MatDialogRef, useValue: mockDialogRef },
-        MAT_DIALOG_DATA
+        { provide: MatDialogRef, useValue: {} },
+        { provide: MAT_DIALOG_DATA, useValue: {} }
       ]
     }).compileComponents();
   }));

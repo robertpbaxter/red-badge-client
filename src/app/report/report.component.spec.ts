@@ -1,16 +1,39 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { HttpClient, HttpHandler } from "@angular/common/http";
+import { ReportComponent } from "./report.component";
+import {
+  MatOptionModule,
+  MatSelectModule,
+  MatFormFieldModule,
+  MatDialogRef,
+  MatDialogModule,
+  MAT_DIALOG_DATA,
+  MatInputModule
+} from "@angular/material";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { ReportComponent } from './report.component';
-
-describe('ReportComponent', () => {
+describe("ReportComponent", () => {
   let component: ReportComponent;
   let fixture: ComponentFixture<ReportComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReportComponent ]
-    })
-    .compileComponents();
+      imports: [
+        MatOptionModule,
+        MatSelectModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDialogModule,
+        BrowserAnimationsModule
+      ],
+      declarations: [ReportComponent],
+      providers: [
+        HttpClient,
+        HttpHandler,
+        { provide: MAT_DIALOG_DATA, useValue: {} },
+        { provide: MatDialogRef, useValue: {} }
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +42,7 @@ describe('ReportComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
