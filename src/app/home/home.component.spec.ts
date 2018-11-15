@@ -1,21 +1,16 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { Component, Directive, Input } from "@angular/core";
+import { Component } from "@angular/core";
 import { HomeComponent } from "./home.component";
 import { MatTableModule, MatSortModule } from "@angular/material";
-import { RouterLink } from "@angular/router";
 import { HttpClient, HttpHandler } from "@angular/common/http";
+import { RouterTestingModule } from "@angular/router/testing";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @Component({ selector: "app-map", template: "" })
 class MapStubComponent {}
 
-@Directive({ selector: "[routerLink]", host: { "(click)": "onClick()" } })
-export class RouterLinkDirectiveStub {
-  @Input("routerLink") linkParams: any;
-  navigatedTo: any = null;
-  onclick() {
-    this.navigatedTo = this.linkParams;
-  }
-}
+@Component({ template: "" })
+class DummyComponent {}
 
 describe("HomeComponent", () => {
   let component: HomeComponent;
@@ -23,9 +18,16 @@ describe("HomeComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatTableModule, MatSortModule, RouterLink],
+      imports: [
+        MatTableModule,
+        MatSortModule,
+        BrowserAnimationsModule,
+        RouterTestingModule.withRoutes([
+          { path: "", component: DummyComponent }
+        ])
+      ],
       providers: [HttpClient, HttpHandler],
-      declarations: [HomeComponent, MapStubComponent, RouterLinkDirectiveStub]
+      declarations: [HomeComponent, MapStubComponent, DummyComponent]
     }).compileComponents();
   }));
 

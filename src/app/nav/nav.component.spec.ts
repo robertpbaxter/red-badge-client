@@ -4,19 +4,13 @@ import {
   MatMenuModule,
   MatBadgeModule
 } from "@angular/material";
-import { RouterLink } from "@angular/router";
 import { NavComponent } from "./nav.component";
 import { HttpClient, HttpHandler } from "@angular/common/http";
-import { Directive, Input } from "@angular/core";
+import { RouterTestingModule } from "@angular/router/testing";
+import { Component } from "@angular/core";
 
-@Directive({ selector: "[routerLink]", host: { "(click)": "onClick()" } })
-export class RouterLinkDirectiveStub {
-  @Input("routerLink") linkParams: any;
-  navigatedTo: any = null;
-  onclick() {
-    this.navigatedTo = this.linkParams;
-  }
-}
+@Component({ template: "" })
+class DummyComponent {}
 
 describe("NavComponent", () => {
   let component: NavComponent;
@@ -24,8 +18,15 @@ describe("NavComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatToolbarModule, RouterLink, MatMenuModule, MatBadgeModule],
-      declarations: [NavComponent, RouterLinkDirectiveStub],
+      imports: [
+        MatToolbarModule,
+        MatMenuModule,
+        MatBadgeModule,
+        RouterTestingModule.withRoutes([
+          { path: "", component: DummyComponent }
+        ])
+      ],
+      declarations: [NavComponent, DummyComponent],
       providers: [HttpClient, HttpHandler]
     }).compileComponents();
   }));
