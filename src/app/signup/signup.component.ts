@@ -20,25 +20,15 @@ export class SignupComponent implements OnInit {
   ) {
     let e = email.toLowerCase().trim();
     let p = password.trim();
-    // let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    switch (true) {
-      case firstName === "":
-        alert("First name cannot be blank");
-        break;
-      case lastName === "":
-        alert("Last name cannot be blank");
-        break;
-      // case email.match(mailFormat):
-      //   alert("Email matches!");
-      //   break;
-      case password.length < 8:
-        alert("Password must be at least 8 characters long");
-        break;
-      case password.length >= 8 && password != confirmPassword:
-        alert("Passwords must match");
-        break;
-      default:
-        this.signup(firstName, lastName, e, p);
+
+    if (password.length > 5 && password === confirmPassword) {
+      this.signup(firstName, lastName, e, p);
+    } else if (password.length > 5 && password != confirmPassword) {
+      alert("Your passwords don't match");
+    } else if (password.length < 6) {
+      alert("Password must be at least 6 characters long");
+    } else {
+      alert("Error!");
     }
   }
 
