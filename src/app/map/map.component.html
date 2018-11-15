@@ -1,8 +1,12 @@
 <div class="mapdiv">
   <div class="mapmap">
-    <agm-map [latitude]="startingLat" [longitude]="startingLng">
+    <agm-map [zoom]="10" [latitude]="startingLat" [longitude]="startingLng">
       <div *ngFor="let coord of coords">
-        <agm-marker id="coord.housingId" [latitude]="coord.latitude" [longitude]="coord.longitude">
+        <agm-marker
+          id="coord.housingId"
+          [latitude]="coord.latitude"
+          [longitude]="coord.longitude"
+        >
           <agm-info-window>
             <app-map-details [housingId]="coord.housingId"></app-map-details>
           </agm-info-window>
@@ -12,7 +16,19 @@
   </div>
   <div class="textdiv">
     <h1>Welcome to Nest!</h1>
-    <p><i>Nest</i> is an easy place for searching roommates to find one another. Whether you are subletting space, renting property, or looking for short-term living accommadation, <i>Nest</i> is your new home.</p> <br/> <p>At <i>Nest</i>, we believe that birds of a feather flock together. In <i>nest</i> to no time, you are sure to find your new home! Thanks to <i>Nest</i>, there is no need to wing it. 
-      As you search for your new home, you are welcome to reach out to the owners of the accommadations we have to offer. Feel free to spread your wings and explore all that <i>Nest</i> has to offer!    
+    <p>
+      <i>Nest</i> is an easy place for searching roommates to find one another.
+      Whether you are subletting space, renting property, or looking for
+      short-term living accommadation, <i>Nest</i> is your new home.
+    </p>
+    <br />
+    <p>
+      At <i>Nest</i>, we believe that birds of a feather flock together. In
+      <i>nest</i> to no time, you are sure to find your new home! Thanks to
+      <i>Nest</i>, there is no need to wing it. As you search for your new home,
+      you are welcome to reach out to the owners of the accommadations we have
+      to offer. Feel free to spread your wings and explore all that
+      <i>Nest</i> has to offer!
+    </p>
   </div>
 </div>

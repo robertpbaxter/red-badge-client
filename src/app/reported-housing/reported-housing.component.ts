@@ -22,4 +22,10 @@ export class ReportedHousingComponent implements OnInit {
       this.housing = housing;
     });
   }
+
+  delete(id: number): void {
+    this.housingService
+      .deleteHousing(id)
+      .subscribe(() => this.getOneHousing(id));
+  }
 }

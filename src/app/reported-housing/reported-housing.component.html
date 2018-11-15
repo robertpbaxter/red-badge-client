@@ -1,27 +1,27 @@
 <mat-list *ngIf="housingId">
   <mat-list-item>
-    <p>Type: {{housing?.residenceType}}</p>
+    <p>Type: {{ housing?.residenceType || "deleted" }}</p>
   </mat-list-item>
   <mat-list-item>
-    <p># of rooms: {{housing?.rooms}}</p>
+    <p># of rooms: {{ housing?.rooms || "deleted" }}</p>
   </mat-list-item>
   <mat-list-item>
-    <p># of bathrooms: {{housing?.bathrooms}}</p>
+    <p># of bathrooms: {{ housing?.bathrooms || "deleted" }}</p>
   </mat-list-item>
   <mat-list-item>
-    <p>address: {{housing?.address}}</p>
+    <p>address: {{ housing?.address || "deleted" }}</p>
   </mat-list-item>
   <mat-list-item>
-    <p>pets allowed: {{housing?.petsAllowed}}</p>
+    <p>pets allowed: {{ housing?.petsAllowed || "deleted" }}</p>
   </mat-list-item>
   <mat-list-item>
-    <p>facilities: {{housing?.facilities}}</p>
+    <p>facilities: {{ housing?.facilities || "deleted" }}</p>
   </mat-list-item>
   <mat-list-item>
-    <p>price: ${{housing?.price}}</p>
+    <p>price: ${{ housing?.price || "deleted" }}</p>
   </mat-list-item>
   <mat-list-item>
-    <p>id: {{housing?.id}}</p>
+    <p>id: {{ housing?.id || "deleted" }}</p>
   </mat-list-item>
-
+  <button mat-raised-button (click)="delete(housing.id)">Delete</button>
 </mat-list>
