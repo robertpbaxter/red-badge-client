@@ -1,13 +1,13 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { MiniMapComponent } from "./mini-map.component";
-import { AgmCoreModule } from "@agm/core";
+import { AgmCoreModule, MapsAPILoader } from "@agm/core";
 import { HttpClient, HttpHandler } from "@angular/common/http";
 
 describe("MiniMapComponent", () => {
   let component: MiniMapComponent;
   let fixture: ComponentFixture<MiniMapComponent>;
-  let MapsAPILoader;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [AgmCoreModule],
