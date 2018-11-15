@@ -21,6 +21,13 @@
   box-shadow: .2em .2em .1em rgba(0, 0, 0, 0.294);
 }
 
+p{
+  font-family: "Ubuntu", "sans-serif";
+  font-weight: 100;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
 @media screen and (max-width: 412px) {
   .card {
     margin:auto;
